@@ -26,3 +26,6 @@ config/secrets.yml
 # Vagrant
 .vagrant
 Vagrantfile
+
+# RubyMine
+.idea
