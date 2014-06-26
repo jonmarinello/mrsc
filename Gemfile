@@ -49,6 +49,12 @@ gem 'bootstrap-sass', '3.1.1.1'
 # Haml
 gem 'haml-rails', '0.5.3'
 
+group :production do
+  # Heroku requires this
+  gem 'rails_12factor', '0.0.2'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '0.0.0'
 
