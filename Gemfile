@@ -59,7 +59,7 @@ end
 # gem 'bcrypt', '0.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn', '0.0.0'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', '0.0.0', group: :development
