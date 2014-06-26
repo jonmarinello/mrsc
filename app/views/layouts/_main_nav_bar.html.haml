@@ -11,10 +11,10 @@
     #collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li{:class => @active_tab == 'projects' ? 'active' : ''}
-          %a{href: 'statics/projects'} Projects
+          =link_to('Projects', { controller: 'statics', action: 'projects' })
         %li{:class => @active_tab == 'about' ? 'active' : ''}
-          %a{href: 'statics/about'} About
+          =link_to('About', { controller: 'statics', action: 'about' })
         %li{:class => @active_tab == 'services' ? 'active' : ''}
-          %a{href: 'statics/services'} Services
+          =link_to('Services', { controller: 'statics', action: 'services' })
         %li{:class => @active_tab == 'contact' ? 'active' : ''}
-          %a{href: 'statics/contact'} Contact
+          =link_to('Contact', { controller: 'statics', action: 'contact' })

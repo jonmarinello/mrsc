@@ -17,11 +17,14 @@
 
 /* Push down the body so that the fixed toolbar won't cover the content */
 body {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 /* Change the default padding so that the MRSC logo fits inside the toolbar */
-.navbar-brand
-{
+.navbar-brand {
     padding: 1px;
+}
+
+.mrsc_container {
+    padding: 1em;
 }
