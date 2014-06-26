@@ -1,5 +1,7 @@
 class StaticsController < ApplicationController
+
   def index
+    @company_name = 'Mission Ridge Software Consulting, LLC'
     @active_tab = 'index'
   end
 
@@ -18,4 +20,5 @@ class StaticsController < ApplicationController
   def contact
     @active_tab = 'contact'
   end
+
 end
