@@ -1,23 +1,22 @@
-.container
-  .page-header
-    %h3
-      Mission Ridge Software Consulting, LLC
-      %p
-        %small Quality Consulting Services
-  %div
-    %p
-      =image_tag 'mrsc.jpg', :class => 'padded-image img-responsive pull-left'
-      Mission Ridge Software Consulting is located in Santa Barbara, California and provides quality
-      software consulting services at competitive rates. We specialize in
-      %a{:target => '_blank', :href => 'http://rubyonrails.org'} Ruby on Rails
-      Web 2.0 application development, basic
-      %a{:target => '_blank', :href => 'https://www.ruby-lang.org/en/'} Ruby
-      application and gem development as well as providing other technical consulting services.
-    %p
-      Our mission is to provide our customers with quality consulting services that are delivered per
-      specification, on time, every time. We are dedicated to helping you achieve greater success by providing targeted
-      technical education, improving your overall level of Engineering Excellence as well as directly contributing to the
-      development of your products and services. Your success and satisfaction is what makes or breaks our business.
-    %p
-      This site was developed using Ruby on Rails 4.1 using Bootstrap 3 and the source code is available
-      %a{:target => '_blank', :href => 'https://github.com/jonmarinello/mrsc'} here.
+=render 'layouts/main_nav_bar'
+%h3
+  Mission Ridge Software Consulting, LLC
+  %p
+    %small Quality Consulting Services
+%p= @active_tab == 'index' ? 'active' : 'inactive'
+%p
+  =image_tag 'mrsc.jpg', :class => 'padded-image img-responsive pull-left'
+  Mission Ridge Software Consulting is located in Santa Barbara, California and provides quality
+  software consulting services at competitive rates. We specialize in
+  %a{:target => '_blank', :href => 'http://rubyonrails.org'} Ruby on Rails
+  Web 2.0 application development, basic
+  %a{:target => '_blank', :href => 'https://www.ruby-lang.org/en/'} Ruby
+  application and gem development as well as providing other technical consulting services.
+%p
+  Our mission is to provide our customers with quality consulting services that are delivered per
+  specification, on time, every time. We are dedicated to helping you achieve greater success by providing targeted
+  technical education, improving your overall level of Engineering Excellence as well as directly contributing to the
+  development of your products and services. Your success and satisfaction is what makes or breaks our business.
+%p
+  This site was developed using Ruby on Rails 4.1 using Bootstrap 3 and the source code is available
+  %a{:target => '_blank', :href => 'https://github.com/jonmarinello/mrsc'} here.
