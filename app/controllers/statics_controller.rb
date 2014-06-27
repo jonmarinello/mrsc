@@ -7,6 +7,7 @@ class StaticsController < ApplicationController
 
   def projects
     @active_tab = 'projects'
+    @person_image_width = 120
   end
 
   def about
