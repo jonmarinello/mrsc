@@ -26,25 +26,26 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::SubTitle" x="218" y="353" w="-1" h="-1" measuredW="1046" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::SubTitle" x="218" y="353" w="-1" h="-1" measuredW="1055" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <text>From%20conception%20to%20completion%20we%20will%20handle%20building%20your%20web%20application%20and%20make%20it%20look%20amazing%21</text>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Image" x="627" y="1422" w="130" h="54" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Image" x="627" y="1414" w="130" h="54" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <text>mrsc</text>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="520" y="1439" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="520" y="1431" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Founded%202011</text>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="772" y="1439" w="-1" h="-1" measuredW="304" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="772" y="1431" w="-1" h="-1" measuredW="304" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Copyright%20%A9%202014%20Mission%20Ridge%20Software%20Consulting</text>
       </controlProperties>
     </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::ModalScreen" x="156" y="1100" w="1149" h="380" measuredW="320" measuredH="240" zOrder="10" locked="false" isInGroup="-1"/>
   </controls>
 </mockup>
