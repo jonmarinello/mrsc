@@ -6,26 +6,8 @@
 %p
   =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
 .well-lg
-  %h4
-    Recommendations
-
-
   .clearfix.visible-xs.visible-lg
   .row
-    .col-lg-6.col-xs-8
-      .thumbnail
-        .caption
-          %h4
-            %center
-              =image_tag 'fin_and_field.jpg', :class => 'img-responsive img-rounded'
-          %p
-            Contract developer. Ruby on Rails development and maintenance of the Fin & Field Site.
-          %p
-            Clouds used: Huroku
-          %p
-            Tools and technologies used: RubyMine, Vagrant, Virtual Box, Amazon's S3 Services, Ruby on Rails 4.0, CSS, Bootstrap 3, git, github, Codeship, Heroku, SourceTree, vi/vim, Jira, Balsamiq, MindNode
-          %p
-            %a.btn.btn-info{href: "#"} Read more
     .col-lg-6.col-xs-8
       .thumbnail
         .caption
@@ -52,123 +34,137 @@
             SourceTree, vi/vim, Accunote, Confluence
           %p
             %a.btn.btn-info{href: "#"} Read more
+          %h5
+            Related Recommendations
+          #accordion.panel-group
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#shawn"}
+                    Shawn Duex - Engineering Manager at RightScale, October 23, 2013
+              #shawn.panel-collapse.collapse.in
+                .panel-body
+                  =image_tag 'shawn.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    Jon and I have been working together on and off since 2008. We worked together at Microsoft and most
+                    recently we have been working closely at Rightscale. Jon is responsible for the development and support
+                    of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing
+                    tools used by my team to validate RightScale's Windows RightImages and ServerTemplates.
+                  %p
+                    Jon has consistently provided amazing support for my team. He has championed many important features my
+                    team has needed and he builds these new features with an extremely high level of quality. Jon is very quick
+                    to deliver and does an amazing job following up with my team to ensure that these new features are
+                    successfully integrated. If we encounter an issue, Jon is always readily available to suggest a work-around
+                    and get a fix developed quickly.
+                  %p
+                    Many of my team members are offshore and Jon has always made him self available during their work day to
+                    help with issues or troubleshooting problems. Often times Jon will go the extra mile and proactively check
+                    in with my team members and make sure they are unblocked and working efficiently with the tools he supports.
+                  %p
+                    In summary, Jon provides a level of productivity, support, quality and professionalism that is not typical
+                    in the industry. Coupled with his many years of software development experience, Jon would make a great
+                    addition to any software development organization that might be considering bringing him on.
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#dan"}
+                    Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012
+              #dan.panel-collapse.collapse
+                .panel-body
+                  =image_tag 'dan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    RightScale contracted with Jon Marinello at Mission Ridge Software Consulting in February of 2012 to
+                    back-fill the departure of our lead developer who was responsible for a very complex automated test framework
+                    designed to verify cloud-based server implementations. Jon faced a significant learning curve at the onset
+                    of this project.
+                  %p
+                    He came up to speed very quickly on an array new technologies; Ruby, Bash, Linux, Cloud
+                    Infrastructure and all our internal applications. In addition to the programming tasks, Jon has also stepped
+                    up and managed all the Test Automation Agile SDLC (Scrum) story grooming, sprint planning, estimation and
+                    sprint execution.
+                  %p
+                    Jon’s focus on teamwork, professionalism and after-hours availability have had a significant
+                    impact on our success. Simply stated, Jon has done an outstanding job and has exceeded all my expectations.
+                    If you’re looking for software consulting services that you can rely on to solve tough problems,
+                    I highly recommend Jon Marinello and Mission Ridge Software Consulting.
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#efrain"}
+                    Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012
+              #efrain.panel-collapse.collapse
+                .panel-body
+                  =image_tag 'efrain.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    I've had the pleasure of working with Jon on an a very fast moving and quick to yield results test
+                    automation project. I had been thinking about this project for a while, so I was pleasantly surprised
+                    when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule
+                    which added value on a timescale I hadn't foreseen. During planning, he helped guide our discussions down
+                    to just the necessary details to minimize risk, yet not constrain us or over think a solution.
+                  %p
+                    In short,
+                    Jon has the ability to bring true and tried Software Engineering experience to the table, while at the
+                    same time keeping an open mind to new possibilities and solutions then following that up with very pragmatic
+                    engineering skills in execution.
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#cary"}
+                    Cary Penniman - Software Architect at RightScale, April 5, 2013
+              #cary.panel-collapse.collapse
+                .panel-body
+                  =image_tag 'cary.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    Jon has rock solid software engineering skills and has done a great job maintaining and
+                    refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company.
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#kannan"}
+                    Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013
+              #kannan.panel-collapse.collapse
+                .panel-body
+                  =image_tag 'kannan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    Jon is an one-man-army in developing and maintaining code for the testing framework used here at
+                    RightScale to test the server configuration across different cloud vendors and operating systems using
+                    the API. He always has the passion for learning new tools, technologies, and integrating it with the
+                    product he builds.
+                  %p
+                    Whether it is day or night, He is available to support teams related to issues they
+                    have with the product he built and fixes them ASAP. Jon's tireless work ethic and positive attitude
+                    make him a valuable professional. I would recommend Jon without hesitation.
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#nitin"}
+                    Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013
+              #nitin.panel-collapse.collapse
+                .panel-body
+                  =image_tag 'nitin.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+                  %p
+                    Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
+                    deadline.
+                  %p
+                    He has been instrumental in automating our testing across different cloud providers and
+                    refactoring test code in ruby to make it easier to understand and use. He is very approachable and
+                    friendly, and never hesitates to share his wisdom.
+    .col-lg-6.col-xs-8
+      .thumbnail
+        .caption
+          %h4
+            %center
+              =image_tag 'fin_and_field.jpg', :class => 'img-responsive img-rounded'
+          %p
+            Contract developer. Ruby on Rails development and maintenance of the Fin & Field Site.
+          %p
+            Clouds used: Huroku
+          %p
+            Tools and technologies used: RubyMine, Vagrant, Virtual Box, Amazon's S3 Services, Ruby on Rails 4.0, CSS, Bootstrap 3, git, github, Codeship, Heroku, SourceTree, vi/vim, Jira, Balsamiq, MindNode
+          %p
+            %a.btn.btn-info{href: "#"} Read more
 
 
-
-
-  #accordion.panel-group
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#shawn"}
-            Shawn Duex - Engineering Manager at RightScale, October 23, 2013
-      #shawn.panel-collapse.collapse.in
-        .panel-body
-          =image_tag 'shawn.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            Jon and I have been working together on and off since 2008. We worked together at Microsoft and most
-            recently we have been working closely at Rightscale. Jon is responsible for the development and support
-            of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing
-            tools used by my team to validate RightScale's Windows RightImages and ServerTemplates.
-          %p
-            Jon has consistently provided amazing support for my team. He has championed many important features my
-            team has needed and he builds these new features with an extremely high level of quality. Jon is very quick
-            to deliver and does an amazing job following up with my team to ensure that these new features are
-            successfully integrated. If we encounter an issue, Jon is always readily available to suggest a work-around
-            and get a fix developed quickly.
-          %p
-            Many of my team members are offshore and Jon has always made him self available during their work day to
-            help with issues or troubleshooting problems. Often times Jon will go the extra mile and proactively check
-            in with my team members and make sure they are unblocked and working efficiently with the tools he supports.
-          %p
-            In summary, Jon provides a level of productivity, support, quality and professionalism that is not typical
-            in the industry. Coupled with his many years of software development experience, Jon would make a great
-            addition to any software development organization that might be considering bringing him on.
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#dan"}
-            Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012
-      #dan.panel-collapse.collapse
-        .panel-body
-          =image_tag 'dan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            RightScale contracted with Jon Marinello at Mission Ridge Software Consulting in February of 2012 to
-            back-fill the departure of our lead developer who was responsible for a very complex automated test framework
-            designed to verify cloud-based server implementations. Jon faced a significant learning curve at the onset
-            of this project.
-          %p
-            He came up to speed very quickly on an array new technologies; Ruby, Bash, Linux, Cloud
-            Infrastructure and all our internal applications. In addition to the programming tasks, Jon has also stepped
-            up and managed all the Test Automation Agile SDLC (Scrum) story grooming, sprint planning, estimation and
-            sprint execution.
-          %p
-            Jon’s focus on teamwork, professionalism and after-hours availability have had a significant
-            impact on our success. Simply stated, Jon has done an outstanding job and has exceeded all my expectations.
-            If you’re looking for software consulting services that you can rely on to solve tough problems,
-            I highly recommend Jon Marinello and Mission Ridge Software Consulting
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#efrain"}
-            Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012
-      #efrain.panel-collapse.collapse
-        .panel-body
-          =image_tag 'efrain.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            I've had the pleasure of working with Jon on an a very fast moving and quick to yield results test
-            automation project. I had been thinking about this project for a while, so I was pleasantly surprised
-            when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule
-            which added value on a timescale I hadn't foreseen. During planning, he helped guide our discussions down
-            to just the necessary details to minimize risk, yet not constrain us or over think a solution.
-          %p
-            In short,
-            Jon has the ability to bring true and tried Software Engineering experience to the table, while at the
-            same time keeping an open mind to new possibilities and solutions then following that up with very pragmatic
-            engineering skills in execution.
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#cary"}
-            Cary Penniman - Software Architect at RightScale, April 5, 2013
-      #cary.panel-collapse.collapse
-        .panel-body
-          =image_tag 'cary.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            Jon has rock solid software engineering skills and has done a great job maintaining and
-            refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company.
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#kannan"}
-            Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013
-      #kannan.panel-collapse.collapse
-        .panel-body
-          =image_tag 'kannan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            Jon is an one-man-army in developing and maintaining code for the testing framework used here at
-            RightScale to test the server configuration across different cloud vendors and operating systems using
-            the API. He always has the passion for learning new tools, technologies, and integrating it with the
-            product he builds.
-          %p
-            Whether it is day or night, He is available to support teams related to issues they
-            have with the product he built and fixes them ASAP. Jon's tireless work ethic and positive attitude
-            make him a valuable professional. I would recommend Jon without hesitation.
-    .panel.panel-default
-      .panel-heading
-        %h4.panel-title
-          %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#nitin"}
-            Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013
-      #nitin.panel-collapse.collapse
-        .panel-body
-          =image_tag 'nitin.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-          %p
-            Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
-            deadline.
-          %p
-            He has been instrumental in automating our testing across different cloud providers and
-            refactoring test code in ruby to make it easier to understand and use. He is very approachable and
-            friendly, and never hesitates to share his wisdom.
 .well-lg
   %center
     %h3 Have a project we can help with?
