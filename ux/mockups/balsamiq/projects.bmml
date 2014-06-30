@@ -33,7 +33,7 @@
     <control controlID="30" controlTypeID="com.balsamiq.mockups::ModalScreen" x="156" y="1079" w="1149" h="154" measuredW="320" measuredH="240" zOrder="1" locked="false" isInGroup="-1"/>
     <control controlID="31" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="136" y="5" w="1191" h="1309" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>A%20Web%20Page%0Ahttp%3A//</text>
+        <text>http%3A//missionridgeconsulting.com/statics/projects</text>
       </controlProperties>
     </control>
     <control controlID="34" controlTypeID="com.balsamiq.mockups::Image" x="162" y="698" w="-1" h="-1" measuredW="340" measuredH="76" zOrder="8" locked="false" isInGroup="-1">
@@ -63,9 +63,9 @@
         <text>LET%27S%20TALK%20ABOUT%20YOUR%20PROJECT</text>
       </controlProperties>
     </control>
-    <control controlID="39" controlTypeID="com.balsamiq.mockups::Title" x="150" y="134" w="-1" h="-1" measuredW="698" measuredH="50" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Title" x="150" y="134" w="-1" h="-1" measuredW="688" measuredH="50" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Mission%20Ridge%20Software%20Consulting%2C%20LLC</text>
+        <text>Mission%20Ridge%20Software%20Consulting%20LLC</text>
       </controlProperties>
     </control>
     <control controlID="40" controlTypeID="com.balsamiq.mockups::Image" x="149" y="79" w="100" h="55" measuredW="240" measuredH="143" zOrder="14" locked="false" isInGroup="-1">
