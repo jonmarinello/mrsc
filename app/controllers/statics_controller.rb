@@ -11,7 +11,7 @@ class StaticsController < ApplicationController
 
   def about
     @active_tab = 'about'
-    @person_image_width = 120
+    @person_image_width = 90
   end
 
   def services

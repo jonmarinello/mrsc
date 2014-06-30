@@ -1,35 +1,46 @@
 =render 'layouts/main_nav_bar'
 %p
   =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
-%a{name: 'jonmarinello'}
-%p
+%h3
+  Our Mission
+.well
   Our mission is to provide our customers with very highest quality consulting services that are delivered per
   specification, on time, every time. We are dedicated to helping you achieve greater success by providing
   targeted technical education, improving your overall level of Engineering Excellence as well as directly
   contributing to the development of your products and services. Your success and satisfaction is what makes
   or breaks our business.
+
+  Mission Ridge Software Consulting LLC is a sole proprietorship owned and operated by Jon Marinello.
+%h3
+  The Team
 .panel.panel-default
   .panel-heading
     %h3.panel-title
-      =image_tag 'jonmarinello.jpg', :class => 'padded-image img-responsive img-circle pull-left'
-      Jon Marinello
+      =image_tag 'jonmarinello.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => 140
+      %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
   .panel-body
     %p
-      Jon Marinello is the founder and CTO of Mission Ridge Software Consulting, LLC which began operations in 2011.
-      Jon has over 30 years of experience developing highly scalable, reliable and available software systems
-      in use today by tens of millions of subscribers. Jon has held senior level positions at Borland, Unisys,
-      Callwave, United Online (NetZero & Juno) and most recently at Microsoft.
+      Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
+      I have over 30 years of experience developing highly scalable, reliable and available software systems
+      in use today by tens of millions of subscribers. I have held senior level positions at Borland, Unisys,
+      Callwave, United Online (NetZero & Juno) and Microsoft.
+    %p
+      In the past we've helped companies transition to Agile methodologies as well as maintaining and extending
+      Ruby-based large-scale
+      test automation frameworks.
+    %p
+      Currently, I prefer to work in Ruby on Rails. Its a wonderful platform that allows you to get
+      the most bang for your buck and supports all the latest and greatest web-related technologies. This is my
+      passion and I love building "responsive" web applications.
     %p
       Click
       %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} here
-      to see the details of Jon Marinello's qualifications on LinkedIn.
+      to see the details of all my qualifications on LinkedIn.
     %p
-      Since forming Mission Ridge Software Consulting, we've worked with several companies and they have had a lot of
-      great things to say about the services we have
-      provided.
-%center
-  %h3
-    Recommendations
+      Since forming Mission Ridge Software Consulting, I've worked with several companies and they have had a lot of
+      great things to say about the services Mission Ridge Software Consulting LLC provided. Check out these recommendations:
+%h3
+  Recommendations
 #accordion.panel-group
   .panel.panel-default
     .panel-heading
@@ -40,7 +51,7 @@
       .panel-body
         =image_tag 'shawn_duex.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          Jon and I have been working together on and off since 2008. We worked together at Microsoft and most
+          "Jon and I have been working together on and off since 2008. We worked together at Microsoft and most
           recently we have been working closely at Rightscale. Jon is responsible for the development and support
           of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing
           tools used by my team to validate RightScale's Windows RightImages and ServerTemplates.
@@ -57,7 +68,7 @@
         %p
           In summary, Jon provides a level of productivity, support, quality and professionalism that is not typical
           in the industry. Coupled with his many years of software development experience, Jon would make a great
-          addition to any software development organization that might be considering bringing him on.
+          addition to any software development organization that might be considering bringing him on."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -67,14 +78,14 @@
       .panel-body
         =image_tag 'kannan_manickam.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          Jon is an one-man-army in developing and maintaining code for the testing framework used here at
+          "Jon is an one-man-army in developing and maintaining code for the testing framework used here at
           RightScale to test the server configuration across different cloud vendors and operating systems using
           the API. He always has the passion for learning new tools, technologies, and integrating it with the
           product he builds.
         %p
           Whether it is day or night, He is available to support teams related to issues they
           have with the product he built and fixes them ASAP. Jon's tireless work ethic and positive attitude
-          make him a valuable professional. I would recommend Jon without hesitation.
+          make him a valuable professional. I would recommend Jon without hesitation."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -84,12 +95,12 @@
       .panel-body
         =image_tag 'nitin_mohan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
+          "Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
           deadline.
         %p
           He has been instrumental in automating our testing across different cloud providers and
           refactoring test code in ruby to make it easier to understand and use. He is very approachable and
-          friendly, and never hesitates to share his wisdom.
+          friendly, and never hesitates to share his wisdom."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -99,8 +110,8 @@
       .panel-body
         =image_tag 'cary_penniman.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          Jon has rock solid software engineering skills and has done a great job maintaining and
-          refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company.
+          "Jon has rock solid software engineering skills and has done a great job maintaining and
+          refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -110,7 +121,7 @@
       .panel-body
         =image_tag 'dan_onorato.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          RightScale contracted with Jon Marinello at Mission Ridge Software Consulting in February of 2012 to
+          "RightScale contracted with Jon Marinello at Mission Ridge Software Consulting in February of 2012 to
           back-fill the departure of our lead developer who was responsible for a very complex automated test framework
           designed to verify cloud-based server implementations. Jon faced a significant learning curve at the onset
           of this project.
@@ -123,7 +134,7 @@
           Jon’s focus on teamwork, professionalism and after-hours availability have had a significant
           impact on our success. Simply stated, Jon has done an outstanding job and has exceeded all my expectations.
           If you’re looking for software consulting services that you can rely on to solve tough problems,
-          I highly recommend Jon Marinello and Mission Ridge Software Consulting.
+          I highly recommend Jon Marinello and Mission Ridge Software Consulting."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -133,7 +144,7 @@
       .panel-body
         =image_tag 'efrain_olivares.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          I've had the pleasure of working with Jon on an a very fast moving and quick to yield results test
+          "I've had the pleasure of working with Jon on an a very fast moving and quick to yield results test
           automation project. I had been thinking about this project for a while, so I was pleasantly surprised
           when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule
           which added value on a timescale I hadn't foreseen. During planning, he helped guide our discussions down
@@ -142,7 +153,7 @@
           In short,
           Jon has the ability to bring true and tried Software Engineering experience to the table, while at the
           same time keeping an open mind to new possibilities and solutions then following that up with very pragmatic
-          engineering skills in execution.
+          engineering skills in execution."
   .panel.panel-default
     .panel-heading
       %h4.panel-title
@@ -152,7 +163,7 @@
       .panel-body
         =image_tag 'steve_reynolds.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
-          We contracted with Mission Ridge Software Consulting to help us in a couple of key areas; Test automation and
+          "We contracted with Mission Ridge Software Consulting to help us in a couple of key areas; Test automation and
           choosing a new SDLC process. MRSC was instrumental in providing the training we needed in these key areas.
           Test Driven Development (TDD) was an area new to us and they walked us through the process, helped us select
           a test framework and mentored us on an ongoing basis. Choosing a new SDLC process was something we always
@@ -162,4 +173,4 @@
           road-map we needed to successfully make the transition to Scrum. The result of this investment is that we
           have really improved our overall engineering excellence, have a happier and much more productive team and,
           most importantly, we have much happier customers. This has had a significant positive impact on our bottom
-          line. MRSC gets our highest recommendation!
+          line. MRSC gets our highest recommendation!"
