@@ -34,9 +34,9 @@
   .panel.panel-default
     .panel-heading
       %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#shawn"}
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#shawn_duex"}
           Shawn Duex - Engineering Manager at RightScale, October 23, 2013
-    #shawn.panel-collapse.collapse.in
+    #shawn_duex.panel-collapse.collapse.in
       .panel-body
         =image_tag 'shawn.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
@@ -61,9 +61,52 @@
   .panel.panel-default
     .panel-heading
       %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#dan"}
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#kannan_manickam"}
+          Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013
+    #kannan_manickam.panel-collapse.collapse
+      .panel-body
+        =image_tag 'kannan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+        %p
+          Jon is an one-man-army in developing and maintaining code for the testing framework used here at
+          RightScale to test the server configuration across different cloud vendors and operating systems using
+          the API. He always has the passion for learning new tools, technologies, and integrating it with the
+          product he builds.
+        %p
+          Whether it is day or night, He is available to support teams related to issues they
+          have with the product he built and fixes them ASAP. Jon's tireless work ethic and positive attitude
+          make him a valuable professional. I would recommend Jon without hesitation.
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#nitin_mohan"}
+          Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013
+    #nitin_mohan.panel-collapse.collapse
+      .panel-body
+        =image_tag 'nitin.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+        %p
+          Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
+          deadline.
+        %p
+          He has been instrumental in automating our testing across different cloud providers and
+          refactoring test code in ruby to make it easier to understand and use. He is very approachable and
+          friendly, and never hesitates to share his wisdom.
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#cary_penniman"}
+          Cary Penniman - Software Architect at RightScale, April 5, 2013
+    #cary_penniman.panel-collapse.collapse
+      .panel-body
+        =image_tag 'cary.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+        %p
+          Jon has rock solid software engineering skills and has done a great job maintaining and
+          refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company.
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#dan_onorato"}
           Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012
-    #dan.panel-collapse.collapse
+    #dan_onorato.panel-collapse.collapse
       .panel-body
         =image_tag 'dan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
@@ -84,9 +127,9 @@
   .panel.panel-default
     .panel-heading
       %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#efrain"}
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#efrain_olivares"}
           Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012
-    #efrain.panel-collapse.collapse
+    #efrain_olivares.panel-collapse.collapse
       .panel-body
         =image_tag 'efrain.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
@@ -103,9 +146,9 @@
   .panel.panel-default
     .panel-heading
       %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#steve"}
+        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#steve_reynolds"}
           Steve Reynolds – Managing Partner, Elite Associates 2011
-    #steve.panel-collapse.collapse
+    #steve_reynolds.panel-collapse.collapse
       .panel-body
         =image_tag 'steve.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
         %p
@@ -120,46 +163,3 @@
           have really improved our overall engineering excellence, have a happier and much more productive team and,
           most importantly, we have much happier customers. This has had a significant positive impact on our bottom
           line. MRSC gets our highest recommendation!
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#cary"}
-          Cary Penniman - Software Architect at RightScale, April 5, 2013
-    #cary.panel-collapse.collapse
-      .panel-body
-        =image_tag 'cary.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-        %p
-          Jon has rock solid software engineering skills and has done a great job maintaining and
-          refactoring our Ruby-based test framework which tests server configurations in the cloud. He is an asset to any company.
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#kannan"}
-          Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013
-    #kannan.panel-collapse.collapse
-      .panel-body
-        =image_tag 'kannan.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-        %p
-          Jon is an one-man-army in developing and maintaining code for the testing framework used here at
-          RightScale to test the server configuration across different cloud vendors and operating systems using
-          the API. He always has the passion for learning new tools, technologies, and integrating it with the
-          product he builds.
-        %p
-          Whether it is day or night, He is available to support teams related to issues they
-          have with the product he built and fixes them ASAP. Jon's tireless work ethic and positive attitude
-          make him a valuable professional. I would recommend Jon without hesitation.
-  .panel.panel-default
-    .panel-heading
-      %h4.panel-title
-        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#nitin"}
-          Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013
-    #nitin.panel-collapse.collapse
-      .panel-body
-        =image_tag 'nitin.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
-        %p
-          Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within
-          deadline.
-        %p
-          He has been instrumental in automating our testing across different cloud providers and
-          refactoring test code in ruby to make it easier to understand and use. He is very approachable and
-          friendly, and never hesitates to share his wisdom.
