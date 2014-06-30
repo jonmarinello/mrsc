@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title MRSC
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  .mrsc_container
+    = yield
+    .well
+      %center
+        %h3 Have a project we can help with?
+        %p.text-uppercase
+          %a.btn.btn-warning{href: url_for(:controller => 'statics', :action => 'services') } LET'S TALK ABOUT YOUR PROJECT
+    %center
+      %footer
+        %small
+          Mission Ridge Software Consulting LLC founded 2011, Copyright © 2014
+  %script{:src => 'http://code.jquery.com/jquery-latest.min.js'}

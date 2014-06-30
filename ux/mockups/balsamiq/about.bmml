@@ -1,0 +1,104 @@
+<mockup version="1.0" skin="sketch" measuredW="1318" measuredH="1725" mockupW="1191" mockupH="1720">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ButtonBar" x="249" y="79" w="362" h="55" measuredW="292" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Projects%2CAbout%2CServices%2CContact</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Image" x="156" y="179" w="1148" h="500" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::SubTitle" x="194" y="413" w="-1" h="-1" measuredW="55" measuredH="33" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TBD</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Label" x="473" y="1661" w="-1" h="-1" measuredW="424" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mission%20Ridge%20Software%20Consulting%2C%20LLC%20founded%202011%2C%20Copyright%20%A9%202014%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::ModalScreen" x="156" y="1498" w="1149" h="154" measuredW="320" measuredH="240" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="127" y="5" w="1191" h="1720" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>MRSC%0Ahttp%3A//www.missionridgeconsulting.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::SubTitle" x="524" y="1540" w="-1" h="-1" measuredW="354" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Have%20a%20project%20we%20can%20help%20with%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Button" x="556" y="1580" w="290" h="27" measuredW="249" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>LET%27S%20TALK%20ABOUT%20YOUR%20PROJECT</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Title" x="150" y="134" w="-1" h="-1" measuredW="688" measuredH="50" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mission%20Ridge%20Software%20Consulting%20LLC</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Image" x="149" y="79" w="100" h="55" measuredW="240" measuredH="143" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../app/assets/images/mrsc.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextArea" x="156" y="734" w="1148" h="72" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Our%20mission%20is%20to%20provide%20our%20customers%20with%20very%20highest%20quality%20consulting%20services%20that%20are%20delivered%20per%20specification%2C%20on%20time%2C%20every%20time.%20We%20are%20dedicated%20to%20helping%20you%20achieve%20greater%20success%20by%20providing%20targeted%20technical%20education%2C%20improving%20your%20overall%20level%20of%20Engineering%20Excellence%20as%20well%20as%20directly%20contributing%20to%20the%20development%20of%20your%20products%20and%20services.%20Your%20success%20and%20satisfaction%20is%20what%20makes%20or%20breaks%20our%20business.%20Mission%20Ridge%20Software%20Consulting%20LLC%20is%20a%20sole%20proprietorship%20owned%20and%20operated%20by%20Jon%20Marinello.</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::SubTitle" x="159" y="703" w="-1" h="-1" measuredW="128" measuredH="33" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Our%20Mission</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::SubTitle" x="158" y="824" w="-1" h="-1" measuredW="117" measuredH="33" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>The%20Team</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Accordion" x="156" y="1154" w="1145" h="323" measuredW="608" measuredH="351" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Shawn%20Duex%20-%20Engineering%20Manager%20at%20RightScale%2C%20October%2023%2C%202013%0AKannan%20Manickam%20-%20Senior%20Software%20Engineer%20at%20RightScale%2C%20April%208%2C%202013%0ANitin%20Mohan%20-%20Senior%20Software%20Engineer%20at%20RightScale%2C%20April%206%2C%202013%0ACary%20Penniman%20-%20Software%20Architect%20at%20RightScale%2C%20April%205%2C%202013%0ADan%20Onorato%20-%20Quality%20Assurance%20Manager%2C%20Righ%0AEfrain%20Olivares%20-%20Software%20Develompent%20Engineer%20in%20Test%2C%20RightScale%20April%2016%2C%202012tScale%20April%2024%2C%202012%0ASteve%20Reynolds%20%u2013%20Managing%20Partner%2C%20Elite%20Associates%202011</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::FieldSet" x="156" y="854" w="1144" h="248" measuredW="200" measuredH="170" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Jon%20Marinello</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Image" x="172" y="876" w="109" h="102" measuredW="200" measuredH="200" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../app/assets/images/jonmarinello.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::TextArea" x="292" y="877" w="980" h="213" measuredW="200" measuredH="140" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Hi%2C%20I%27m%20Jon%20Marinello%2C%20the%20founder%20and%20CTO%20of%20Mission%20Ridge%20Software%20Consulting%20LLC%20which%20began%20operations%20in%202011.%20I%20have%20over%2030%20years%20of%20experience%20developing%20highly%20scalable%2C%20reliable%20and%20available%20software%20systems%20in%20use%20today%20by%20tens%20of%20millions%20of%20subscribers.%20I%20have%20held%20senior%20level%20positions%20at%20Borland%2C%20Unisys%2C%20Callwave%2C%20United%20Online%20%28NetZero%20%26%20Juno%29%20and%20Microsoft.%0A%20%0AIn%20the%20past%20we%27ve%20helped%20companies%20transition%20to%20Agile%20methodologies%20as%20well%20as%20maintaining%20and%20extending%20Ruby-based%20large-scale%20test%20automation%20frameworks.%0A%20%0ACurrently%2C%20I%20prefer%20to%20work%20in%20Ruby%20on%20Rails.%20Its%20a%20wonderful%20platform%20that%20allows%20you%20to%20get%20the%20most%20bang%20for%20your%20buck%20and%20supports%20all%20the%20latest%20and%20greatest%20web-related%20technologies.%20This%20is%20my%20passion%20and%20I%20love%20building%20%22responsive%22%20web%20applications.%0A%20%0AClick%20here%20to%20see%20the%20details%20of%20all%20my%20qualifications%20on%20LinkedIn.%0A%20%0ASince%20forming%20Mission%20Ridge%20Software%20Consulting%2C%20I%27ve%20worked%20with%20several%20companies%20and%20they%20have%20had%20a%20lot%20of%20great%20things%20to%20say%20about%20the%20services%20Mission%20Ridge%20Software%20Consulting%20LLC%20provided.%20Check%20out%20these%20recommendations%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::SubTitle" x="163" y="1112" w="-1" h="-1" measuredW="200" measuredH="33" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Recommendations</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Image" x="163" y="1187" w="63" h="64" measuredW="200" measuredH="200" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../app/assets/images/shawn_duex.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::TextArea" x="233" y="1184" w="1054" h="132" measuredW="200" measuredH="140" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%22Jon%20and%20I%20have%20been%20working%20together%20on%20and%20off%20since%202008.%20We%20worked%20together%20at%20Microsoft%20and%20most%20recently%20we%20have%20been%20working%20closely%20at%20Rightscale.%20Jon%20is%20responsible%20for%20the%20development%20and%20support%20of%20our%20automated%20test%20frameworks.%20These%20frameworks%20included%20the%20virtual%20monkey%20and%20rocket%20monkey%20testing%20tools%20used%20by%20my%20team%20to%20validate%20RightScale%27s%20Windows%20RightImages%20and%20ServerTemplates.%0A%20%0AJon%20has%20consistently%20provided%20amazing%20support%20for%20my%20team.%20He%20has%20championed%20many%20important%20features%20my%20team%20has%20needed%20and%20he%20builds%20these%20new%20features%20with%20an%20extremely%20high%20level%20of%20quality.%20Jon%20is%20very%20quick%20to%20deliver%20and%20does%20an%20amazing%20job%20following%20up%20with%20my%20team%20to%20ensure%20that%20these%20new%20features%20are%20successfully%20integrated.%20If%20we%20encounter%20an%20issue%2C%20Jon%20is%20always%20readily%20available%20to%20suggest%20a%20work-around%20and%20get%20a%20fix%20developed%20quickly.%0A%20%0AMany%20of%20my%20team%20members%20are%20offshore%20and%20Jon%20has%20always%20made%20him%20self%20available%20during%20their%20work%20day%20to%20help%20with%20issues%20or%20troubleshooting%20problems.%20Often%20times%20Jon%20will%20go%20the%20extra%20mile%20and%20proactively%20check%20in%20with%20my%20team%20members%20and%20make%20sure%20they%20are%20unblocked%20and%20working%20efficiently%20with%20the%20tools%20he%20supports.%0A%20%0AIn%20summary%2C%20Jon%20provides%20a%20level%20of%20productivity%2C%20support%2C%20quality%20and%20professionalism%20that%20is%20not%20typical%20in%20the%20industry.%20Coupled%20with%20his%20many%20years%20of%20software%20development%20experience%2C%20Jon%20would%20make%20a%20great%20addition%20to%20any%20software%20development%20organization%20that%20might%20be%20considering%20bringing%20him%20on.%22</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
