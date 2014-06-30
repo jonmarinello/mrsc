@@ -17,6 +17,7 @@
     </control>
     <control controlID="14" controlTypeID="com.balsamiq.mockups::ButtonBar" x="249" y="109" w="362" h="55" measuredW="292" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
+        <selectedIndex>-1</selectedIndex>
         <text>Projects%2CAbout%2CServices%2CContact</text>
       </controlProperties>
     </control>
