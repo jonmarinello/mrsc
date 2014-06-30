@@ -11,12 +11,12 @@
     #collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li{:class => @active_tab == 'projects' ? 'active' : ''}
-          =link_to('Projects', { controller: 'statics', action: 'projects' })
+          =link_to('Projects', { controller: 'pages', action: 'projects' })
         %li{:class => @active_tab == 'about' ? 'active' : ''}
-          =link_to('About', { controller: 'statics', action: 'about' })
+          =link_to('About', { controller: 'pages', action: 'about' })
         %li{:class => @active_tab == 'services' ? 'active' : ''}
-          =link_to('Services', { controller: 'statics', action: 'services' })
+          =link_to('Services', { controller: 'pages', action: 'services' })
         %li{:class => @active_tab == 'contact' ? 'active' : ''}
-          =link_to('Contact', { controller: 'statics', action: 'contact' })
+          =link_to('Contact', { controller: 'pages', action: 'contact' })
 %h3
   Mission Ridge Software Consulting LLC

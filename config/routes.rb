@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Point the MRSC web site root to the index page
-  root :to => 'statics#index'
+  root :to => 'pages#index'
 
   # Automatically match all out routes
   match ':controller(/:action(/:id))', :via => :get

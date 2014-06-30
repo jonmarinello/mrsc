@@ -1,4 +1,4 @@
-class StaticsController < ApplicationController
+class PagesController < ApplicationController
 
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'
