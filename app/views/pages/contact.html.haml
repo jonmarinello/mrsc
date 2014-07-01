@@ -21,14 +21,8 @@
     %address
       %strong Skype
       %br/
-      If you would like to skype us a message, please be sure to include a short message that explains your request
-      for information and that it is related to Mission Ridge Software Consulting LLC.
-      %script{src: "http://www.skypeassets.com/i/scom/js/skype-uri.js", type: "text/javascript"}
-      %div{id: "SkypeButton_Call_jon.marinello.mrsc_1"}
-        :javascript
-          Skype.ui({
-            "name": "dropdown",
-            "element": "SkypeButton_Call_jon.marinello.mrsc_1",
-            "participants": ["jon.marinello.mrsc"],
-            "imageSize": 32
-          });
+      If you would like to Skype us, please be sure to include a short message that explains a summary of your request
+      for information and that it is related to Mission Ridge Software Consulting LLC. Just click to Skype button below:
+      %br/
+      %a{href: 'skype:jon.marinello.mrsc?chat'}
+        =image_tag 'skype.jpg', :class => 'img-responsive', :width => 80
