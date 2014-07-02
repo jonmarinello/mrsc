@@ -2,6 +2,7 @@ MRSC
 ====
 
 Mission Ridge Software Development LLC
+
 Company Web Site
 
 Current Build Status of this Branch
@@ -14,4 +15,5 @@ Copyright Notice
 ----------------
 
 Copyright © 2014 Mission Ridge Software Development LLC
+
 All rights reserved.
