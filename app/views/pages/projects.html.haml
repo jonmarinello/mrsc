@@ -1,3 +1,4 @@
+- button_text = 'READ THEIR RECOMMENDATIONS'
 =render 'layouts/main_nav_bar'
 %p
   =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
@@ -27,15 +28,17 @@
         %p
           We worked with Rightscale starting in January 2012 for two years on their command-line driven, server template test automation framework with a domain-specific DSL known affectionately as the Virtual Monkey.
         %p
-          Server templates provide a repeatable set of bash scripts or chef recipes that can be applied to a server launched in the cloud. Server templates include provisioning logic that can be run at boot-time, operationally, or during decommission.
+          Server templates provide a repeatable set of bash scripts or chef recipes that can be applied to a server launched in the cloud. Server templates include provisioning logic that can be run at boot-time, operationally, or during decommission. We took the Virtual Monkey over and maintained and extended it into the Next Generation phase. This work included revamping the domain-specific DSL to support many new advanced features like code sharing, test case tagging and shared helpers.
         %p
-          We took the Virtual Monkey over and maintained and extended it into the Next Generation phase. This work included revamping the domain-specific DSL to support many new advanced features like code sharing, test case tagging and shared helpers. Then we hot rodded it with additional layer called the Rocket Monkey. This new layer of the software stack provides a Google Drive matrix-driven interface that allows simplified definition of server template tests across multiple clouds. We also, maintained and extended the Virtual Monkey server template in both RightScript and Chef versions. Combined these three components are the Monkey Stack. We also ported the entire stack from Ruby 1.8.7 to 1.9.3.
+          Then we hot rodded it with an additional software layer called the Rocket Monkey. This new layer of the software stack provides a Google Drive matrix-driven interface that allows simplified definition of server template tests across multiple clouds. It also provided a very rich set of web-based reports and embedded Google charts. We also, maintained and extended the Virtual Monkey server template in both RightScript and Chef versions. Combined these three components are the Monkey Stack. We also ported the entire stack from Ruby 1.8.7 to 1.9.3. We supported teams teams in the Santa Barbara area as well as overseas in Belarus.
         %p
           This Virtual and Rocket monkeys are Ruby based and run on many flavors of Unix both in the cloud and locally (Ubuntu, CentOS, Linux, Mac OSX and others). The Monkey Stack and test collateral interact with Rightscale's API to create and launch servers in the cloud from a designated set of server templates. The monkey framework then executes the test collateral to interrogate the operational servers to validate the server templates have been coded per specification.
         %p
           We worked with numerous clouds in this engagement including Amazon Web Services (AWS), Rackspace, CloudStack, Google Compute Engine (GCE), Azure and HP.
         %p
-          %a.btn.btn-warning.btn-block{href: 'about#jonmarinello'} Recommendations
+          %center
+            %a.btn.btn-warning{href: 'about#jonmarinello'}
+              = button_text
   .col-md-4
     .thumbnail
       .caption
@@ -44,8 +47,14 @@
           %a{:target => '_blank', :href => 'http://elite-associates.com'}
             =image_tag 'elite_associates.jpg', :class => 'img-responsive'
         %p
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+          In the summer of 2011 Elite Associates contacted us for help with their development process. They were looking for guidance in two key areas; improving software quality and streamlining their engineering process.
         %p
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          Elite Associates had been using the Waterfall process for software development but like many companies, they were frustrated with how inflexible the process was and they needed to do something to respond to rapidly changing customer requirements. We provided them with the training and materials they needed to quickly adopt the Scrum Agile development process. This led to a marked increase in their ability to provide customers with the features they really needed and avoid building capabilities their customers rarely or never used in practice.
         %p
-          %a.btn.btn-warning.btn-block{href: 'about#jonmarinello'} Recommendations
+          As part of their conversion to agile software development we recommended that they adopt Test Driven Development (TDD). Here we provided them with the training and examples they needed to quickly adopt the new testing practice. Thier defect counts were greatly reduced and the overall software quality was immensely improved. It also, led to much more predictable software planning and execution since much less time was spent finding and fixing bugs after the code left the developer’s workstations. QA time was significantly reduced and they were no longer considered a bottleneck, but most importantly, their customers were finding fewer defects in production.
+        %p
+          With our help,  the testing and process changes we proposed and helped implement, had a direct and very positive impact on how Elite Associates was viewed by their customers and the market in general.
+        %p
+          %center
+            %a.btn.btn-warning{href: 'about#jonmarinello'}
+              = button_text
