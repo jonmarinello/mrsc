@@ -22,24 +22,15 @@
           %a{:target => '_blank', :href => 'http://www.rightscale.com'}
             =image_tag 'rightscale.jpg', :class => 'img-responsive'
         %p
-          QA Automation Team contract developer. Responsible for all development and maintenance the Virtual and
-          Rocket Monkey automation test frameworks.
+          We worked with Rightscale starting in January 2012 for two years on their command-line driven, server template test automation framework with a domain-specific DSL known affectionately as the Virtual Monkey.
         %p
-          The Virtual and Rocket Monkey test framework is used to test cloud-based server templates across all the
-          clouds supported by RightScale. This is a Ruby-based framework that runs on many flavors of Unix both cloud
-          based and local (Ubuntu, CentOS, Linux, Mac OSX and others). The monkey framework and test collateral
-          interact with Rightscale's API to create and launch servers in the cloud from a designated set of server
-          templates. The monkey framework then executes the test collateral to interrogate the operational servers
-          to validate the server templates have been coded per specification.
+          Server templates provide a repeatable set of bash scripts or chef recipes that can be applied to a server launched in the cloud. Server templates include provisioning logic that can be run at boot-time, operationally, or during decommission.
         %p
-          Server templates provide a repeatable set of bash scripts or chef recipes that can be applied to a server
-          launched in the cloud. Server templates include scripts/recipes that can be run at boot-time, operationally,
-          or during decommission.
+          We took the Virtual Monkey over and maintained and extended it into the Next Generation phase. This work included revamping the domain-specific DSL to support many new advanced features like code sharing, test case tagging and shared helpers. Then we hot rodded it with additional layer called the Rocket Monkey. This new layer of the software stack provides a Google Drive matrix-driven interface that allows simplified definition of server template tests across multiple clouds. We also, maintained and extended the Virtual Monkey server template in both RightScript and Chef versions. Combined these three components are the Monkey Stack. We also ported the entire stack from Ruby 1.8.7 to 1.9.3.
         %p
-          Clouds used: Amazon Web Services (AWS), Rackspace, CloudStack, GCE, Azure, HP, Datapipe
+          This Virtual and Rocket monkeys are Ruby based and run on many flavors of Unix both in the cloud and locally (Ubuntu, CentOS, Linux, Mac OSX and others). The Monkey Stack and test collateral interact with Rightscale's API to create and launch servers in the cloud from a designated set of server templates. The monkey framework then executes the test collateral to interrogate the operational servers to validate the server templates have been coded per specification.
         %p
-          Tools and technologies used: RubyMine, Amazon's SimpleDB and S3 Services, Ruby, git, github, Jenkins,
-          SourceTree, vi/vim, Accunote, Confluence
+          We worked with numerous clouds in this engagement including Amazon Web Services (AWS), Rackspace, CloudStack, Google Compute Engine (GCE), Azure and HP.
         %p
           %a.btn.btn-warning.btn-block{href: 'about#jonmarinello'} Recommendations
   .col-md-4
