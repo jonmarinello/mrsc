@@ -7,7 +7,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-  .mrsc_container
+  .mrsc-container
+    =render 'layouts/main_nav_bar'
     = yield
     .well
       %center
