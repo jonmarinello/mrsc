@@ -3,7 +3,7 @@
 %h3
   Our Mission
 .well
-  =image_tag 'mrsc.jpg', :class => 'padded-image img-responsive pull-left'
+  =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
   %p
     Our mission is to provide our customers with very highest quality consulting services that are delivered per
     specification, on time, every time.
@@ -16,12 +16,12 @@
     Mission Ridge Software Consulting LLC is a sole proprietorship owned and operated by Jon Marinello.
 %h3
   The Team
-.panel.panel-default
+.panel.panel-primary
   .panel-heading
     %h3.panel-title
-      =image_tag 'jonmarinello.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => 140
       %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
   .panel-body
+    =image_tag 'jonmarinello.jpg', :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => 140
     %p
       Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
       I have over 30 years of experience developing highly scalable, reliable and available software systems
@@ -50,7 +50,7 @@
   -# Also, note that this is the first time through the loop so we only open the first accordion panel.
   - first_time = true
   - @recommendations.each_key do |key|
-    .panel.panel-default
+    .panel.panel-info
       .panel-heading
         %h4.panel-title
           %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => "collapse", href: "##{key}"}
@@ -58,7 +58,7 @@
       -# Generate the id using the key
       .panel-collapse.collapse{id: "#{key}", :class => ('in' if first_time) }
         .panel-body
-          =image_tag "#{key}.jpg", :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+          =image_tag "#{key}.jpg", :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => @person_image_width
           -# Now iterate over the body paragraphs and display them each in their own paragraph tag
           - @recommendations[key]['body'].each do |paragraph|
             %p
