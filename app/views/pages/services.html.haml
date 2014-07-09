@@ -26,7 +26,10 @@
           =image_tag 'prototyping.jpg', :class => 'img-responsive pull-left', :width => 80
           Pork pig bresaola porchetta bacon pastrami. Jowl pork belly short loin venison bacon shankle meatloaf flank strip steak chuck tri-tip. Filet mignon pork loin turducken pastrami. Tri-tip pig kielbasa pork belly sirloin tenderloin pancetta meatloaf prosciutto shoulder.
           %p
-            %iframe{:allowfullscreen => '', :frameborder => '0', :width => '400em', :height => '300em', :src => "//www.youtube.com/embed/aJTuFRaIi_g"}
+            .responsive-embedded-youtube-video
+              .delimiter
+                .container
+                  %iframe{:frameborder => '0', :src => "//www.youtube.com/embed/aJTuFRaIi_g"}
   .clearfix.visible-lg
   .col-lg-4.col-md-6.col-sm-10.col-xs-12
     .thumbnail
