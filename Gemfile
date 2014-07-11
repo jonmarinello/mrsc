@@ -11,7 +11,7 @@ gem 'rails', '4.1.1'
 
 group :production do
   # Production database
-  #gem 'pg', '0.17.1'
+  gem 'pg', '0.17.1'
 end
 
 group :development, :test do
