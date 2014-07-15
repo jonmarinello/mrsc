@@ -31,3 +31,6 @@ config/initializers/secret_token.rb
 
 # Mac Desktop Services Store files
 .DS_Store
+
+# Database yaml file
+database.yml
