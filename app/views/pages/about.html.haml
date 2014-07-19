@@ -50,7 +50,7 @@
   -# Also, note that this is the first time through the loop so we only open the first accordion panel.
   - first_time = true
   - @recommendations.each_key do |key|
-    .panel.panel-info
+    .panel.panel-success
       .panel-heading
         %h4.panel-title
           %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => "collapse", href: "##{key}"}

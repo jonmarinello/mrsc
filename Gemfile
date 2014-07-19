@@ -67,3 +67,4 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', '0.0.0', group: [:development, :test]
 
+gem 'bootswatch-rails'
