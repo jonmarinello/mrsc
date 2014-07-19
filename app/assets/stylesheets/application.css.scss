@@ -15,30 +15,18 @@
  */
 /*@import "bootstrap";*/
 
-// Example using 'Cerulean' bootswatch
+// Integrate bootswatch theme
 //
-// First import cerulean variables
-@import "bootswatch/cosmo/variables";
+// First import theme variables
+@import 'bootswatch/cerulean/variables';
 
 // Then bootstrap itself
-@import "bootstrap";
+@import 'bootstrap';
 
 // Bootstrap body padding for fixed navbar
 body { padding-top: 60px; }
 
 // And finally bootswatch style itself
-@import "bootswatch/cosmo/bootswatch";
+@import 'bootswatch/cerulean/bootswatch';
 
-/* Push down the body so that the fixed toolbar won't cover the content */
-body {
-    padding-top: 30px;
-}
-
-/* Change the default padding so that the MRSC logo fits inside the toolbar */
-.navbar-brand {
-    padding: 1px;
-}
-
-.mrsc-container {
-    padding: 1em;
-}
+@import 'base';
