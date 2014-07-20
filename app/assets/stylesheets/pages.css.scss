@@ -1,0 +1,35 @@
+// Place all the styles related to the Statics controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mrsc-padded-image {
+  padding-right: 1em;
+  padding-bottom: 0.10em;
+}
+
+.social-media {
+  align: center;
+  width: 22em;
+}
+
+.responsive-embedded-youtube-video {
+  .delimiter {
+    width: 100%;
+    margin: auto;
+  }
+
+  .container {
+    height: 0px;
+    width: 100%;
+    padding-top: 56.25%; /* Relationship: 16/9 = 56.25% */
+    position: relative;
+  }
+
+  iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}

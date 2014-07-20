@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  # Point the MRSC web site root to the index page
+  root :to => 'pages#index'
+
+  # Automatically match all out routes
+  match ':controller(/:action(/:id))', :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

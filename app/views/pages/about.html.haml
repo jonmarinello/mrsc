@@ -1,0 +1,68 @@
+%p
+  =image_tag 'about.jpg', :class => 'img-responsive img-rounded pull-right'
+%h3
+  Our Mission
+.well
+  =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
+  %p
+    %strong
+      Our mission is to provide our customers with very highest quality consulting services that are delivered per
+      specification, on time, every time.
+  %P
+    We are dedicated to helping you achieve greater success by providing
+    targeted technical education, improving your overall level of Engineering Excellence as well as directly
+    contributing to the development of your products and services. Your success and satisfaction is what makes
+    or breaks our business.
+  %p
+    Mission Ridge Software Consulting LLC is a sole proprietorship owned and operated by Jon Marinello.
+%h3
+  The Team
+.panel.panel-primary
+  .panel-heading
+    %h3.panel-title
+      %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
+  .panel-body
+    =image_tag 'jonmarinello.jpg', :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => 140
+    %p
+      Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
+      I have over 30 years of experience developing highly scalable, reliable and available software systems
+      in use today by tens of millions of subscribers. I have held senior level positions at Borland, Unisys,
+      Callwave, United Online (NetZero & Juno) and Microsoft.
+    %p
+      In the past we've helped companies transition to Agile methodologies as well as maintaining and extending
+      Ruby-based large-scale
+      test automation frameworks.
+    %p
+      Currently, I prefer to work in Ruby on Rails. Its a wonderful platform that allows you to get
+      the most bang for your buck and supports all the latest and greatest web-related technologies. This is my
+      passion and I love building "responsive" web applications.
+    %p
+      Click
+      %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} here
+      to see the details of all my qualifications on LinkedIn.
+    %p
+      Since forming Mission Ridge Software Consulting LLC, I've worked with several companies and they have had a lot of
+      great things to say about the services Mission Ridge Software Consulting LLC provided. Check out these recommendations:
+%h3
+  Recommendations
+#accordion.panel-group
+  -# Iterate over the hash of recommendations getting the key out so we can use that for generating the ids and also so we
+  -# can index into the hash to get the title and body elements.
+  -# Also, note that this is the first time through the loop so we only open the first accordion panel.
+  - first_time = true
+  - @recommendations.each_key do |key|
+    .panel.panel-success
+      .panel-heading
+        %h4.panel-title
+          %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => "collapse", href: "##{key}"}
+            = @recommendations[key]['title']
+      -# Generate the id using the key
+      .panel-collapse.collapse{id: "#{key}", :class => ('in' if first_time) }
+        .panel-body
+          =image_tag "#{key}.jpg", :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => @person_image_width
+          -# Now iterate over the body paragraphs and display them each in their own paragraph tag
+          - @recommendations[key]['body'].each do |paragraph|
+            %p
+              = paragraph
+    -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
+    - first_time = false

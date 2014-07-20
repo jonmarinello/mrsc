@@ -11,7 +11,6 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 config/initializers/secret_token.rb
-config/secrets.yml
 
 ## Environment normalisation:
 /.bundle
@@ -19,6 +18,19 @@ config/secrets.yml
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
+.ruby-version
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Vagrant
+.vagrant
+
+# RubyMine
+.idea
+
+# Mac Desktop Services Store files
+.DS_Store
+
+# Database yaml file
+database.yml
