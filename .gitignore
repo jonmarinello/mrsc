@@ -28,3 +28,9 @@ config/initializers/secret_token.rb
 
 # RubyMine
 .idea
+
+# Mac Desktop Services Store files
+.DS_Store
+
+# Database yaml file
+database.yml

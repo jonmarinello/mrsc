@@ -1,22 +1,16 @@
 %nav.div
-  %nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
-    %div{class: "navbar-header>"}
-      %button.navbar-toggle{"data-target" => "#collapse", "data-toggle" => "collapse", type: "button"}
+  %nav.navbar.navbar-default.navbar-fixed-top{role: 'navigation'}
+    %div{class: 'navbar-header>'}
+      %button.navbar-toggle{"data-target" => '#collapse', "data-toggle" => 'collapse', type: 'button'}
         %span.sr-only Toggle Navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
+        - 3.times do
+          %span.icon-bar
       %a.navbar-brand{href: root_path}
-        %img.img-responsive{alt: 'MRSC', src: asset_path('mrsc.jpg'), width: '80'}
+        %img.img-responsive{alt: 'mrsc', src: asset_path('mrsc.jpg'), width: '80'}
     #collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li{:class => @active_tab == 'projects' ? 'active' : ''}
-          =link_to('Projects', { controller: 'pages', action: 'projects' })
-        %li{:class => @active_tab == 'about' ? 'active' : ''}
-          =link_to('About', { controller: 'pages', action: 'about' })
-        %li{:class => @active_tab == 'services' ? 'active' : ''}
-          =link_to('Services', { controller: 'pages', action: 'services' })
-        %li{:class => @active_tab == 'contact' ? 'active' : ''}
-          =link_to('Contact', { controller: 'pages', action: 'contact' })
+        - %w(projects about services contact).each do |page|
+          %li{:class => @active_tab == page ? 'active' : ''}
+            =link_to(page.capitalize, { controller: 'pages', action: page })
 %h3
   Mission Ridge Software Consulting LLC

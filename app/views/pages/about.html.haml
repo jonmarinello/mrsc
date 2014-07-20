@@ -1,24 +1,28 @@
-=render 'layouts/main_nav_bar'
 %p
-  =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
+  =image_tag 'about.jpg', :class => 'img-responsive img-rounded pull-right'
 %h3
   Our Mission
 .well
-  Our mission is to provide our customers with very highest quality consulting services that are delivered per
-  specification, on time, every time. We are dedicated to helping you achieve greater success by providing
-  targeted technical education, improving your overall level of Engineering Excellence as well as directly
-  contributing to the development of your products and services. Your success and satisfaction is what makes
-  or breaks our business.
-
-  Mission Ridge Software Consulting LLC is a sole proprietorship owned and operated by Jon Marinello.
+  =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
+  %p
+    %strong
+      Our mission is to provide our customers with very highest quality consulting services that are delivered per
+      specification, on time, every time.
+  %P
+    We are dedicated to helping you achieve greater success by providing
+    targeted technical education, improving your overall level of Engineering Excellence as well as directly
+    contributing to the development of your products and services. Your success and satisfaction is what makes
+    or breaks our business.
+  %p
+    Mission Ridge Software Consulting LLC is a sole proprietorship owned and operated by Jon Marinello.
 %h3
   The Team
-.panel.panel-default
+.panel.panel-primary
   .panel-heading
     %h3.panel-title
-      =image_tag 'jonmarinello.jpg', :class => 'padded-image img-responsive img-circle pull-left', :width => 140
       %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
   .panel-body
+    =image_tag 'jonmarinello.jpg', :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => 140
     %p
       Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
       I have over 30 years of experience developing highly scalable, reliable and available software systems
@@ -47,7 +51,7 @@
   -# Also, note that this is the first time through the loop so we only open the first accordion panel.
   - first_time = true
   - @recommendations.each_key do |key|
-    .panel.panel-default
+    .panel.panel-success
       .panel-heading
         %h4.panel-title
           %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => "collapse", href: "##{key}"}
@@ -55,7 +59,7 @@
       -# Generate the id using the key
       .panel-collapse.collapse{id: "#{key}", :class => ('in' if first_time) }
         .panel-body
-          =image_tag "#{key}.jpg", :class => 'padded-image img-responsive img-circle pull-left', :width => @person_image_width
+          =image_tag "#{key}.jpg", :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => @person_image_width
           -# Now iterate over the body paragraphs and display them each in their own paragraph tag
           - @recommendations[key]['body'].each do |paragraph|
             %p

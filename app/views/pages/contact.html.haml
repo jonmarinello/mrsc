@@ -1,34 +1,33 @@
-=render 'layouts/main_nav_bar'
 %p
   =image_tag 'contact.jpg', :class => 'img-responsive img-rounded'
-.well-lg
-  %blockquote
-    %address
-      %strong Mailing Address
-      %br/
-      Mission Ridge Software Consulting LLC
-      %br/
-      1410 Harbor View Drive
-      %br/
-      Santa Barbara, CA 93103
-      %br/
-      %abbr{title: 'Phone'} P:
-      (805) 705-7929
-    %address
-      %strong Email
-      %br/
-      %a{href: "mailto:jonmarinello@gmail.com"} Jon Marinello
-    %address
-      %strong Skype
-      %br/
-      If you would like to skype us a message, please be sure to include a short message that explains your request
-      for information and that it is related to Mission Ridge Software Consulting LLC.
-      %script{src: "http://www.skypeassets.com/i/scom/js/skype-uri.js", type: "text/javascript"}
-      %div{id: "SkypeButton_Call_jon.marinello.mrsc_1"}
-        :javascript
-          Skype.ui({
-            "name": "dropdown",
-            "element": "SkypeButton_Call_jon.marinello.mrsc_1",
-            "participants": ["jon.marinello.mrsc"],
-            "imageSize": 32
-          });
+.row
+  .col-md-6.col-sm-6
+    .well-lg
+      %blockquote
+        %address
+          %strong Mailing Address
+          %br/
+          Mission Ridge Software Consulting LLC
+          %br/
+          1410 Harbor View Drive
+          %br/
+          Santa Barbara, CA 93103
+          %br/
+          %abbr{title: 'Phone'} P:
+          (805) 705-7929
+        %address
+          %strong Email
+          %br/
+          %a{href: "mailto:jonmarinello@gmail.com"} Jon Marinello
+        %address
+          %strong Skype
+          %br/
+          %br/
+          %a{href: 'skype:jon.marinello.mrsc?chat'}
+            =image_tag 'skype.jpg', :class => 'mrsc-padded-image img-responsive pull-left', :width => 80
+          If you would like to Skype us click the skype button and include a short message that explains a summary of your request
+          for information and that it is related to Mission Ridge Software Consulting LLC.
+  .col-md-6.col-sm-6
+    .well-lg
+      %blockquote
+        %iframe{:frameborder => "0", :height => "400", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26328.953979405916!2d-119.66473400000005!3d34.423725999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e913bb21fdb28d%3A0xfb6a9d458dfaa3bf!2s1410+Harbor+View+Dr!5e0!3m2!1sen!2sus!4v1404473191641", :style => "border:0", :width => "400"}

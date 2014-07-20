@@ -15,16 +15,18 @@
  */
 /*@import "bootstrap";*/
 
-/* Push down the body so that the fixed toolbar won't cover the content */
-body {
-    padding-top: 30px;
-}
+// Integrate bootswatch theme
+//
+// First import theme variables
+@import 'bootswatch/cerulean/variables';
 
-/* Change the default padding so that the MRSC logo fits inside the toolbar */
-.navbar-brand {
-    padding: 1px;
-}
+// Then bootstrap itself
+@import 'bootstrap';
 
-.mrsc_container {
-    padding: 1em;
-}
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// And finally bootswatch style itself
+@import 'bootswatch/cerulean/bootswatch';
+
+@import 'base';

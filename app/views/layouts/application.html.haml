@@ -3,19 +3,46 @@
   %head
     %title MRSC
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-  .mrsc_container
+  .mrsc-container
+    =render 'layouts/main_nav_bar'
     = yield
     .well
       %center
         %h3 Have a project we can help with?
         %p.text-uppercase
-          %a.btn.btn-warning{href: url_for(:controller => 'pages', :action => 'services') } LET'S TALK ABOUT YOUR PROJECT
+          %a.btn.btn-warning{href: url_for(:controller => 'pages', :action => 'contact')} LET'S TALK ABOUT YOUR PROJECT &raquo;
     %center
       %footer
+        .social-media
+          %h4
+            Stay Connected With Us
+          %ul.fa-ul{:class => 'nav nav-pills'}
+            %li
+              %a{:target => '_blank', :href => "skype:jon.marinello.mrsc?chat"}
+                %i.fa.fa-2x.fa-skype
+            %li
+              %a{:target => '_blank', :href => "https://www.facebook.com/missionridgeconsulting"}
+                %i.fa.fa-2x.fa-facebook
+            %li
+              %a{:target => '_blank', :href => "http://twitter.com/jonmarinello"}
+                %i.fa.fa-2x.fa-twitter
+            %li
+              %a{:target => '_blank', :href => "http://google.com/+JonMarinello"}
+                %i.fa.fa-2x.fa-google
+            %li
+              %a{:target => '_blank', :href => "https://github.com/jonmarinello/mrsc"}
+                %i.fa.fa-2x.fa-github-alt
         %small
           Mission Ridge Software Consulting LLC founded 2011, Copyright © 2014
+          %p
+            This site currently hosted on Heroku running Ruby on Rails
+            = Rails::VERSION::STRING
+            with Bootstrap 3 and Ruby
+            = succeed '.' do
+              = RUBY_VERSION
   %script{:src => 'http://code.jquery.com/jquery-latest.min.js'}
