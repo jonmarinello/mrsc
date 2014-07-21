@@ -18,7 +18,7 @@
 // Integrate bootswatch theme
 //
 // First import theme variables
-@import 'bootswatch/cerulean/variables';
+@import 'bootswatch/cosmo/variables';
 
 // Then bootstrap itself
 @import 'bootstrap';
@@ -27,6 +27,6 @@
 body { padding-top: 60px; }
 
 // And finally bootswatch style itself
-@import 'bootswatch/cerulean/bootswatch';
+@import 'bootswatch/cosmo/bootswatch';
 
 @import 'base';

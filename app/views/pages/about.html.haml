@@ -1,7 +1,8 @@
 %p
-  =image_tag 'about.jpg', :class => 'img-responsive img-rounded pull-right'
-%h3
-  Our Mission
+  =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
+%h1
+  %center
+    About Us
 .well
   =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
   %p
@@ -66,3 +67,5 @@
               = paragraph
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
     - first_time = false
+%p
+  %a.btn.btn-primary{href: '/pages/services'} READ MORE &raquo;

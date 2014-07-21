@@ -1,11 +1,15 @@
+- default_image_width = 200
 %p
   =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
+%h1
+  %center
+    Our Core Services
 .row
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'rails.jpg', :class => 'img-responsive pull-left img-rounded mrsc-padded-image', :width => 120
+          =image_tag 'rails.png', :class => 'img-responsive pull-left img-rounded mrsc-padded-image', :width => default_image_width
         %h4
           Ruby On Rails Web Development
         %p
@@ -30,12 +34,12 @@
     .thumbnail
       .caption
         %p
-          =image_tag 'iphone_ipad.jpg', :class => 'img-responsive pull-left mrsc-padded-image', :width => 180
+          =image_tag 'iphone_ipad.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => default_image_width
         %h4
           iOS/iPhone/iPad Mobile App Development
         %p
           %strong
-            Let´s build the next great iPhone/iPad app
+            Let's build the next great iPhone/iPad app
         %p
           We love building iPhone and iPad apps. We do native iPhone app development and responsive mobile web
           development. Have an app idea or design you want to get into this rapidly growing marketplace?
@@ -49,20 +53,16 @@
           techniques and design standards for mobile.
         %p
           We're ready to get started developing your iPhone app when you are.
-        %p
+        %strong
           Check out this cool Apple video called
-          %strong Apps We Can't Live Without
-          which should get your juices flowing about a mobile app you could be adding to the Apple marketplace:
-        %p
-          .responsive-embedded-youtube-video
-            .delimiter
-              .container
-                %iframe{:src => '//www.youtube.com/embed/EBSU9KaCYP4'}
+          %a{:target => '_blank', :href => 'http://youtu.be/EBSU9KaCYP4'} Apps We Can't Live Without
+          %strong
+            which should get your juices flowing about a mobile app you could be adding to the Apple marketplace.
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'conceptual_planning.jpg', :class => 'img-responsive pull-left mrsc-padded-image', :width => 180
+          =image_tag 'scrum.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => default_image_width
         %h4
           Agile/Scrum Software Development
         %p
@@ -92,17 +92,17 @@
         -#  throughout development, allowing them to be as competitive as possible in the marketplace. Agile development
         -#  preserves a product’s critical market relevance and ensures a team’s work doesn’t wind up on a shelf, never
         -#  released.
-        %p
-          .responsive-embedded-youtube-video
-            .delimiter
-              .container
-                %iframe{:src => '//www.youtube.com/embed/XU0llRltyFM'}
+        %strong
+          To get a short introduction to Scrum take a look at this short video called
+          %a{:target => '_blank', :href => 'http://youtu.be/XU0llRltyFM'}
+            %strong
+              Intro to Agile Scrum in Under 10 Minutes - What is Scrum?
 .row
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'mind_map.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => 180
+          =image_tag 'mind_map.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => default_image_width
         %h4
           Mind Mapping
         %p
@@ -138,17 +138,16 @@
           lead. Mind mapping helps us to do this and at the same time will document these ideas, their connections and the
           resources we will need to complete your vision and project.
         %p
-          %strong Check out how mind mapping works to help us explore your ideas this short video:
-        %p
-          .responsive-embedded-youtube-video
-            .delimiter
-              .container
-                %iframe{:src => '//www.youtube.com/embed/v8_H42Z9wxA'}\
+          %strong
+            Check out how mind mapping works to help us explore your ideas in this short video called
+          %a{:target => '_blank', :href => 'http://youtu.be/v8_H42Z9wxA'}
+            %strong
+              How To Make A Mind Map
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'prototyping.jpg', :class => 'img-responsive pull-left mrsc-padded-image', :width => 130
+          =image_tag 'prototyping.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => default_image_width
         %h4
           UX Prototyping
         %p
@@ -170,17 +169,15 @@
           and refine them sooner, leaving more time for discussion and writing code.
           %em All at lower cost to you!
         %p
-          %strong Check out how quickly we can mockup a user interface for you in this short video:
-        %p
-          .responsive-embedded-youtube-video
-            .delimiter
-              .container
-                %iframe{:src => '//www.youtube.com/embed/aJTuFRaIi_g'}
+          %strong Take a quick look at how quickly we can mockup a user interface for you in this video called
+          %a{:target => '_blank', :href => 'http://youtu.be/aJTuFRaIi_g'}
+            %strong
+              Balsamiq Mockups Intro
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'cloud.jpg', :class => 'img-responsive pull-left mrsc-padded-image', :width => 160
+          =image_tag 'cloud.png', :class => 'img-responsive pull-left mrsc-padded-image', :width => default_image_width
         %h4
           Everything Cloud
         %p
@@ -203,9 +200,9 @@
           Together we'll explore the power, flexibility and cost savings that cloud computing offers and how it can
           benefit your organization.
         %p
-          %strong Check out this short video on how cloud computing can help you:
-        %p
-          .responsive-embedded-youtube-video
-            .delimiter
-              .container
-                %iframe{:src => '//www.youtube.com/embed/ae_DKNwK_ms'}
+          %strong Check out this great short video called
+          %a{:target => '_blank', :href => 'http://youtu.be/ae_DKNwK_ms'}
+            %strong
+              What is Cloud Computing?
+%p
+  %a.btn.btn-primary{href: '/pages/contact'} READ MORE &raquo;
