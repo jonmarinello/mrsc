@@ -111,29 +111,5 @@
             %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
 %p
   %a.btn.btn-success{href: '/pages/about'} READ MORE &raquo;
-:javascript
-  defaultFontSize = 36
+= javascript_include_tag('main_image_resize')
 
-  function resizeMainImageText() {
-    mainImageText = $("#main-image-text")
-    mainImageLearnMoreButton = $("#main-image-learn-more-button")
-    if ($(window).width() < 500) {
-      mainImageLearnMoreButton.hide();
-      mainImageText.css('font-size', 24);
-    }
-    else
-    {
-      mainImageLearnMoreButton.show();
-      mainImageText.css('font-size', defaultFontSize);
-    }
-  }
-
-  $(document).ready(function() {
-    resizeMainImageText()
-  });
-
-  $(document).ready(function() {
-    $(window).on('resize', function() {
-      resizeMainImageText()
-    });
-  });
