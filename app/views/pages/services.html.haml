@@ -1,6 +1,13 @@
 - default_image_width = 200
-%p
-  =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
+#container
+  %main-image
+    =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
+  %p#main-image-text
+    We offer the services needed to turn your vision into an application
+    %br/
+    %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
+  -#=image_tag 'index.jpg', :class => 'img-responsive img-rounded'
+#start
 %h1
   %center
     Our Core Services
@@ -205,4 +212,4 @@
             %strong
               What is Cloud Computing?
 %p
-  %a.btn.btn-primary{href: '/pages/contact'} READ MORE &raquo;
+  %a.btn.btn-success{href: '/pages/contact'} READ MORE &raquo;

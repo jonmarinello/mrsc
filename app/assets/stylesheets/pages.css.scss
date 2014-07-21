@@ -11,3 +11,26 @@
   align: center;
   width: 22em;
 }
+
+#container
+{
+  position:relative;
+}
+
+#main-image
+{
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+#main-image-text
+{
+  z-index:100;
+  position:absolute;
+  color:white;
+  font-size:36px;
+//  font-weight:bold;
+  left:20px;
+  top:2px;
+}

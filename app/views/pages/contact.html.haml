@@ -1,5 +1,12 @@
-%p
-  =image_tag 'contact.jpg', :class => 'img-responsive img-rounded'
+#container
+  %main-image
+    =image_tag 'contact.jpg', :class => 'img-responsive img-rounded'
+  %p#main-image-text
+    Let's talk about your idea for a new project
+    %br/
+    %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
+  -#=image_tag 'index.jpg', :class => 'img-responsive img-rounded'
+#start
 %h1
   %center
     Contact Us

@@ -1,5 +1,12 @@
-%p
-  =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
+#container
+  %main-image
+    =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
+  %p#main-image-text
+    Who we are and what people are saying saying about us
+    %br/
+    %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
+  -#=image_tag 'index.jpg', :class => 'img-responsive img-rounded'
+#start
 %h1
   %center
     About Us
@@ -7,8 +14,8 @@
   =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
   %p
     %strong
-      Our mission is to provide our customers with very highest quality consulting services that are delivered per
-      specification, on time, every time.
+      We're based in Santa Barbara, California and our mission is to provide you with very highest quality
+      consulting services delivered per specification, on time, every time.
   %P
     We are dedicated to helping you achieve greater success by providing
     targeted technical education, improving your overall level of Engineering Excellence as well as directly
@@ -68,4 +75,4 @@
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
     - first_time = false
 %p
-  %a.btn.btn-primary{href: '/pages/services'} READ MORE &raquo;
+  %a.btn.btn-success{href: '/pages/services'} READ MORE &raquo;

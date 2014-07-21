@@ -1,5 +1,12 @@
-%p
-  =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
+#container
+  %main-image
+    =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
+  %p#main-image-text
+    We have a track record of success
+    %br/
+    %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
+  -#=image_tag 'index.jpg', :class => 'img-responsive img-rounded'
+#start
 %h1
   %center
     We work well with others
@@ -104,4 +111,4 @@
           %center
             %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
 %p
-  %a.btn.btn-primary{href: '/pages/about'} READ MORE &raquo;
+  %a.btn.btn-success{href: '/pages/about'} READ MORE &raquo;
