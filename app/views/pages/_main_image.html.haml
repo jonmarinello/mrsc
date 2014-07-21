@@ -1,9 +1,8 @@
 #container
   %main-image
     =image_tag "#{image}", :class => 'img-responsive img-rounded'
-  %center
-    #main-image-text
-      = greeting
-      #main-image-learn-more-button
-        %a.btn.btn-warning{href: '#learn-more'} LEARN MORE &raquo;
+  #main-image-text
+    = greeting
+    #main-image-learn-more-button
+      %a.btn.btn-warning{href: '#learn-more'} LEARN MORE &raquo;
 #learn-more{:class => 'anchor'}
