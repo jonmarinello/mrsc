@@ -1,10 +1,9 @@
 #container
   %main-image
     =image_tag 'contact.jpg', :class => 'img-responsive img-rounded'
-  .hidden-xs
-    #main-image-text
-      Let's talk about your idea for a new project
-      %br/
+  #main-image-text
+    Let's talk about your idea for a new project
+    #main-image-learn-more-button
       %a.btn.btn-warning{href: '#start'} LEARN MORE
 #start
 %h1
@@ -41,3 +40,29 @@
     .well-lg
       %blockquote
         %iframe{:frameborder => "0", :height => "400", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26328.953979405916!2d-119.66473400000005!3d34.423725999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e913bb21fdb28d%3A0xfb6a9d458dfaa3bf!2s1410+Harbor+View+Dr!5e0!3m2!1sen!2sus!4v1404473191641", :style => "border:0", :width => "400"}
+:javascript
+  defaultFontSize = 36
+
+  function resizeMainImageText() {
+    mainImageText = $("#main-image-text")
+    mainImageLearnMoreButton = $("#main-image-learn-more-button")
+    if ($(window).width() < 500) {
+      mainImageLearnMoreButton.hide();
+      mainImageText.css('font-size', 24);
+    }
+    else
+    {
+      mainImageLearnMoreButton.show();
+      mainImageText.css('font-size', defaultFontSize);
+    }
+  }
+
+  $(document).ready(function() {
+    resizeMainImageText()
+  });
+
+  $(document).ready(function() {
+    $(window).on('resize', function() {
+      resizeMainImageText()
+    });
+  });

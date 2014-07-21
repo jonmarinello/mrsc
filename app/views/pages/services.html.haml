@@ -2,10 +2,9 @@
 #container
   %main-image
     =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
-  .hidden-xs
-    #main-image-text
-      We offer the services needed to realize your vision
-      %br/
+  #main-image-text
+    We offer the services needed to realize your vision
+    #main-image-learn-more-button
       %a.btn.btn-warning{href: '#start'} LEARN MORE
 #start
 %h1
@@ -220,3 +219,29 @@
               What is Cloud Computing?
 %p
   %a.btn.btn-success{href: '/pages/contact'} READ MORE &raquo;
+:javascript
+  defaultFontSize = 36
+
+  function resizeMainImageText() {
+    mainImageText = $("#main-image-text")
+    mainImageLearnMoreButton = $("#main-image-learn-more-button")
+    if ($(window).width() < 500) {
+      mainImageLearnMoreButton.hide();
+      mainImageText.css('font-size', 24);
+    }
+    else
+    {
+      mainImageLearnMoreButton.show();
+      mainImageText.css('font-size', defaultFontSize);
+    }
+  }
+
+  $(document).ready(function() {
+    resizeMainImageText()
+  });
+
+  $(document).ready(function() {
+    $(window).on('resize', function() {
+      resizeMainImageText()
+    });
+  });

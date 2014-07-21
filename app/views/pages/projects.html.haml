@@ -1,10 +1,9 @@
 #container
   %main-image
     =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
-  .hidden-xs
-    #main-image-text
-      We have a track record of success
-      %br/
+  #main-image-text
+    We have a track record of success
+    #main-image-learn-more-button
       %a.btn.btn-warning{href: '#start'} LEARN MORE
 #start
 %h1
@@ -112,3 +111,29 @@
             %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
 %p
   %a.btn.btn-success{href: '/pages/about'} READ MORE &raquo;
+:javascript
+  defaultFontSize = 36
+
+  function resizeMainImageText() {
+    mainImageText = $("#main-image-text")
+    mainImageLearnMoreButton = $("#main-image-learn-more-button")
+    if ($(window).width() < 500) {
+      mainImageLearnMoreButton.hide();
+      mainImageText.css('font-size', 24);
+    }
+    else
+    {
+      mainImageLearnMoreButton.show();
+      mainImageText.css('font-size', defaultFontSize);
+    }
+  }
+
+  $(document).ready(function() {
+    resizeMainImageText()
+  });
+
+  $(document).ready(function() {
+    $(window).on('resize', function() {
+      resizeMainImageText()
+    });
+  });
