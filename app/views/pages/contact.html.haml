@@ -1,11 +1,4 @@
-#container
-  %main-image
-    =image_tag 'contact.jpg', :class => 'img-responsive img-rounded'
-  #main-image-text
-    Let's talk about your idea for a new project
-    #main-image-learn-more-button
-      %a.btn.btn-warning{href: '#start'} LEARN MORE
-#start
+= render partial: 'main_image', :locals => {:greeting => 'Let\'s talk about your idea for a new project'}
 %h1
   %center
     Contact Us

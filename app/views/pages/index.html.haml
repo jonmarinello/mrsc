@@ -1,11 +1,4 @@
-#container
-  %main-image
-    =image_tag 'index.jpg', :class => 'img-responsive img-rounded'
-  #main-image-text
-    We build software with both brains and beauty
-    #main-image-learn-more-button
-      %a.btn.btn-warning{href: '#start'} LEARN MORE
-#start
+= render partial: 'main_image', :locals => {:greeting => 'We build software with both brains and beauty'}
 %h1
   %center
     Welcome To Mission Ridge Software Consulting

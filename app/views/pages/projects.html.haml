@@ -1,11 +1,4 @@
-#container
-  %main-image
-    =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
-  #main-image-text
-    We have a track record of success
-    #main-image-learn-more-button
-      %a.btn.btn-warning{href: '#start'} LEARN MORE
-#start
+= render partial: 'main_image', :locals => {:greeting => 'We have a proven track record of success'}
 %h1
   %center
     We work well with others

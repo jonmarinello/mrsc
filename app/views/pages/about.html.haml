@@ -1,11 +1,4 @@
-#container
-  %main-image
-    =image_tag 'about.jpg', :class => 'img-responsive img-rounded'
-  #main-image-text
-    Who we are & what people are saying saying about us
-    #main-image-learn-more-button
-      %a.btn.btn-warning{href: '#start'} LEARN MORE
-#start
+= render partial: 'main_image', :locals => {:greeting => 'Who we are & what people are saying saying about us'}
 %h1
   %center
     About Us

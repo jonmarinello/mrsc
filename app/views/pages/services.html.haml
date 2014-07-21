@@ -1,12 +1,5 @@
+= render partial: 'main_image', :locals => {:greeting => 'We offer the services needed to realize your vision'}
 - default_image_width = 200
-#container
-  %main-image
-    =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
-  #main-image-text
-    We offer the services needed to realize your vision
-    #main-image-learn-more-button
-      %a.btn.btn-warning{href: '#start'} LEARN MORE
-#start
 %h1
   %center
     Our Core Services

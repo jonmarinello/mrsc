@@ -12,3 +12,9 @@ body {
 .mrsc-container {
   padding: 1em;
 }
+
+// Fixes anchor landing to accommodate the fixed header
+.anchor {
+  position: relative;
+  top: -50px;
+}
