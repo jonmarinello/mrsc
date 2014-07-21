@@ -12,5 +12,5 @@
         - %w(projects about services contact).each do |page|
           %li{:class => @active_tab == page ? 'active' : ''}
             =link_to(page.capitalize, { controller: 'pages', action: page })
-%h3
+%h2
   Mission Ridge Software Consulting LLC
