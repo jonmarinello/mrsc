@@ -3,10 +3,10 @@
   %main-image
     =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
   .hidden-xs
-    %p#main-image-text
-      We offer the services needed to turn your vision into an application
+    #main-image-text
+      We offer the services needed to realize your vision
       %br/
-      %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
+      %a.btn.btn-warning{href: '#start'} LEARN MORE
 #start
 %h1
   %center
@@ -32,11 +32,18 @@
           today's demanding web applications that need to work on both desktop and mobile platforms. It has a large
           community of developers committed to contributing to the Ruby on Rails open source framework.
         %p
+          Coupled with
+          %a{:target => '_blank', :href => 'http://en.wikipedia.org/wiki/Responsive_web_design'}Responsive web design (RWD)
+          the Rails applications we build provide an optimal user experience with easy navigation, minimum
+          resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).
+        %p
           When you're ready to get started with the development of your Ruby on Rails app, we're ready for you.
         %p
-          Krešimir Bojčić, a Ruby Developer at Toptal, has written a great article on why Rails is so popular with the development
-          community. If you want to spend more time exploring this topic, click
-          %a{:target => '_blank', :href => 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails'} here.
+          %strong
+            Check out this
+            %a{:target => '_blank', :href => 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails'}
+              great article
+            on why Rails is so popular with the development community.
   .col-md-4
     .thumbnail
       .caption
