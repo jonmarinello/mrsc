@@ -2,11 +2,11 @@
 #container
   %main-image
     =image_tag 'services.jpg', :class => 'img-responsive img-rounded'
-  %p#main-image-text
-    We offer the services needed to turn your vision into an application
-    %br/
-    %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
-  -#=image_tag 'index.jpg', :class => 'img-responsive img-rounded'
+  .hidden-xs
+    %p#main-image-text
+      We offer the services needed to turn your vision into an application
+      %br/
+      %a.btn.btn-warning{href: '#start'} CLICK HERE TO LEARN MORE
 #start
 %h1
   %center
