@@ -15,18 +15,18 @@
  */
 /*@import "bootstrap";*/
 
-//// Integrate bootswatch theme
-////
-//// First import theme variables
-//@import 'bootswatch/cosmo/variables';
+// Integrate bootswatch theme
 //
-//// Then bootstrap itself
-//@import 'bootstrap';
-//
-//// Bootstrap body padding for fixed navbar
-//body { padding-top: 60px; }
-//
-//// And finally bootswatch style itself
-//@import 'bootswatch/cosmo/bootswatch';
+// First import theme variables
+@import 'bootswatch/cosmo/variables';
+
+// Then bootstrap itself
+@import 'bootstrap';
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// And finally bootswatch style itself
+@import 'bootswatch/cosmo/bootswatch';
 
 @import 'base';
