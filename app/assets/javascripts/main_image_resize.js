@@ -1,10 +1,10 @@
 // Adjusts the main image font size and shows/hides the main image button based on window size
 function handleMainImageFontSizeAndButton() {
     // Get the text
-    mainImageText = $("#main-image-text")
+    var mainImageText = $("#main-image-text");
 
     // Get the button
-    mainImageLearnMoreButton = $("#main-image-learn-more-button")
+    var mainImageLearnMoreButton = $("#main-image-learn-more-button");
 
     if ($(window).width() < 500) {
         // If the window get too small, shrink the text and hide the button
