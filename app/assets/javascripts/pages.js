@@ -22,16 +22,30 @@ function handleMainImageFontSizeAndButton() {
 }
 
 
+// Toggles the "Read More/Read Less" label and associated text visibility
+function handleShowHideText(toggleText, text) {
+    if (toggleText.text().trim() == window.readMoreLabel) {
+        text.show();
+        toggleText.text(window.readLessLabel)
+    }
+    else {
+        text.hide();
+        toggleText.text(window.readMoreLabel)
+    }
+    return false;
+}
+
+
 $(document).ready(function() {
-    // One time sizing at startup when document ready
-    handleMainImageFontSizeAndButton()
+    // One time sizing
+    handleMainImageFontSizeAndButton();
 
     // Register for the resize event so we can adjust the main image text and button
     $(window).on('resize', function() {
         handleMainImageFontSizeAndButton()
     });
 
-    // One time services text visibility at startup when document ready
+    // One time set services "Read More/Read Less" text to be hidden
     $("#rails-text").hide();
     $("#iphone-text").hide();
     $("#scrum-text").hide();
@@ -39,83 +53,32 @@ $(document).ready(function() {
     $("#prototyping-text").hide();
     $("#cloud-text").hide();
 
-    // Register for services text click events to handle visibility
-    $("#toggle-rails-text").unbind("click").click(function(){
-        console.log($("#toggle-rails-text").text())
-        if ($("#toggle-rails-text").text() == "Read More") {
-            $("#rails-text").show('slow');
-            $("#toggle-rails-text").text("Read Less")
-        }
-        else {
-            $("#rails-text").hide('slow');
-            $("#toggle-rails-text").text("Read More")
-        }
-        return false;
+    // Setup our label comparison strings
+    window.readMoreLabel = "More...";
+    window.readLessLabel = "Less...";
+
+    // Register for all the services "Read More/Read Less" click events to handle associated text visibility
+    $("#toggle-rails-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-rails-text"), $("#rails-text"));
     });
 
-    $("#toggle-iphone-text").unbind("click").click(function(){
-        console.log($("#toggle-iphone-text").text())
-        if ($("#toggle-iphone-text").text() == "Read More") {
-            $("#iphone-text").show('slow');
-            $("#toggle-iphone-text").text("Read Less")
-        }
-        else {
-            $("#iphone-text").hide('slow');
-            $("#toggle-iphone-text").text("Read More")
-        }
-        return false;
+    $("#toggle-iphone-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-iphone-text"), $("#iphone-text"));
     });
 
-    $("#toggle-scrum-text").unbind("click").click(function(){
-        console.log($("#toggle-scrum-text").text())
-        if ($("#toggle-scrum-text").text() == "Read More") {
-            $("#scrum-text").show('slow');
-            $("#toggle-scrum-text").text("Read Less")
-        }
-        else {
-            $("#scrum-text").hide('slow');
-            $("#toggle-scrum-text").text("Read More")
-        }
-        return false;
+    $("#toggle-scrum-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-scrum-text"), $("#scrum-text"));
     });
 
-    $("#toggle-mind-map-text").unbind("click").click(function(){
-        console.log($("#toggle-mind-map-text").text())
-        if ($("#toggle-mind-map-text").text() == "Read More") {
-            $("#mind-map-text").show('slow');
-            $("#toggle-mind-map-text").text("Read Less")
-        }
-        else {
-            $("#mind-map-text").hide('slow');
-            $("#toggle-mind-map-text").text("Read More")
-        }
-        return false;
+    $("#toggle-mind-map-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-mind-map-text"), $("#mind-map-text"));
     });
 
-    $("#toggle-prototyping-text").unbind("click").click(function(){
-        console.log($("#toggle-prototyping-text").text())
-        if ($("#toggle-prototyping-text").text() == "Read More") {
-            $("#prototyping-text").show('slow');
-            $("#toggle-prototyping-text").text("Read Less")
-        }
-        else {
-            $("#prototyping-text").hide('slow');
-            $("#toggle-prototyping-text").text("Read More")
-        }
-        return false;
+    $("#toggle-prototyping-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-prototyping-text"), $("#prototyping-text"));
     });
 
-    $("#toggle-cloud-text").unbind("click").click(function(){
-        console.log($("#toggle-cloud-text").text())
-        if ($("#toggle-cloud-text").text() == "Read More") {
-            $("#cloud-text").show('slow');
-            $("#toggle-cloud-text").text("Read Less")
-        }
-        else {
-            $("#cloud-text").hide('slow');
-            $("#toggle-cloud-text").text("Read More")
-        }
-        return false;
+    $("#toggle-cloud-text").unbind("click").click(function() {
+        return handleShowHideText($("#toggle-cloud-text"), $("#cloud-text"));
     });
 });
-

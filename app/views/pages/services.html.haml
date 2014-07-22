@@ -1,5 +1,6 @@
 = render partial: 'main_image', :locals => {:page => 'services'}
 - default_image_width = 200
+- read_more_label = 'More...'
 %h3
   Our Core Services
 .row
@@ -18,7 +19,8 @@
           of development and the many products around it including
           %a{:target => '_blank', :href => 'https://www.heroku.com/'} Heroku
           for hosting, New Relic for monitoring and many more.
-        %a#toggle-rails-text{href: '#'} Read More
+        %a#toggle-rails-text{href: '#'}
+          = read_more_label
         %div#rails-text
           %p
             Rails provides the the most flexible, scalable, secure and well thought out framework for developing
@@ -50,7 +52,8 @@
         %p
           We love building iPhone and iPad apps. We do native iPhone app development and responsive mobile web
           development. Have an app idea or design you want to get into this rapidly growing marketplace?
-        %a#toggle-iphone-text{href: '#'} Read More
+        %a#toggle-iphone-text{href: '#'}
+          = read_more_label
         %div#iphone-text
           %p
             We started developing iPhone apps two years ago in response to the growing demand in the mobile app
@@ -80,7 +83,8 @@
         %p
           We want to develop your project in close concert with you. Along the way, delivering and iterating usable
           features that you can use now. Using Scrum we can get you the most "bang for the buck" as early as possible.
-        %a#toggle-scrum-text{href: '#'} Read More
+        %a#toggle-scrum-text{href: '#'}
+          = read_more_label
         %div#scrum-text
           %p
             Agile development provides opportunities to assess the direction throughout the development lifecycle.
@@ -123,7 +127,8 @@
           concept, drawn as an image in the center of a blank landscape page, to which associated representations of
           ideas such as images, words and parts of words are added. Major ideas are connected directly to the central
           concept, and other ideas branch out from those.
-        %a#toggle-mind-map-text{href: '#'} Read More
+        %a#toggle-mind-map-text{href: '#'}
+          = read_more_label
         %div#mind-map-text
           %p
             What can we use mind maps for?
@@ -170,7 +175,8 @@
           we'll build a set of wireframes to mockup your web or mobile application. Mockups are easy to build quickly and
           super easy to refine. This avoids wasting time writing code for user interfaces that haven't been thoroughly
           thought through and will then need to be changed multiple times.
-        %a#toggle-prototyping-text{href: '#'} Read More
+        %a#toggle-prototyping-text{href: '#'}
+          = read_more_label
         %div#prototyping-text
           %p
             %em Doing this iteration in wireframe mockups significantly reduces costs.
@@ -201,7 +207,8 @@
           If you are looking for expertise in cloud computing then we can help. Cloud computing has become an integral
           part of businesses of all sizes because it allows a company to focus on what they do best without the hassle
           of hardware and software.
-        %a#toggle-cloud-text{href: '#'} Read More
+        %a#toggle-cloud-text{href: '#'}
+          = read_more_label
         %div#cloud-text
           %p
             Cloud computing is in high demand because it allows companies to scale with ease. They can pay for as much as
