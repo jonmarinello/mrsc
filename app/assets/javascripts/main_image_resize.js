@@ -1,23 +1,23 @@
 // Adjusts the main image font size and shows/hides the main image button based on window size
 function handleMainImageFontSizeAndButton() {
-    // Get the text
-    var mainImageText = $("#main-image-text");
+    // Get the text items
+    var mainImageTextItems = $(".main-image-text");
 
-    // Get the button
-    var mainImageLearnMoreButton = $("#main-image-learn-more-button");
+    // Get the learn more buttons
+    var mainImageLearnMoreButtons = $(".main-image-learn-more-button");
 
     if ($(window).width() < 500) {
-        // If the window get too small, hide the button and shrink the text
-        mainImageLearnMoreButton.hide();
-        mainImageText.css('font-size', 24);
+        // If the window get too small, hide the buttons and shrink the text items
+        mainImageLearnMoreButtons.hide();
+        mainImageTextItems.css('font-size', 24);
     }
     else
     {
-        // If the window is big enough, show the button and enlarge the text
-        mainImageLearnMoreButton.show();
+        // If the window is big enough, show the buttons and enlarge the text items
+        mainImageLearnMoreButtons.show();
         // This is the default font size for the main image float text - this should match what's in #main-image-text in
         // pages.css.scss.
-        mainImageText.css('font-size', 36);
+        mainImageTextItems.css('font-size', 33);
     }
 }
 
