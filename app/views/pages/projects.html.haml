@@ -1,5 +1,6 @@
-%p
-  =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
+= render partial: 'main_image', :locals => {:page => 'projects'}
+%h3
+  We work well with others
 .row
   .col-md-4
     .thumbnail
@@ -32,7 +33,7 @@
       .caption
         %h4
           %a{:target => '_blank', :href => 'http://www.rightscale.com'}
-            =image_tag 'rightscale.jpg', :class => 'img-responsive'
+            =image_tag 'rightscale.jpg', :class => 'img-responsive', :width => 300
         %p
           %strong
             RightScale provides a complete management platform to design, deploy, and manage the lifecycle of
@@ -71,7 +72,7 @@
         %h4
           %center
           %a{:target => '_blank', :href => 'http://elite-associates.com'}
-            =image_tag 'elite_associates.jpg', :class => 'img-responsive'
+            =image_tag 'elite_associates.jpg', :class => 'img-responsive', :width => 340
         %p
           %strong
             Elite Associates is involved in all aspects of the design, development and delivery of StarTeam to
@@ -100,3 +101,7 @@
         %p
           %center
             %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
+%p
+  %a.btn.btn-success{href: '/pages/about'} READ MORE &raquo;
+= javascript_include_tag('main_image_resize')
+

@@ -1,13 +1,12 @@
-%p
-  =image_tag 'about.jpg', :class => 'img-responsive img-rounded pull-right'
+= render partial: 'main_image', :locals => {:page => 'about'}
 %h3
-  Our Mission
+  About Us
 .well
   =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
   %p
     %strong
-      Our mission is to provide our customers with very highest quality consulting services that are delivered per
-      specification, on time, every time.
+      We're based in Santa Barbara, California and our mission is to provide you with very highest quality
+      consulting services delivered per specification, on time, every time.
   %P
     We are dedicated to helping you achieve greater success by providing
     targeted technical education, improving your overall level of Engineering Excellence as well as directly
@@ -66,3 +65,7 @@
               = paragraph
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
     - first_time = false
+%p
+  %a.btn.btn-success{href: '/pages/services'} READ MORE &raquo;
+= javascript_include_tag('main_image_resize')
+
