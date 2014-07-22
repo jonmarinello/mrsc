@@ -1,3 +1,12 @@
+// If the window is big enough, show the buttons/border-bottoms
+function showCarouselButtonAndBottomBorder(mainImageLearnMoreButtons) {
+    mainImageLearnMoreButtons.show();
+    pageHeader = $(".main-image-text .page-header");
+    pageHeader.css("padding-bottom", "9.5px");
+    pageHeader.css("border-bottom", "1px solid #e6e6e6");
+}
+
+
 // Adjusts the main image font size and shows/hides the main image button based on window size
 function handleMainImageFontSizeAndButton() {
     // Get the text items
@@ -6,18 +15,25 @@ function handleMainImageFontSizeAndButton() {
     // Get the learn more buttons
     var mainImageLearnMoreButtons = $(".main-image-learn-more-button");
 
-    if ($(window).width() < 550) {
-        // If the window get too small, hide the buttons and shrink the text items
-        mainImageLearnMoreButtons.hide();
-        mainImageTextItems.css('font-size', 24);
+    if ($(window).width() < 760) {
+        if ($(window).width() < 560) {
+            // If the window get too small, hide the buttons/border-bottoms and shrink the text items
+            mainImageLearnMoreButtons.hide();
+            pageHeader = $(".main-image-text .page-header");
+            pageHeader.css("border-bottom", "none");
+            pageHeader.css("padding-bottom", "0px");
+            mainImageTextItems.css('font-size', "16px");
+        }
+        else {
+            showCarouselButtonAndBottomBorder(mainImageLearnMoreButtons);
+            mainImageTextItems.css('font-size', "24px");
+        }
     }
     else
     {
-        // If the window is big enough, show the buttons and enlarge the text items
-        mainImageLearnMoreButtons.show();
-        // This is the default font size for the main image float text - this should match what's in #main-image-text in
-        // pages.css.scss.
-        mainImageTextItems.css('font-size', 36);
+        // If the window is big enough, show the buttons/border-bottoms and enlarge the text items
+        showCarouselButtonAndBottomBorder(mainImageLearnMoreButtons);
+        mainImageTextItems.css('font-size', "46px");
     }
 }
 
