@@ -19,20 +19,10 @@
     - pages.each_key do |page_key|
       - if page_key == page
         .item.active
-          %img{alt: "...", src: image_path("#{page_key}.jpg")}
-          .carousel-caption
-            .main-image-text
-              = pages[page_key]
-            .main-image-learn-more-button
-              %a.btn.btn-warning{href: '#learn-more'} LEARN MORE &raquo;
+          =render partial: 'carousel_item', :locals => {:pages => pages, :page => "#{page_key}"}
       - else
         .item
-          %img{alt: "...", src: image_path("#{page_key}.jpg")}
-          .carousel-caption
-            .main-image-text
-              = pages[page_key]
-            .main-image-learn-more-button
-              %a.btn.btn-warning{href: '#learn-more'} LEARN MORE &raquo;
+          =render partial: 'carousel_item', :locals => {:pages => pages, :page => "#{page_key}"}
   / Controls
   %a.left.carousel-control{"data-slide" => "prev", href: "#main-carousel", role: "button"}
     %span.glyphicon.glyphicon-chevron-left

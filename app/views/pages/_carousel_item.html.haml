@@ -1,0 +1,6 @@
+%img{alt: "#{page} page carousel image", src: image_path("#{page}.jpg")}
+.carousel-caption
+  .main-image-text
+    = pages[page]
+  .main-image-learn-more-button
+    %a.btn.btn-warning{href: "/pages/#{page}/#learn-more"} LEARN MORE &raquo;
