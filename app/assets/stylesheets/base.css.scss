@@ -18,3 +18,35 @@ body {
   position: relative;
   top: -50px;
 }
+
+// Pushes the carousel caption up a little
+.carousel-caption {
+  padding-bottom: 12%;
+}
+
+// Bootstrap carousel fade feature customization
+.carousel .item {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.carousel .active.left {
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel .next {
+  left: 0;
+  opacity: 1;
+  z-index: 1;}
+
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+}
