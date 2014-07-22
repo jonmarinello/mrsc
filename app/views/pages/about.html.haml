@@ -2,7 +2,7 @@
 %h3
   About Us
 .well
-  =image_tag 'mrsc.jpg', :class => 'mrsc-padded-image img-responsive pull-left'
+  =image_tag 'mrsc.jpg', :class => 'padded-right-bottom-image img-responsive pull-left'
   %p
     We're based in beautiful Santa Barbara, California and our mission is to provide you with very highest quality
     consulting services delivered per specification, on time, every time.
@@ -20,7 +20,7 @@
     %h3.panel-title
       %a{:target => '_blank', :href => 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
   .panel-body
-    =image_tag 'jonmarinello.jpg', :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => 140
+    =image_tag 'jonmarinello.jpg', :class => 'padded-right-bottom-image img-responsive img-circle pull-left', :width => 140
     %p
       Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
       I have over 30 years of experience developing highly scalable, reliable and available software systems
@@ -57,7 +57,7 @@
       -# Generate the id using the key
       .panel-collapse.collapse{id: "#{key}", :class => ('in' if first_time) }
         .panel-body
-          =image_tag "#{key}.jpg", :class => 'mrsc-padded-image img-responsive img-circle pull-left', :width => @person_image_width
+          =image_tag "#{key}.jpg", :class => 'padded-right-bottom-image img-responsive img-circle pull-left', :width => @person_image_width
           -# Now iterate over the body paragraphs and display them each in their own paragraph tag
           - @recommendations[key]['body'].each do |paragraph|
             %p
