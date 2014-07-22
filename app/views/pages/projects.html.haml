@@ -1,8 +1,6 @@
-%p
-  =image_tag 'projects.jpg', :class => 'img-responsive img-rounded'
-%h1
-  %center
-    We work well with others
+= render partial: 'main_image', :locals => {:page => 'projects'}
+%h3
+  We work well with others
 .row
   .col-md-4
     .thumbnail
@@ -104,4 +102,6 @@
           %center
             %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
 %p
-  %a.btn.btn-primary{href: '/pages/about'} READ MORE &raquo;
+  %a.btn.btn-success{href: '/pages/about'} READ MORE &raquo;
+= javascript_include_tag('main_image_resize')
+

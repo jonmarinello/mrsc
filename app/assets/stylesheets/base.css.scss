@@ -5,10 +5,16 @@ body {
 
 // Change the default padding so that the MRSC logo fits inside the toolbar
 .navbar-brand {
-  padding: 1px;
+  padding: 2px;
 }
 
 // application container
 .mrsc-container {
   padding: 1em;
+}
+
+// Fixes anchor landing to accommodate the fixed header
+.anchor {
+  position: relative;
+  top: -50px;
 }

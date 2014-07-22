@@ -1,0 +1,31 @@
+#main-carousel.carousel.slide{"data-ride" => "carousel"}
+  - pages = {}
+  - pages['index'] = 'We build software with both brains and beauty'
+  - pages['projects'] = 'We have a proven track record of success'
+  - pages['about'] = 'Who we are & what people are saying saying about us'
+  - pages['services'] = 'We offer the services needed to realize your vision'
+  - pages['contact'] = 'Let\'s talk about your idea for a new project'
+  / Indicators
+  %ol.carousel-indicators
+    - count = 0
+    - pages.each_key do |page_key|
+      - if page_key == page
+        %li.active{"data-slide-to" => "#{count}", "data-target" => "#main-carousel"}
+      - else
+        %li{"data-slide-to" => "#{count}", "data-target" => "#main-carousel"}
+      - count += 1
+  / Wrapper for slides
+  .carousel-inner
+    - pages.each_key do |page_key|
+      - if page_key == page
+        .item.active
+          =render partial: 'carousel_item', :locals => {:pages => pages, :page => "#{page_key}"}
+      - else
+        .item
+          =render partial: 'carousel_item', :locals => {:pages => pages, :page => "#{page_key}"}
+  / Controls
+  %a.left.carousel-control{"data-slide" => "prev", href: "#main-carousel", role: "button"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#main-carousel", role: "button"}
+    %span.glyphicon.glyphicon-chevron-right
+#learn-more{:class => 'anchor'}
