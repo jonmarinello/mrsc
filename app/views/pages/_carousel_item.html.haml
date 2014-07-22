@@ -3,6 +3,6 @@
   .main-image-text
     -# Using page deader here to get the nice horizontal line between the text and the button
     .page-header
-      = pages[page]
+      = raw(pages[page])
   .main-image-learn-more-button
     %a.btn.btn-warning{href: "/pages/#{page}/#learn-more"} LEARN MORE &raquo;
