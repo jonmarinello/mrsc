@@ -59,7 +59,7 @@ end
 # gem 'bcrypt', '0.0.0'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', '4.8.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', '0.0.0', group: :development
@@ -67,4 +67,4 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', '0.0.0', group: [:development, :test]
 
-gem 'bootswatch-rails'
+gem 'bootswatch-rails', '3.2.0'
