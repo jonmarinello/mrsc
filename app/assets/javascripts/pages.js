@@ -61,40 +61,46 @@ $(document).ready(function() {
         handleMainImageFontSizeAndButton()
     });
 
-    // One time set services "Read More/Read Less" text to be hidden
-    $("#rails-text").hide();
-    $("#iphone-text").hide();
-    $("#scrum-text").hide();
-    $("#mind-map-text").hide();
-    $("#prototyping-text").hide();
-    $("#cloud-text").hide();
+    // Setup array of services sections for use with "Read More/Read Less"
+    var textItems = ["rails-text", "iphone-text", "scrum-text", "mind-map-text", "prototyping-text", "cloud-text"];
+
+    // One time set all services "Read More/Read Less" text to be "Read More"
+    var index;
+    for (index = 0; index < textItems.length; ++index) {
+        $("#" + textItems[index]).hide();
+    }
 
     // Setup our label comparison strings
     window.readMoreLabel = "More...";
     window.readLessLabel = "Less...";
 
+    var togglePrefix = "#toggle-";
+
     // Register for all the services "Read More/Read Less" click events to handle associated text visibility
-    $("#toggle-rails-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-rails-text"), $("#rails-text"));
+    //
+    // TODO: Would love change this to using a for loop but unfortunately, by the time the Click event fires,
+    // i is 6 for all the functions. Looking for a way to do this using meta-programming but timed out for now.
+    $(togglePrefix + textItems[0]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[0]), $("#" + textItems[0]));
     });
 
-    $("#toggle-iphone-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-iphone-text"), $("#iphone-text"));
+    $(togglePrefix + textItems[1]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[1]), $("#" + textItems[1]));
     });
 
-    $("#toggle-scrum-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-scrum-text"), $("#scrum-text"));
+    $(togglePrefix + textItems[2]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[2]), $("#" + textItems[2]));
     });
 
-    $("#toggle-mind-map-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-mind-map-text"), $("#mind-map-text"));
+    $(togglePrefix + textItems[3]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[3]), $("#" + textItems[3]));
     });
 
-    $("#toggle-prototyping-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-prototyping-text"), $("#prototyping-text"));
+    $(togglePrefix + textItems[4]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[4]), $("#" + textItems[4]));
     });
 
-    $("#toggle-cloud-text").unbind("click").click(function() {
-        return handleShowHideText($("#toggle-cloud-text"), $("#cloud-text"));
+    $(togglePrefix + textItems[5]).unbind("click").click(function() {
+        return handleShowHideText($(togglePrefix + textItems[5]), $("#" + textItems[5]));
     });
 });

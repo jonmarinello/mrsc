@@ -2,6 +2,7 @@
 %html
   %head
     %title MRSC
+    %link{href: image_path('mission_bell.ico'), rel: "shortcut icon"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
     %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", :rel => "stylesheet"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -14,8 +15,7 @@
     .well
       %center
         %h3 Have a project we can help with?
-        %p.text-uppercase
-          %a.btn.btn-warning{href: url_for(:controller => 'pages', :action => 'contact')} LET'S TALK ABOUT YOUR PROJECT &raquo;
+        %a.btn.btn-warning{href: url_for(:controller => 'pages', :action => 'contact')} LET'S TALK ABOUT YOUR PROJECT &raquo;
     %center
       %footer
         .social-media
@@ -34,6 +34,9 @@
             %li
               %a{:target => '_blank', :href => "http://google.com/+JonMarinello"}
                 %i.fa.fa-2x.fa-google
+            %li
+              %a{:target => '_blank', :href => "http://www.linkedin.com/in/jonmarinello"}
+                %i.fa.fa-2x.fa-linkedin
             %li
               %a{:target => '_blank', :href => "https://github.com/jonmarinello"}
                 %i.fa.fa-2x.fa-github-alt
