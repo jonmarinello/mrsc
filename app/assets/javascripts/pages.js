@@ -62,12 +62,12 @@ $(document).ready(function() {
     });
 
     // One time set services "Read More/Read Less" text to be hidden
-    $("#rails-text").hide();
-    $("#iphone-text").hide();
-    $("#scrum-text").hide();
-    $("#mind-map-text").hide();
-    $("#prototyping-text").hide();
-    $("#cloud-text").hide();
+    var textItems = ["rails-text", "iphone-text", "scrum-text", "mind-map-text", "prototyping-text", "cloud-text"];
+
+    var index;
+    for (index = 0; index < textItems.length; ++index) {
+        $("#" + textItems[index]).hide();
+    }
 
     // Setup our label comparison strings
     window.readMoreLabel = "More...";
