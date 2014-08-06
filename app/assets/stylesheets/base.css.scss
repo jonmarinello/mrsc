@@ -24,6 +24,12 @@ body {
   padding-bottom: 12%;
 }
 
+
+.carousel-caption .main-image-text .page-header {
+  font-family: 'Shadows Into Light', cursive;
+  font-size-adjust: 0.80;
+}
+
 // Bootstrap carousel fade feature customization
 .carousel .item {
   -webkit-transition: opacity 0.5s;
