@@ -5,10 +5,13 @@ Mission Ridge Software Development LLC
 
 Company Web Site
 
-Current Build Status of this Branch
------------------------------------
+Current Build Status
+--------------------
 
-[ ![Codeship Status for jonmarinello/mrsc](https://www.codeship.io/projects/ff1d7c80-e3af-0131-ac19-1a224a6206b8/status)](https://www.codeship.io/projects/25487)
+Develop: [ ![Codeship Status for jonmarinello/mrsc](https://www.codeship.io/projects/ff1d7c80-e3af-0131-ac19-1a224a6206b8/status?branch=develop)](https://www.codeship.io/projects/25487)
+
+Master: [ ![Codeship Status for jonmarinello/mrsc](https://www.codeship.io/projects/ff1d7c80-e3af-0131-ac19-1a224a6206b8/status?branch=master)](https://www.codeship.io/projects/25487)
+
 
 
 Copyright Notice
