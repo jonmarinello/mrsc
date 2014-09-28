@@ -9,15 +9,8 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
-group :production do
-  # Production database
-  gem 'pg', '0.17.1'
-end
-
-group :development, :test do
-  # Development and Test Database
-  gem 'sqlite3', '1.3.9'
-end
+# Postgres database
+gem 'pg', '0.17.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
@@ -54,7 +47,6 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '0.0.0'
 
@@ -68,3 +60,6 @@ gem 'unicorn', '4.8.3'
 # gem 'debugger', '0.0.0', group: [:development, :test]
 
 gem 'bootswatch-rails', '3.2.0'
+
+# Active Admin
+gem 'activeadmin', github: 'activeadmin'
