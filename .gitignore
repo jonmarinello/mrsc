@@ -34,3 +34,7 @@ config/initializers/secret_token.rb
 
 # Database yaml file
 database.yml
+
+# Coverage files
+/public/coverage
+

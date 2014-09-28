@@ -14,10 +14,13 @@ gem 'pg', '0.17.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.5.0'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -42,23 +45,27 @@ gem 'bootstrap-sass', '3.1.1.1'
 # Haml
 gem 'haml-rails', '0.5.3'
 
+# Production dependencies
 group :production do
   # Heroku requires this
   gem 'rails_12factor', '0.0.2'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '0.0.0'
+# Test dependencies
+group :test do
+  # Capybara
+  gem "minitest-rails-capybara", '2.0.1'
+  gem 'capybara_minitest_spec', '1.0.2'
+  gem 'selenium-webdriver', '2.43.0'
+  # Test Coverage
+  gem 'simplecov', '0.9.0'
+
+end
 
 # Use unicorn as the app server
 gem 'unicorn', '4.8.3'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', '0.0.0', group: :development
-
-# Use debugger
-# gem 'debugger', '0.0.0', group: [:development, :test]
-
+# Bootswatch skins
 gem 'bootswatch-rails', '3.2.0'
 
 # Active Admin

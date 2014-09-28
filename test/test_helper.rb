@@ -1,6 +1,8 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'simplecov'
+require "minitest/rails/capybara"
 
 
 #
@@ -21,6 +23,28 @@ if ENV['SHOW_STDOUT'] && ENV['SHOW_STDOUT'] == '1'
 end
 
 
+#
+# SimpleCov Initialization
+#
+
+# Remove any previous SimpleCov results
+FileUtils.rm_rf('public/coverage')
+
+# Define profiles
+SimpleCov.profiles.define 'mrsc_profile' do
+  load_profile 'rails'
+  add_filter 'vendor'
+  add_filter 'test'
+  add_filter 'app/admin'
+  add_group 'Concerns', 'app/models/concerns'
+  coverage_dir 'public/coverage'
+end
+
+# Start the SimpleCov profiler
+SimpleCov.start 'mrsc_profile'
+
+
+
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
@@ -29,4 +53,71 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  Capybara.default_wait_time = 5
+
+
+  def switch_to_new_window!(sleep_seconds_before = 1, sleep_seconds_after = 1)
+    # Sleep before trying to change windows to the new browser instance. This is needed because it takes a little time
+    # for the new browser window to launch and get loaded
+    sleep sleep_seconds_before
+    page.driver.browser.switch_to.window page.driver.browser.window_handles.last
+    # We also need a sleep after changing windows and before the next commend is to let things settle down
+    sleep sleep_seconds_after
+  end
+
+  # Waits for the page element to become available using Capybara's find() method
+  def wait_for_page_element(element)
+    find(element)
+  end
+
+  # Assert we landed on the correct page and if not, provide a helpful error message
+  def assert_on_page_path(expected_page, actual_page = current_path)
+    assert_equal expected_page, actual_page, 'ERROR: Landed on wrong page'
+  end
+
+  # Hack to allow us to input data into a field using a jQuery input mask see:
+  #    https://github.com/thoughtbot/capybara-webkit/issues/303 for details.
+  def fill_in_input_mask(location, options={})
+    len = options[:with].to_s.length - 1
+    len.times do
+      fill_in location, :with => '1'
+    end
+    fill_in location, options
+  end
 end
+
+
+
+
+#
+# Ajax related logic
+#
+
+# Borrowed from http://robots.thoughtbot.com/automatically-wait-for-ajax-with-capybara
+#
+# Example usage:
+#   visit users_path
+#   click_link 'Add Gabe as friend via AJAX'
+#   wait_for_ajax # This is new!
+#   reload_page
+#   expect(page).to have_css('.favorite', text: 'Gabe')
+#
+module WaitForAjax
+  def wait_for_ajax
+    Timeout.timeout(Capybara.default_wait_time) do
+      loop until finished_all_ajax_requests?
+    end
+  end
+
+  def finished_all_ajax_requests?
+    page.evaluate_script('jQuery.active').zero?
+  end
+end
+
+
+def reload_page
+  # Capybara/Selenium compatible page reload
+  visit page.driver.browser.current_url
+end
+
