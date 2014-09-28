@@ -27,11 +27,13 @@ class PagesControllerTest < ActionController::TestCase
   end
 
   test 'should get about' do
-    get :about
-    assert_response :success
-    assert_template :about
-    assert_template layout: "layouts/application"
-    assert_select 'title', "MRSC"
+    silence_stream(STDOUT) do
+      get :about
+      assert_response :success
+      assert_template :about
+      assert_template layout: "layouts/application"
+      assert_select 'title', "MRSC"
+    end
   end
 
   test 'should get services' do
