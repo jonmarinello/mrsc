@@ -14,6 +14,8 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
 
+    click_link_or_button('LEARN MORE »')
+
 
     # Visit Projects tab
     click_link('Projects', match: :first)
@@ -30,6 +32,8 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
 
+    click_link_or_button('LEARN MORE »')
+
 
     # Visit About tab
     click_link('About', match: :first)
@@ -42,6 +46,8 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'The Team'
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
+
+    click_link_or_button('LEARN MORE »')
 
 
     # Visit Services tab
@@ -56,6 +62,8 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
 
+    click_link_or_button('LEARN MORE »')
+
 
     # Visit Services tab
     click_link('Contact', match: :first)
@@ -68,5 +76,7 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Contact Us'
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
+
+    click_link_or_button('LEARN MORE »')
   end
 end
