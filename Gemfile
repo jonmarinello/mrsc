@@ -53,13 +53,13 @@ end
 
 # Test dependencies
 group :test do
-  # Capybara
+  # Code Coverage
+  gem 'simplecov', '0.9.0'
+
+  # Capybara/Minitest
   gem "minitest-rails-capybara", '2.0.1'
   gem 'capybara_minitest_spec', '1.0.2'
   gem 'selenium-webdriver', '2.43.0'
-  # Test Coverage
-  gem 'simplecov', '0.9.0'
-
 end
 
 # Use unicorn as the app server
