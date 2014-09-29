@@ -36,7 +36,9 @@ class PagesTest < Capybara::Rails::TestCase
 
 
     # Visit About tab
-    click_link('About', match: :first)
+    silence_stream(STDOUT) do
+      click_link('About', match: :first)
+    end
 
     # Validate we landed on the correct page
     assert_on_page_path '/pages/about'
