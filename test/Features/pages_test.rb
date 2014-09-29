@@ -22,6 +22,11 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
 
+    # 5.times do
+    #   find('carousel-control right').click
+    #   sleep DEFAULT_SLEEP_TIME
+    # end
+
     # click on the learn more button
     silence_stream(STDOUT) do
       click_link_or_button('LEARN MORE »')
@@ -48,23 +53,30 @@ class PagesTest < Capybara::Rails::TestCase
   end
 
 
-  def click_all_recommendation_links(sleep_seconds = DEFAULT_SLEEP_TIME)
+  def click_all_recommendation_links(validate_content)
     click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
-    sleep sleep_seconds
+    must_have_content 'Jon and I have been working together on and off since 2008' if validate_content
+
     click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
-    sleep sleep_seconds
+    must_have_content 'Jon is an one-man-army' if validate_content
+
     click_link('Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013')
-    sleep sleep_seconds
+    must_have_content 'Its been a delight to work along-side Jon' if validate_content
+
     click_link('Cary Penniman - Software Architect at RightScale, April 5, 2013')
-    sleep sleep_seconds
+    must_have_content 'Jon has rock solid software engineering skills' if validate_content
+
     click_link('Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012')
-    sleep sleep_seconds
+    must_have_content 'RightScale contracted with Jon Marinello' if validate_content
+
     click_link('Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012')
-    sleep sleep_seconds
+    must_have_content 'I\'ve had the pleasure of working with Jon' if validate_content
+
     click_link('Vitaly Sedelnik – Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014')
-    sleep sleep_seconds
+    must_have_content 'Jon is super skilled software engineer' if validate_content
+
     click_link('Steve Reynolds – Managing Partner, Elite Associates 2011')
-    sleep sleep_seconds
+    must_have_content 'We contracted with Mission Ridge Software Consulting LLC' if validate_content
   end
 
 
@@ -91,8 +103,13 @@ class PagesTest < Capybara::Rails::TestCase
     validate_nav_page('about') do
       must_have_content 'About Us'
       must_have_content 'The Team'
-      click_all_recommendation_links
-      click_all_recommendation_links
+
+      # Close the first accordion panel
+      click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
+
+      # Test the recommendation accordion panels
+      click_all_recommendation_links(true)
+      click_all_recommendation_links(false)
     end
 
     # Visit Services page
@@ -104,6 +121,14 @@ class PagesTest < Capybara::Rails::TestCase
     # Visit Contact page
     validate_nav_page('contact') do
       must_have_content 'Contact Us'
+
+      # Visit all the social media links
+      find('#skype-link').click
+      find('#facebook-link').click
+      find('#twitter-link').click
+      find('#googleplus-link').click
+      find('#linkedin-link').click
+      find('#githib-link').click
     end
   end
 end
