@@ -1,6 +1,7 @@
 require "test_helper"
 
 class PagesTest < Capybara::Rails::TestCase
+  DEFAULT_SLEEP_TIME = 0.12
 
   # Helper for testing any main navigation bar page
   def validate_nav_page(page_name, &block)
@@ -22,10 +23,48 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Stay Connected With Us'
 
     # click on the learn more button
-    click_link_or_button('LEARN MORE »')
+    silence_stream(STDOUT) do
+      click_link_or_button('LEARN MORE »')
+    end
 
     # Execute any code the client wants
     yield
+  end
+
+
+  def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME)
+    find('#toggle-rails-text').click
+    sleep sleep_seconds
+    find('#toggle-iphone-text').click
+    sleep sleep_seconds
+    find('#toggle-scrum-text').click
+    sleep sleep_seconds
+    find('#toggle-mind-map-text').click
+    sleep sleep_seconds
+    find('#toggle-prototyping-text').click
+    sleep sleep_seconds
+    find('#toggle-cloud-text').click
+    sleep sleep_seconds
+  end
+
+
+  def click_all_recommendation_links(sleep_seconds = DEFAULT_SLEEP_TIME)
+    click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
+    sleep sleep_seconds
+    click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
+    sleep sleep_seconds
+    click_link('Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013')
+    sleep sleep_seconds
+    click_link('Cary Penniman - Software Architect at RightScale, April 5, 2013')
+    sleep sleep_seconds
+    click_link('Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012')
+    sleep sleep_seconds
+    click_link('Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012')
+    sleep sleep_seconds
+    click_link('Vitaly Sedelnik – Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014')
+    sleep sleep_seconds
+    click_link('Steve Reynolds – Managing Partner, Elite Associates 2011')
+    sleep sleep_seconds
   end
 
 
@@ -52,11 +91,14 @@ class PagesTest < Capybara::Rails::TestCase
     validate_nav_page('about') do
       must_have_content 'About Us'
       must_have_content 'The Team'
+      click_all_recommendation_links
+      click_all_recommendation_links
     end
 
     # Visit Services page
     validate_nav_page('services') do
-      must_have_content 'Our Core Services'
+      click_all_services_more_less_links
+      click_all_services_more_less_links
     end
 
     # Visit Contact page
