@@ -12,6 +12,9 @@ gem 'rails', '4.1.1'
 # Postgres database
 gem 'pg', '0.17.1'
 
+# Authentication/Authorization
+gem 'devise', '3.2.4'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
 

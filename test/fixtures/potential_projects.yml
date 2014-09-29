@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: MyString
+  email: MyString
+  phone: MyString
+  company_name: MyString
+  project_idea: MyString
+  type_website: false
+  type_ruby_on_rails: false
+  type_web_design: false
+  type_code_review: false
+  type_other: false
+  start_timeframe: MyString
+  additional_info: MyText
+  heard_about_us: MyString
+  keep_me_updated: false
+
+two:
+  id: 2
+  name: MyString
+  email: MyString
+  phone: MyString
+  company_name: MyString
+  project_idea: MyString
+  type_website: false
+  type_ruby_on_rails: false
+  type_web_design: false
+  type_code_review: false
+  type_other: false
+  start_timeframe: MyString
+  additional_info: MyText
+  heard_about_us: MyString
+  keep_me_updated: false
