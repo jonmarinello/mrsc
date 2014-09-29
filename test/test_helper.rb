@@ -66,15 +66,18 @@ class ActiveSupport::TestCase
     sleep sleep_seconds_after
   end
 
+
   # Waits for the page element to become available using Capybara's find() method
   def wait_for_page_element(element)
     find(element)
   end
 
+
   # Assert we landed on the correct page and if not, provide a helpful error message
   def assert_on_page_path(expected_page, actual_page = current_path)
     assert_equal expected_page, actual_page, 'ERROR: Landed on wrong page'
   end
+
 
   # Hack to allow us to input data into a field using a jQuery input mask see:
   #    https://github.com/thoughtbot/capybara-webkit/issues/303 for details.
