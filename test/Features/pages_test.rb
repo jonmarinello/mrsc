@@ -22,11 +22,6 @@ class PagesTest < Capybara::Rails::TestCase
     must_have_content 'Have a project we can help with?'
     must_have_content 'Stay Connected With Us'
 
-    # 5.times do
-    #   find('carousel-control right').click
-    #   sleep DEFAULT_SLEEP_TIME
-    # end
-
     # click on the learn more button
     silence_stream(STDOUT) do
       click_link_or_button('LEARN MORE »')
@@ -85,11 +80,20 @@ class PagesTest < Capybara::Rails::TestCase
     visit '/'
     assert_on_page_path "/"
 
+    # Flip through carousel images
+    5.times do
+      find('a[class="right carousel-control"]').click
+      sleep 1
+    end
+    5.times do
+      find('a[class="left carousel-control"]').click
+      sleep 1
+    end
+
     # Visit Index page
     validate_nav_page('index') do
       must_have_content 'Welcome To Mission Ridge Software Consulting'
     end
-
 
     # Visit Projects page
     validate_nav_page('projects') do
@@ -106,6 +110,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       # Close the first accordion panel
       click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
+      sleep 1
 
       # Test the recommendation accordion panels
       click_all_recommendation_links(true)
