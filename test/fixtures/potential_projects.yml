@@ -2,34 +2,34 @@
 
 one:
   id: 1
-  name: MyString
-  email: MyString
-  phone: MyString
-  company_name: MyString
-  project_idea: MyString
-  type_website: false
-  type_ruby_on_rails: false
-  type_web_design: false
+  name: Josh Marinello
+  email: josh.mxrider23@gmail.com
+  phone: (805) 705-7035
+  company_name: Josh's Video Prodctions
+  project_idea: A Corporate Web site for my company.
+  type_website: true
+  type_ruby_on_rails: true
+  type_web_design: true
   type_code_review: false
   type_other: false
-  start_timeframe: MyString
-  additional_info: MyText
-  heard_about_us: MyString
-  keep_me_updated: false
+  start_timeframe: Sometime soon
+  additional_info: Please give me a call and let's discuss this project idea ASAP.
+  heard_about_us: Google search
+  keep_me_updated: true
 
 two:
   id: 2
-  name: MyString
-  email: MyString
-  phone: MyString
-  company_name: MyString
-  project_idea: MyString
-  type_website: false
-  type_ruby_on_rails: false
-  type_web_design: false
+  name: Steve Reynolds
+  email: Steve@Elite-Associates.com
+  phone: (714) 588-9405
+  company_name: Elite Associates
+  project_idea: A responsive Corporate Web site for my company and a Mobile Web application.
+  type_website: true
+  type_ruby_on_rails: true
+  type_web_design: true
   type_code_review: false
-  type_other: false
-  start_timeframe: MyString
-  additional_info: MyText
-  heard_about_us: MyString
+  type_other: true
+  start_timeframe: One month from now
+  additional_info: Please email me and let's discuss this project idea and mobile application. I have some other ideas as well.
+  heard_about_us: A professional friend
   keep_me_updated: false
