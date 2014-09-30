@@ -57,6 +57,17 @@ class ActiveSupport::TestCase
   Capybara.default_wait_time = 5
 
 
+  # logs in as admin user for Active Admin tests
+  def login_admin_user!(admin_user = admin_users(:one))
+    visit('/admin/login')
+    within('#session_new') do
+      fill_in('admin_user[email]', :with => admin_user.email)
+      fill_in('admin_user[password]', :with => 'password')
+      click_button('Login')
+    end
+  end
+
+
   def switch_to_new_window!(sleep_seconds_before = 1, sleep_seconds_after = 1)
     # Sleep before trying to change windows to the new browser instance. This is needed because it takes a little time
     # for the new browser window to launch and get loaded

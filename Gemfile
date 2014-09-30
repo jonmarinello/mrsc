@@ -59,6 +59,10 @@ group :test do
   # Code Coverage
   gem 'simplecov', '0.9.0'
 
+  # awesome matchers that make mundane tests easy
+  gem 'shoulda', '3.5.0'
+  gem 'minitest-spec-rails', '5.0.4'
+
   # Capybara/Minitest
   gem "minitest-rails-capybara", '2.0.1'
   gem 'capybara_minitest_spec', '1.0.2'
