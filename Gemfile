@@ -77,3 +77,6 @@ gem 'bootswatch-rails', '3.2.0'
 
 # Active Admin
 gem 'activeadmin', github: 'activeadmin'
+
+# New Relic Monitoring
+gem 'newrelic_rpm', '3.8.1.221'

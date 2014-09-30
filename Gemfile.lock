@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 708e59018cdec2a078a173da0dbc0b732b3a9399
+  revision: 8299dee5bd08c78cea7d216382dfc183fef60934
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -56,7 +56,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
-    capybara (2.4.1)
+    capybara (2.4.3)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -73,7 +73,7 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.1)
+    coffee-script-source (1.8.0)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -83,7 +83,7 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.2.1)
-    ffi (1.9.3)
+    ffi (1.9.5)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
     haml (4.0.5)
@@ -119,7 +119,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     mini_portile (0.6.0)
-    minitest (5.4.0)
+    minitest (5.4.2)
     minitest-capybara (0.7.1)
       capybara (~> 2.2)
       minitest (~> 5.0)
@@ -138,7 +138,8 @@ GEM
       minitest (~> 5.0)
       rails (~> 4.1.0.rc2)
     multi_json (1.10.1)
-    nokogiri (1.6.2.1)
+    newrelic_rpm (3.8.1.221)
+    nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
@@ -176,7 +177,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
-    rdoc (4.1.1)
+    rdoc (4.1.2)
       json (~> 1.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
@@ -199,7 +200,7 @@ GEM
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
     shoulda-context (1.2.1)
-    shoulda-matchers (2.6.1)
+    shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simplecov (0.9.0)
       docile (~> 1.1.0)
@@ -212,7 +213,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.1.3)
+    sprockets-rails (2.1.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -224,7 +225,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
@@ -254,6 +255,7 @@ DEPENDENCIES
   jquery-rails (= 3.1.0)
   minitest-rails-capybara (= 2.0.1)
   minitest-spec-rails (= 5.0.4)
+  newrelic_rpm (= 3.8.1.221)
   pg (= 0.17.1)
   rails (= 4.1.1)
   rails_12factor (= 0.0.2)
