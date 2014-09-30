@@ -57,6 +57,14 @@ class ActiveSupport::TestCase
   Capybara.default_wait_time = 5
 
 
+  # Temporary helper until we get a better one in the test helpers
+  def mini_test_login_admin_user!(admin_user = admin_users(:one))
+    @request.env['devise.mapping'] = Devise.mappings[:admin_user] if @request.present?
+    #sign the user in
+    sign_in admin_user if @request.present?
+  end
+
+
   # logs in as admin user for Active Admin tests
   def login_admin_user!(admin_user = admin_users(:one))
     visit('/admin/login')
