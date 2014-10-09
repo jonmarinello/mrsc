@@ -3,7 +3,21 @@
 .well
   %p
     Tell us about the project you would like to start.
-= simple_form_for @potential_project do |f|
-  = f.input :username
-  = f.input :password
-  = f.button :submit
+  = simple_form_for @potential_project,:url => url_for(:action => 'create', :controller => 'pages') do |f|
+    = f.input :name
+    = f.input :email
+    = f.input :phone
+    = f.input :company_name
+    = f.input :project_idea
+    = f.input :type_website, :label => 'Website'
+    = f.input :type_ruby_on_rails, :label => 'Ruby On Rails'
+    = f.input :type_web_design, :label => 'Web Design'
+    = f.input :type_code_review, :label => 'Code Review'
+    = f.input :type_other, :label => 'Other'
+    = f.input :project_idea
+    = f.input :type_other
+    = f.input :start_timeframe
+    = f.input :additional_info
+    = f.input :heard_about_us
+    = f.input :keep_me_updated
+    = f.button :submit

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # Automatically match all out routes
   match ':controller(/:action(/:id))', :via => :get
+  match ':controller(/:action(/:id))', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

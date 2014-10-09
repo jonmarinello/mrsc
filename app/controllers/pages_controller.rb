@@ -33,4 +33,30 @@ class PagesController < ApplicationController
     @active_tab = 'start_a_project'
     @potential_project = PotentialProject.new
   end
+
+  def create
+    @potential_project = PotentialProject.new(portential_project_request_params)
+    @potential_project.save!
+    redirect_to root_path
+  end
+
+  def portential_project_request_params
+    params.require(:potential_project).permit(:id,
+                                              :name,
+                                              :email,
+                                              :project_idea,
+                                              :phone,
+                                              :company_name,
+                                              :project_idea,
+                                              :type_website,
+                                              :type_ruby_on_rails,
+                                              :type_web_design,
+                                              :type_code_review,
+                                              :type_other,
+                                              :start_timeframe,
+                                              :additional_info,
+                                              :heard_about_us,
+                                              :keep_me_updated)
+  end
+
 end
