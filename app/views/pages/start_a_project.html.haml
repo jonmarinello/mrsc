@@ -1,0 +1,9 @@
+%h3
+  Start A Project
+.well
+  %p
+    Tell us about the project you would like to start.
+= simple_form_for @potential_project do |f|
+  = f.input :username
+  = f.input :password
+  = f.button :submit

@@ -29,4 +29,8 @@ class PagesController < ApplicationController
     @active_tab = 'contact'
   end
 
+  def start_a_project
+    @active_tab = 'start_a_project'
+    @potential_project = PotentialProject.new
+  end
 end

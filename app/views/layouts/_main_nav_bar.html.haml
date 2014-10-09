@@ -9,8 +9,8 @@
         %img.img-responsive{alt: 'mrsc', src: asset_path('mrsc.jpg'), width: '80'}
     #collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        - %w(projects about services contact).each do |page|
+        - %w(projects about services contact start_a_project).each do |page|
           %li{:class => @active_tab == page ? 'active' : ''}
-            =link_to(page.capitalize, { controller: 'pages', action: page })
+            =link_to(page.humanize.titleize, { controller: 'pages', action: page })
 %h3
   Mission Ridge Software Consulting LLC
