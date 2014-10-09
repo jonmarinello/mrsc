@@ -5,19 +5,19 @@
     Tell us a little bit about yourself and a few things about the project you would like to start.
   %p
     = simple_form_for @potential_project, :url => url_for(:action => 'create', :controller => 'pages') do |f|
-      = f.input :name
-      = f.input :email
-      = f.input :phone
-      = f.input :company_name
-      = f.input :project_idea
+      = f.input :name, :label => 'Your name'
+      = f.input :email, :label => 'Your email address'
+      = f.input :phone, :label => 'Your phone number'
+      = f.input :company_name, :label => 'Company or organization name'
+      = f.input :project_idea, :label => 'Describe your project or idea'
+      Project Type (Select all that apply):
       = f.input :type_website, :label => 'Website', :wrapper => :vertical_boolean
       = f.input :type_ruby_on_rails, :label => 'Ruby On Rails', :wrapper => :vertical_boolean
       = f.input :type_web_design, :label => 'Web Design', :wrapper => :vertical_boolean
       = f.input :type_code_review, :label => 'Code Review', :wrapper => :vertical_boolean
       = f.input :type_other, :label => 'Other', :wrapper => :vertical_boolean
-      = f.input :project_idea
       = f.input :start_timeframe
       = f.input :additional_info, :label => 'Any additional information'
       = f.input :heard_about_us, :label => 'How you heard about us'
-      = f.input :keep_me_updated, :wrapper => :vertical_boolean
+      = f.input :keep_me_updated, :label => 'Keep me updated with Mission Ridge Software Consulting news', :wrapper => :vertical_boolean
       = f.button :submit

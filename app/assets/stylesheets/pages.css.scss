@@ -15,3 +15,6 @@
 .highlighted {
   color: darkorange;
 }
+
+// Turn off bold for simple form labels
+label{font-weight:normal !important};
