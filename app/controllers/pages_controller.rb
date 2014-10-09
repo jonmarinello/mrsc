@@ -48,7 +48,6 @@ class PagesController < ApplicationController
 
 
   def start_a_project_landing_page
-    @active_tab = 'start_a_project'
   end
 
 
