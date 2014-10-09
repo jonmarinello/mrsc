@@ -5,9 +5,11 @@ class PagesController < ApplicationController
     @active_tab = 'index'
   end
 
+
   def projects
     @active_tab = 'projects'
   end
+
 
   def about
     @active_tab = 'about'
@@ -21,42 +23,42 @@ class PagesController < ApplicationController
     @recommendations = YAML::load_file(recommendations_path)
   end
 
+
   def services
     @active_tab = 'services'
   end
 
+
   def contact
     @active_tab = 'contact'
   end
+
 
   def start_a_project
     @active_tab = 'start_a_project'
     @potential_project = PotentialProject.new
   end
 
+
   def create
     @potential_project = PotentialProject.new(portential_project_request_params)
     @potential_project.save!
-    redirect_to root_path
+    redirect_to start_a_project_landing_page_path
   end
 
+
+  def start_a_project_landing_page
+    @active_tab = 'start_a_project'
+  end
+
+
+  private
+
   def portential_project_request_params
-    params.require(:potential_project).permit(:id,
-                                              :name,
-                                              :email,
-                                              :project_idea,
-                                              :phone,
-                                              :company_name,
-                                              :project_idea,
-                                              :type_website,
-                                              :type_ruby_on_rails,
-                                              :type_web_design,
-                                              :type_code_review,
-                                              :type_other,
-                                              :start_timeframe,
-                                              :additional_info,
-                                              :heard_about_us,
-                                              :keep_me_updated)
+    params.require(:potential_project).permit(:id, :name, :email, :project_idea, :phone, :company_name,
+                                              :project_idea, :type_website, :type_ruby_on_rails, :type_web_design,
+                                              :type_code_review, :type_other, :start_timeframe,
+                                              :additional_info, :heard_about_us, :keep_me_updated)
   end
 
 end

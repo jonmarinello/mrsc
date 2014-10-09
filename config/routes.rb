@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   match ':controller(/:action(/:id))', :via => :get
   match ':controller(/:action(/:id))', :via => :post
 
+  get '/pages/start_a_project_landing_page', to: 'pages#start_a_project_landing_page',
+      as: :start_a_project_landing_page
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
