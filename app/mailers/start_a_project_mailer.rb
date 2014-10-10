@@ -10,7 +10,7 @@ class StartAProjectMailer < MandrillMailer::TemplateMailer
       vars: {
           'NAME' => potential_project.name,
           'EMAIL' => potential_project.email,
-          'PHONE' => potential_project.phone,
+          'PHONE' => ActiveSupport::NumberHelper.number_to_phone(potential_project.phone, area_code: true),
           'COMPANY_NAME' => potential_project.company_name,
           'PROJECT_IDEA' => potential_project.project_idea,
           'WEBSITE' => boolean_to_string(potential_project.type_web_design),
