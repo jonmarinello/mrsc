@@ -65,7 +65,7 @@ class PagesController < ApplicationController
     m = Mandrill::API.new
     message = {
       :subject => 'Mission Ridge Software Consulting - Start Project Request',
-      :from_name => @potential_project.mail,
+      :from_name => @potential_project.email,
       :text => "Blah blah",
       :to => [
         {
