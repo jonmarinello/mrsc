@@ -17,7 +17,7 @@ class StartAProjectMailer < MandrillMailer::TemplateMailer
           'RUBY_ON_RAILS' => boolean_to_string(potential_project.type_ruby_on_rails),
           'WEBSITE_DESIGN' => boolean_to_string(potential_project.type_web_design),
           'CODE_REVIEW' => boolean_to_string(potential_project.type_code_review),
-          'OTHER' => potential_project.type_other,
+          'OTHER' => boolean_to_string(potential_project.type_other),
           'START_TIMEFRAME' => potential_project.start_timeframe,
           'ADDITIONAL_INFORMATION' => potential_project.additional_info,
           'HEARD_ABOUT_US' => potential_project.heard_about_us,
