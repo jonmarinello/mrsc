@@ -4,7 +4,7 @@ class PagesTest < Capybara::Rails::TestCase
   scenario 'hit all main pages', :js => true do
     # Visit the main index page
     visit '/'
-    assert_on_page_path "/"
+    assert_on_page_path '/'
 
     # Flip through carousel images
     5.times do
@@ -60,6 +60,65 @@ class PagesTest < Capybara::Rails::TestCase
       find('#googleplus-link').click
       find('#linkedin-link').click
       find('#githib-link').click
+    end
+
+    # Visit Start A Project page
+    validate_nav_page('start_a_project') do
+      must_have_content ' Start A Project '
+
+      within('#new_potential_project') do
+        fill_in('potential_project[company_name]', :with => 'Hans Dickman Boat Yard')
+        check('potential_project[type_website]')
+        check('potential_project[type_ruby_on_rails]')
+        check('potential_project[type_web_design]')
+        check('potential_project[type_code_review]')
+        check('potential_project[type_other]')
+        fill_in('potential_project[start_timeframe]', :with => 'Fall 2015')
+        fill_in('potential_project[additional_info]', :with => 'Call me back ASAP to discuss this opportunity.')
+        fill_in('potential_project[heard_about_us]', :with => 'Google search.')
+        check('potential_project[keep_me_updated]')
+        click_button('Submit')
+      end
+
+      assert_on_page_path '/pages/create'
+      must_have_content "can't be blank"
+
+      within('#new_potential_project') do
+        fill_in('potential_project[name]', :with => 'Roger Eaton')
+        click_button('Submit')
+      end
+
+      assert_on_page_path '/pages/create'
+      must_have_content "can't be blank"
+
+      within('#new_potential_project') do
+        fill_in('potential_project[email]', :with => 'xxx')
+        click_button('Submit')
+      end
+
+      assert_on_page_path '/pages/create'
+      must_have_content "invalid email address"
+
+      within('#new_potential_project') do
+        fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
+        fill_in('potential_project[phone]', :with => '30912xxx')
+        click_button('Submit')
+      end
+
+      assert_on_page_path '/pages/create'
+      must_have_content "is an invalid number"
+
+
+      within('#new_potential_project') do
+        fill_in('potential_project[phone]', :with => '(805) 705-7929')
+        fill_in('potential_project[project_idea]', :with => 'Build a cool new website for the Hans Dickman Boat Yard!')
+        silence_stream(STDOUT) do
+          click_button('Submit')
+        end
+      end
+
+      assert_on_page_path '/pages/start_a_project_landing_page'
+
     end
   end
 end

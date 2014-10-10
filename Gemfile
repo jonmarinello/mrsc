@@ -4,6 +4,7 @@
 #
 source 'https://rubygems.org'
 
+# Necessary Ruby version
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -11,6 +12,9 @@ gem 'rails', '4.1.1'
 
 # Postgres database
 gem 'pg', '0.17.1'
+
+# Authentication/Authorization
+gem 'devise', '3.2.4'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
@@ -34,10 +38,10 @@ gem 'turbolinks', '2.2.2'
 gem 'jbuilder', '2.0.7'
 
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '0.4.0',          :group => :doc
+gem 'sdoc', '0.4.0', :group => :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', '1.1.3',        :group => :development
+gem 'spring', '1.1.3', :group => :development
 
 # Bootstrap
 gem 'bootstrap-sass', '3.1.1.1'
@@ -56,6 +60,10 @@ group :test do
   # Code Coverage
   gem 'simplecov', '0.9.0'
 
+  # awesome matchers that make mundane tests easy
+  gem 'shoulda', '3.5.0'
+  gem 'minitest-spec-rails', '5.0.4'
+
   # Capybara/Minitest
   gem "minitest-rails-capybara", '2.0.1'
   gem 'capybara_minitest_spec', '1.0.2'
@@ -73,3 +81,15 @@ gem 'activeadmin', github: 'activeadmin'
 
 # New Relic Monitoring
 gem 'newrelic_rpm', '3.8.1.221'
+
+# Simple forms
+gem 'simple_form', '3.1.0.rc1'
+
+# Madrill API
+gem 'mandrill-api', '1.0.51'
+
+# Email validation
+gem 'validates_email_format_of', '1.6.1'
+
+# Phone number validation
+gem 'phony_rails', '0.7.1'
