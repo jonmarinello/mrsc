@@ -41,12 +41,17 @@ class PagesController < ApplicationController
 
 
   def create
-    @potential_project = PotentialProject.new(portential_project_request_params)
+    @active_tab = nil
+    @potential_project = PotentialProject.new(potential_project_request_params)
 
     if @potential_project.save
+      # Save succeeded so sent email letting us know that someone may want to start a project
       ::StartAProjectMailer.start_a_project(@potential_project).deliver
+
+      # Redirect to the thank you landing page
       redirect_to start_a_project_landing_page_path
     else
+      # An error occurred to re-render the page
       render 'start_a_project'
     end
 
@@ -54,16 +59,18 @@ class PagesController < ApplicationController
 
 
   def start_a_project_landing_page
+    @active_tab = nil
   end
 
 
   private
 
-  def portential_project_request_params
-    params.require(:potential_project).permit(:id, :name, :email, :project_idea, :phone, :company_name,
-                                              :project_idea, :type_website, :type_ruby_on_rails, :type_web_design,
-                                              :type_code_review, :type_other, :start_timeframe,
-                                              :additional_info, :heard_about_us, :keep_me_updated)
+  def potential_project_request_params
+    params.require(:potential_project).permit(
+        :id, :name, :email, :project_idea, :phone, :company_name,
+        :project_idea, :type_website, :type_ruby_on_rails, :type_web_design,
+        :type_code_review, :type_other, :start_timeframe,
+        :additional_info, :heard_about_us, :keep_me_updated)
   end
 
 end
