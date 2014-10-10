@@ -1,3 +1,5 @@
+require 'mandrill'
+
 class PagesController < ApplicationController
 
   def index
@@ -44,6 +46,7 @@ class PagesController < ApplicationController
     @potential_project = PotentialProject.new(portential_project_request_params)
 
     if @potential_project.save
+      send_mail
       redirect_to start_a_project_landing_page_path
     else
       render 'start_a_project'
@@ -57,6 +60,26 @@ class PagesController < ApplicationController
 
 
   private
+
+  def send_mail
+    m = Mandrill::API.new
+    message = {
+      :subject => 'Mission Ridge Software Consulting - Start Project Request',
+      :from_name => @potential_project.mail,
+      :text => "Blah blah",
+      :to => [
+        {
+          :email => "jonmarinello@gmail.com",
+          :name => "Jon Marinello"
+        }
+      ],
+      :html => "<html><h1>Hi <strong>message</strong>, how are you?</h1></html>",
+      :from_email => @potential_project.mail
+    }
+    sending = m.messages.send message
+    puts sending
+  end
+
 
   def portential_project_request_params
     params.require(:potential_project).permit(:id, :name, :email, :project_idea, :phone, :company_name,

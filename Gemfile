@@ -84,3 +84,6 @@ gem 'newrelic_rpm', '3.8.1.221'
 
 # Simple forms
 gem 'simple_form', '3.1.0.rc1'
+
+# Madrill API
+gem 'mandrill-api', '1.0.51'
