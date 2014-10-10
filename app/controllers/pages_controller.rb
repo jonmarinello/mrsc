@@ -42,8 +42,13 @@ class PagesController < ApplicationController
 
   def create
     @potential_project = PotentialProject.new(portential_project_request_params)
-    @potential_project.save!
-    redirect_to start_a_project_landing_page_path
+
+    if @potential_project.save
+      redirect_to start_a_project_landing_page_path
+    else
+      render 'start_a_project'
+    end
+
   end
 
 

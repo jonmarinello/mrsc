@@ -127,12 +127,12 @@ class ActiveSupport::TestCase
 
     # Validate standard expected content
     must_have_content 'Mission Ridge Software Consulting LLC'
-    must_have_content 'Have a project we can help with?'
+    must_have_content 'Have a project we can help with?' if page_name != 'start_a_project'
     must_have_content 'Stay Connected With Us'
 
     # click on the learn more button
     silence_stream(STDOUT) do
-      click_link_or_button('LEARN MORE »')
+      click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
     end
 
     # Execute any code the client wants
