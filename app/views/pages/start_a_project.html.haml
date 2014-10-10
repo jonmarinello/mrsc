@@ -1,9 +1,10 @@
 %h3
   Start A Project
 .well
-  %h4
+  %p
     Tell us a little bit about yourself and a few things about the project you would like to start. We will contact
-    you to discuss you ideas in sort order. All information provided will be kept strictly confidential.
+    you to discuss you ideas in sort order. All information provided below will be kept strictly confidential and
+    does not imply any agreement between us. Its just a starting point for a discussion.
   %p
     = simple_form_for @potential_project, :url => url_for(:action => 'create', :controller => 'pages') do |f|
       = f.input :name, :label => 'Your name'
