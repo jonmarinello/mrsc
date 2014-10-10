@@ -5,7 +5,7 @@ class StartAProjectMailer < MandrillMailer::TemplateMailer
 
   def start_a_project(potential_project)
     mandrill_mail template: 'start_a_project',
-      subject: 'Someone Wants To Start A Project',
+      subject: 'Start A Project Request',
       to: 'jonmarinello@gmail.com',
       vars: {
           'NAME' => potential_project.name,
