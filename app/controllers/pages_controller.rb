@@ -74,7 +74,7 @@ class PagesController < ApplicationController
         }
       ],
       :html => "<html><h1>Hi <strong>message</strong>, how are you?</h1></html>",
-      :from_email => @potential_project.mail
+      :from_email => @potential_project.email
     }
     sending = m.messages.send message
     puts sending
