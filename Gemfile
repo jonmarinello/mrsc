@@ -90,3 +90,6 @@ gem 'mandrill-api', '1.0.51'
 
 # Email validation
 gem 'validates_email_format_of', '1.6.1'
+
+# Phone number validation
+gem 'phony_rails', '0.7.1'

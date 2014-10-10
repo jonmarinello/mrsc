@@ -67,7 +67,6 @@ class PagesTest < Capybara::Rails::TestCase
       must_have_content ' Start A Project '
 
       within('#new_potential_project') do
-        fill_in('potential_project[phone]', :with => '(714) 675-3575')
         fill_in('potential_project[company_name]', :with => 'Hans Dickman Boat Yard')
         check('potential_project[type_website]')
         check('potential_project[type_ruby_on_rails]')
@@ -93,14 +92,25 @@ class PagesTest < Capybara::Rails::TestCase
       must_have_content "can't be blank"
 
       within('#new_potential_project') do
-        fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
+        fill_in('potential_project[email]', :with => 'xxx')
         click_button('Submit')
       end
 
       assert_on_page_path '/pages/create'
-      must_have_content "can't be blank"
+      must_have_content "invalid email address"
 
       within('#new_potential_project') do
+        fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
+        fill_in('potential_project[phone]', :with => '30912xxx')
+        click_button('Submit')
+      end
+
+      assert_on_page_path '/pages/create'
+      must_have_content "is an invalid number"
+
+
+      within('#new_potential_project') do
+        fill_in('potential_project[phone]', :with => '(805) 705-7929')
         fill_in('potential_project[project_idea]', :with => 'Build a cool new website for the Hans Dickman Boat Yard!')
         silence_stream(STDOUT) do
           click_button('Submit')
