@@ -53,7 +53,7 @@ class PagesTest < Capybara::Rails::TestCase
     validate_nav_page('contact') do
       must_have_content 'Contact Us'
 
-      Visit all the social media links
+      # Visit all the social media links
       find('#skype-link').click
       find('#facebook-link').click
       find('#twitter-link').click
