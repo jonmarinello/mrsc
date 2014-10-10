@@ -85,8 +85,8 @@ gem 'newrelic_rpm', '3.8.1.221'
 # Simple forms
 gem 'simple_form', '3.1.0.rc1'
 
-# Madrill API
-gem 'mandrill-api', '1.0.51'
+# Madrill Mailer
+gem 'mandrill_mailer', '0.4.9'
 
 # Email validation
 gem 'validates_email_format_of', '1.6.1'
