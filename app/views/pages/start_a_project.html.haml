@@ -2,7 +2,8 @@
   Start A Project
 .well
   %h4
-    Tell us a little bit about yourself and a few things about the project you would like to start.
+    Tell us a little bit about yourself and a few things about the project you would like to start. We will contact
+    you to discuss you ideas in sort order. All information provided will be kept strictly confidential.
   %p
     = simple_form_for @potential_project, :url => url_for(:action => 'create', :controller => 'pages') do |f|
       = f.input :name, :label => 'Your name'
@@ -16,8 +17,8 @@
       = f.input :type_web_design, :label => 'Web Design', :wrapper => :vertical_boolean
       = f.input :type_code_review, :label => 'Code Review', :wrapper => :vertical_boolean
       = f.input :type_other, :label => 'Other', :wrapper => :vertical_boolean
-      = f.input :start_timeframe
       = f.input :additional_info, :label => 'Any additional information'
+      = f.input :start_timeframe, :label => 'Starting timeframe'
       = f.input :heard_about_us, :label => 'How you heard about us'
       = f.input :keep_me_updated, :label => 'Keep me updated with Mission Ridge Software Consulting news', :wrapper => :vertical_boolean
-      = f.button :submit, 'Submit', :class => 'btn btn-primary'
+      = f.button :submit, 'Submit', :class => 'btn btn-warning'
