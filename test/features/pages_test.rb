@@ -102,7 +102,9 @@ class PagesTest < Capybara::Rails::TestCase
 
       within('#new_potential_project') do
         fill_in('potential_project[project_idea]', :with => 'Build a website to Hans Dickman Boat Yard')
-        click_button('Submit')
+        silence_stream(STDOUT) do
+          click_button('Submit')
+        end
       end
 
       assert_on_page_path '/pages/start_a_project_landing_page'

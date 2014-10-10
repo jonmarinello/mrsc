@@ -87,3 +87,6 @@ gem 'simple_form', '3.1.0.rc1'
 
 # Madrill API
 gem 'mandrill-api', '1.0.51'
+
+# Email validation
+gem 'validates_email_format_of', '1.6.1'

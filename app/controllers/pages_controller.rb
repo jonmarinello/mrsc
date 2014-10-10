@@ -66,14 +66,28 @@ class PagesController < ApplicationController
     message = {
       :subject => 'Mission Ridge Software Consulting - Start Project Request',
       :from_name => @potential_project.email,
-      :text => "Blah blah",
       :to => [
         {
           :email => "jonmarinello@gmail.com",
           :name => "Jon Marinello"
         }
       ],
-      :html => "<html><h1>Hi <strong>message</strong>, how are you?</h1></html>",
+      :html => "<html>\
+                <strong><p>Name:</strong> #{@potential_project.name}</p>\
+                <strong><p>Phone:</strong> #{@potential_project.phone}</p>\
+                <strong><p>Company Name:</strong> #{@potential_project.company_name}</p>\
+                <strong><p>Project Idea:</strong> #{@potential_project.project_idea}</p>\
+                <strong><p>Website:</strong> #{@potential_project.type_website}</p>\
+                <strong><p>Ruby On Rails:</strong> #{@potential_project.type_ruby_on_rails}</p>\
+                <strong><p>Website Design:</strong> #{@potential_project.type_web_design}</p>\
+                <strong><p>Code Review:</strong> #{@potential_project.type_code_review}</p>\
+                <strong><p>Other:</strong> #{@potential_project.type_other}</p>\
+                <strong><p>Start Timeframe:</strong> #{@potential_project.start_timeframe}</p>\
+                <strong><p>Additional Information:</strong> #{@potential_project.additional_info}</p>\
+                <strong><p>Heard About Us:</strong> #{@potential_project.heard_about_us}</p>\
+                <strong><p>Keep Me Updated:</strong> #{@potential_project.keep_me_updated}</p>\
+                <strong><p>Created At:</strong> #{@potential_project.created_at}</p>\
+                </html>",
       :from_email => @potential_project.email
     }
     sending = m.messages.send message

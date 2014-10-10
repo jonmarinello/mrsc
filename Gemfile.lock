@@ -241,6 +241,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    validates_email_format_of (1.6.1)
+      i18n
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.2.1)
@@ -277,3 +279,4 @@ DEPENDENCIES
   turbolinks (= 2.2.2)
   uglifier (= 2.5.0)
   unicorn (= 4.8.3)
+  validates_email_format_of (= 1.6.1)
