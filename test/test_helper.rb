@@ -57,6 +57,25 @@ class ActiveSupport::TestCase
   Capybara.default_wait_time = 5
 
 
+  # Temporary helper until we get a better one in the test helpers
+  def mini_test_login_admin_user!(admin_user = admin_users(:one))
+    @request.env['devise.mapping'] = Devise.mappings[:admin_user] if @request.present?
+    #sign the user in
+    sign_in admin_user if @request.present?
+  end
+
+
+  # logs in as admin user for Active Admin tests
+  def login_admin_user!(admin_user = admin_users(:one))
+    visit('/admin/login')
+    within('#session_new') do
+      fill_in('admin_user[email]', :with => admin_user.email)
+      fill_in('admin_user[password]', :with => 'password')
+      click_button('Login')
+    end
+  end
+
+
   def switch_to_new_window!(sleep_seconds_before = 1, sleep_seconds_after = 1)
     # Sleep before trying to change windows to the new browser instance. This is needed because it takes a little time
     # for the new browser window to launch and get loaded
@@ -108,12 +127,12 @@ class ActiveSupport::TestCase
 
     # Validate standard expected content
     must_have_content 'Mission Ridge Software Consulting LLC'
-    must_have_content 'Have a project we can help with?'
+    must_have_content 'Have a project we can help with?' if page_name != 'start_a_project'
     must_have_content 'Stay Connected With Us'
 
     # click on the learn more button
     silence_stream(STDOUT) do
-      click_link_or_button('LEARN MORE »')
+      click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
     end
 
     # Execute any code the client wants
