@@ -101,7 +101,7 @@ class PagesTest < Capybara::Rails::TestCase
       must_have_content "can't be blank"
 
       within('#new_potential_project') do
-        fill_in('potential_project[project_idea]', :with => 'Build a website to Hans Dickman Boat Yard')
+        fill_in('potential_project[project_idea]', :with => 'Build a cool new website for the Hans Dickman Boat Yard!')
         silence_stream(STDOUT) do
           click_button('Submit')
         end
