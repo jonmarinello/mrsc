@@ -239,4 +239,3 @@ def wait_for_page_element(element, try_count = 5)
     end
   end
 end
-
