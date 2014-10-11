@@ -45,13 +45,13 @@ class PagesController < ApplicationController
     @potential_project = PotentialProject.new(potential_project_request_params)
 
     if @potential_project.save
-      # Save succeeded so sent email letting us know that someone may want to start a project
+      # Save succeeded so send email letting us know that someone wants to start a project
       ::StartAProjectMailer.start_a_project(@potential_project).deliver
 
       # Redirect to the thank you landing page
       redirect_to start_a_project_landing_page_path
     else
-      # An error occurred to re-render the page
+      # An error occurred so re-render the page with existing data and error message
       render 'start_a_project'
     end
 
