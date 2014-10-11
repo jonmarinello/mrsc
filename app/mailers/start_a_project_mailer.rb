@@ -33,6 +33,5 @@ class StartAProjectMailer < MandrillMailer::TemplateMailer
   def boolean_to_string(value)
     return '✅' if value == true
     return '&nbsp;' if value == false
-    "unknown value --> #{value.inspect}"
   end
 end
