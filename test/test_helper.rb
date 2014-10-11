@@ -1,7 +1,36 @@
+# This needs to be at the very top - before any application code is run
+# Test coverage
+require 'simplecov'
+
+#
+# SimpleCov Initialization
+#
+
+# Remove any previous SimpleCov results
+FileUtils.rm_rf('public/coverage')
+
+# Define profiles
+SimpleCov.profiles.define 'mrsc_profile' do
+  load_profile 'rails'
+
+  add_filter 'vendor'
+  add_filter 'test'
+  add_filter 'app/admin'
+  add_filter 'bin'
+  add_filter 'Rakefile'
+  add_filter 'lib/tasks'
+
+  add_group 'Models', 'app/models'
+
+  coverage_dir 'public/coverage'
+end
+
+SimpleCov.start 'mrsc_profile'
+SimpleCov.command_name
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'simplecov'
 require 'minitest/rails/capybara'
 
 
@@ -21,27 +50,6 @@ if ENV['SHOW_STDOUT'] && ENV['SHOW_STDOUT'] == '1'
     yield
   end
 end
-
-
-#
-# SimpleCov Initialization
-#
-
-# Remove any previous SimpleCov results
-FileUtils.rm_rf('public/coverage')
-
-# Define profiles
-SimpleCov.profiles.define 'mrsc_profile' do
-  load_profile 'rails'
-  add_filter 'vendor'
-  add_filter 'test'
-  add_filter 'app/admin'
-  add_group 'Concerns', 'app/models/concerns'
-  coverage_dir 'public/coverage'
-end
-
-# Start the SimpleCov profiler
-SimpleCov.start 'mrsc_profile'
 
 
 

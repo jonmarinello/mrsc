@@ -58,7 +58,7 @@ class PagesTest < Capybara::Rails::TestCase
         check('potential_project[type_website]')
         check('potential_project[type_ruby_on_rails]')
         check('potential_project[type_web_design]')
-        check('potential_project[type_code_review]')
+        uncheck('potential_project[type_code_review]')
         check('potential_project[type_other]')
         fill_in('potential_project[start_timeframe]', :with => 'Fall 2015')
         fill_in('potential_project[additional_info]', :with => 'Call me back ASAP to discuss this opportunity.')
