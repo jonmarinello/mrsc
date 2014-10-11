@@ -218,3 +218,25 @@ def reload_page
   # Capybara/Selenium compatible page reload
   visit page.driver.browser.current_url
 end
+
+
+# Waits for the page element to become available using Capybara's find() method.
+#
+# You can pass an optional try_count which defaults to 5 and waits one second
+# between each try. If the element can't be found after try_count times, the
+# Capybara::ElementNotFound exception will be raised.
+def wait_for_page_element(element, try_count = 5)
+  try_count.times do |i|
+    begin
+      find(element)
+      break
+    rescue Capybara::ElementNotFound
+      if i + 1 < try_count
+        sleep 1
+      else
+        raise
+      end
+    end
+  end
+end
+
