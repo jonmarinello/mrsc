@@ -49,19 +49,6 @@ class PagesTest < Capybara::Rails::TestCase
       click_all_services_more_less_links
     end
 
-    # Visit Contact page
-    validate_nav_page('contact') do
-      must_have_content 'Contact Us'
-
-      # Visit all the social media links
-      find('#skype-link').click
-      find('#facebook-link').click
-      find('#twitter-link').click
-      find('#googleplus-link').click
-      find('#linkedin-link').click
-      find('#githib-link').click
-    end
-
     # Visit Start A Project page
     validate_nav_page('start_a_project') do
       must_have_content ' Start A Project '
@@ -118,7 +105,20 @@ class PagesTest < Capybara::Rails::TestCase
       end
 
       assert_on_page_path '/pages/start_a_project_landing_page'
+    end
 
+
+    # Visit Contact page
+    validate_nav_page('contact') do
+      must_have_content 'Contact Us'
+
+      # Visit all the social media links
+      find('#skype-link').click
+      find('#facebook-link').click
+      find('#twitter-link').click
+      find('#googleplus-link').click
+      find('#linkedin-link').click
+      find('#githib-link').click
     end
   end
 end
