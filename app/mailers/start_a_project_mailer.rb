@@ -2,7 +2,7 @@ require 'mandrill'
 
 class StartAProjectMailer < MandrillMailer::TemplateMailer
   default :from => 'donotreply@mrsc.com'
-  
+
   def start_a_project(potential_project)
     mandrill_mail :template => 'start_a_project',
                   :subject => 'Start A Project Request',
