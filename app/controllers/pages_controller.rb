@@ -15,12 +15,8 @@ class PagesController < ApplicationController
     @active_tab = 'about'
     @person_image_width = 90
 
-    # Log that we are about to load the recommendations from our yaml file
-    recommendations_path = File.join(Rails.root, 'app', 'models', 'about', 'recommendations.yml')
-    puts 'Loading recommendations from: ' + recommendations_path
-
     # Load recommendations from our yaml file to be displayed in about page
-    @recommendations = YAML::load_file(recommendations_path)
+    @recommendations = YAML::load_file(File.join(Rails.root, 'app', 'models', 'about', 'recommendations.yml'))
   end
 
 
