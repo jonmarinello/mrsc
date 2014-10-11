@@ -13,9 +13,7 @@ class PagesController < ApplicationController
   def about
     @active_tab = 'about'
     @person_image_width = 90
-
-    # Load recommendations from our yaml file to be displayed in about page
-    @recommendations = YAML.load_file(File.join(Rails.root, 'app', 'models', 'about', 'recommendations.yml'))
+    @recommendations = Recommendation.order(:id).all
   end
 
 

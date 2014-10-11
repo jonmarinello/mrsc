@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: shawn_duex
+  title: Shawn Duex - Engineering Manager at RightScale, October 23, 2013
+  body: "Jon and I have been working together on and off since 2008. We worked together at Microsoft and most recently we have been working closely at Rightscale. Jon is responsible for the development and support of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing tools used by my team to validate RightScale''s Windows RightImages and ServerTemplates."
+
+
+two:
+  id: 2
+  name: kannan_manickam
+  title: Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013
+  body: "Jon is an one-man-army in developing and maintaining code for the testing framework used here at RightScale to test the server configuration across different cloud vendors and operating systems using the API. He always has the passion for learning new tools, technologies, and integrating it with the product he builds."
+
