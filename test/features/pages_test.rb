@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class PagesTest < Capybara::Rails::TestCase
   scenario 'hit all main pages', :js => true do
@@ -84,7 +84,7 @@ class PagesTest < Capybara::Rails::TestCase
       end
 
       assert_on_page_path '/pages/create'
-      must_have_content "invalid email address"
+      must_have_content 'invalid email address'
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
@@ -93,7 +93,7 @@ class PagesTest < Capybara::Rails::TestCase
       end
 
       assert_on_page_path '/pages/create'
-      must_have_content "is an invalid number"
+      must_have_content 'is an invalid number'
 
 
       within('#new_potential_project') do

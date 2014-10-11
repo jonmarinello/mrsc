@@ -2,7 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'simplecov'
-require "minitest/rails/capybara"
+require 'minitest/rails/capybara'
 
 
 #
@@ -17,7 +17,7 @@ require "minitest/rails/capybara"
 # and rerun the test.
 #
 if ENV['SHOW_STDOUT'] && ENV['SHOW_STDOUT'] == '1'
-  def silence_stream(stream, &block)
+  def silence_stream(_stream, &_block)
     yield
   end
 end
@@ -60,7 +60,7 @@ class ActiveSupport::TestCase
   # Temporary helper until we get a better one in the test helpers
   def mini_test_login_admin_user!(admin_user = admin_users(:one))
     @request.env['devise.mapping'] = Devise.mappings[:admin_user] if @request.present?
-    #sign the user in
+    # sign the user in
     sign_in admin_user if @request.present?
   end
 
@@ -100,7 +100,7 @@ class ActiveSupport::TestCase
 
   # Hack to allow us to input data into a field using a jQuery input mask see:
   #    https://github.com/thoughtbot/capybara-webkit/issues/303 for details.
-  def fill_in_input_mask(location, options={})
+  def fill_in_input_mask(location, options = {})
     len = options[:with].to_s.length - 1
     len.times do
       fill_in location, :with => '1'
@@ -112,11 +112,11 @@ class ActiveSupport::TestCase
   DEFAULT_SLEEP_TIME = 0.12
 
   # Helper for testing any main navigation bar page
-  def validate_nav_page(page_name, &block)
+  def validate_nav_page(page_name, &_block)
     if page_name != 'index'
       # Visit main page via navigation bar button
       silence_stream(STDOUT) do
-        click_link(page_name.titleize, match: :first)
+        click_link(page_name.titleize, :match => :first)
       end
     else
       visit '/pages/index'
@@ -218,4 +218,3 @@ def reload_page
   # Capybara/Selenium compatible page reload
   visit page.driver.browser.current_url
 end
-
