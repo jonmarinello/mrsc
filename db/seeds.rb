@@ -12,7 +12,7 @@ if Rails.env.development?
 
   puts 'Loading recommendations...'
   Recommendation.create!(:name => 'shawn_duex',
-                         :title => 'Shawn Duex - Engineering Manager at RightScale, October 23, 2013',
+                         :title => 'Shawn Duex – Engineering Manager at RightScale, October 23, 2013',
                          :body => '"Jon and I have been working together on and off since 2008. We worked together at Microsoft and most recently we have been working closely at Rightscale. Jon is responsible for the development and support of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing tools used by my team to validate RightScale''s Windows RightImages and ServerTemplates.
                                     Jon has consistently provided amazing support for my team. He has championed many important features my team has needed and he builds these new features with an extremely high level of quality. Jon is very quick to deliver and does an amazing job following up with my team to ensure that these new features are successfully integrated. If we encounter an issue, Jon is always readily available to suggest a work-around and get a fix developed quickly.
                                     Many of my team members are offshore and Jon has always made him self available during their work day to help with issues or troubleshooting problems. Often times Jon will go the extra mile and proactively check in with my team members and make sure they are unblocked and working efficiently with the tools he supports."')
@@ -39,12 +39,18 @@ if Rails.env.development?
 
   Recommendation.create!(:name => 'efrain_olivares',
                          :title => 'Efrain Olivares - Software Development Engineer in Test, RightScale April 16, 2012',
-                         :body => '"Ive had the pleasure of working with Jon on an a very fast moving and quick to yield results test automation project. I had been thinking about this project for a while, so I was pleasantly surprised when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule which added value on a timescale I hadn''t foreseen. During planning, he helped guide our discussions down to just the necessary details to minimize risk, yet not constrain us or over think a solution.
+                         :body => '"I\'ve had the pleasure of working with Jon on an a very fast moving and quick to yield results test automation project. I had been thinking about this project for a while, so I was pleasantly surprised when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule which added value on a timescale I hadn\t foreseen. During planning, he helped guide our discussions down to just the necessary details to minimize risk, yet not constrain us or over think a solution.
                                     In short, Jon has the ability to bring true and tried Software Engineering experience to the table, while at the same time keeping an open mind to new possibilities and solutions then following that up with very pragmatic engineering skills in execution."')
 
   Recommendation.create!(:name => 'vitaly_sedelnik',
                          :title => 'Vitaly Sedelnik – Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014',
                          :body => '"Jon is super skilled software engineer, equally great at design, implementation, troubleshooting and maintenance. We worked together for about 2 years at RightScale collaborating on internal test automation framework which was developed and maintained by him. Jon consistently provided high quality and feature rich automation tools which bring QA in my team to the next level. Besides his professionalism Jon is just a nice person, open minded and pleasure to work with. I am looking forward to work with Jon in the future."')
+
+  Recommendation.create!(:name => 'pavel_seredenko',
+                         :title => 'Pavel Seredenko - QA Engineer at Rightscale, August 14, 2014',
+                         :body => '"At the time I worked with Jon he was a senior developer of a test framework for cloud computing testing.
+                                    It was a pleasure to work with Jon, in both professional and personal area. Jon is a real Ruby and cloud computing professional, with a deep understanding of steps, which should be done to achieve project goals, and a deep understanding how this goals can be achieved.
+                                    Jon\'s main edges is a solid understanding of a problem and a that he is always doing he\'s best to solve a problem. It was a great experience for me to work with Jon"')
 
   Recommendation.create!(:name => 'steve_reynolds',
                          :title => 'Steve Reynolds – Managing Partner, Elite Associates 2011',
