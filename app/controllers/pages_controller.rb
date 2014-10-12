@@ -5,8 +5,8 @@ class PagesController < ApplicationController
   end
 
 
-  def projects
-    @active_tab = 'projects'
+  def portfolio
+    @active_tab = 'portfolio'
   end
 
 
