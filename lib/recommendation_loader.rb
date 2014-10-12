@@ -33,7 +33,7 @@ class RecommendationsLoader
 
     Recommendation.create!(:name => 'efrain_olivares',
                            :title => 'Efrain Olivares - Software Development Engineer in Test, RightScale April 16, 2012',
-                           :body => '"I\'ve had the pleasure of working with Jon on an a very fast moving and quick to yield results test automation project. I had been thinking about this project for a while, so I was pleasantly surprised when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule which added value on a timescale I hadn\t foreseen. During planning, he helped guide our discussions down to just the necessary details to minimize risk, yet not constrain us or over think a solution.
+                           :body => '"I\'ve had the pleasure of working with Jon on an a very fast moving and quick to yield results test automation project. I had been thinking about this project for a while, so I was pleasantly surprised when Jon not only quickly picked up the vision of the project but implemented features ahead of schedule which added value on a timescale I hadn\'t foreseen. During planning, he helped guide our discussions down to just the necessary details to minimize risk, yet not constrain us or over think a solution.
                                       In short, Jon has the ability to bring true and tried Software Engineering experience to the table, while at the same time keeping an open mind to new possibilities and solutions then following that up with very pragmatic engineering skills in execution."',
                            :image_url => 'https://media.licdn.com/media/p/4/000/156/0a1/32effd9.jpg')
 
