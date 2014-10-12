@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'
     @active_tab = 'index'
@@ -14,9 +13,7 @@ class PagesController < ApplicationController
   def about
     @active_tab = 'about'
     @person_image_width = 90
-
-    # Load recommendations from our yaml file to be displayed in about page
-    @recommendations = YAML::load_file(File.join(Rails.root, 'app', 'models', 'about', 'recommendations.yml'))
+    @recommendations = Recommendation.order(:id).all
   end
 
 
@@ -50,7 +47,6 @@ class PagesController < ApplicationController
       # An error occurred so re-render the page with existing data and error message
       render 'start_a_project'
     end
-
   end
 
 
@@ -68,5 +64,4 @@ class PagesController < ApplicationController
         :type_code_review, :type_other, :start_timeframe,
         :additional_info, :heard_about_us, :keep_me_updated)
   end
-
 end

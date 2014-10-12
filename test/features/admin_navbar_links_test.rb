@@ -9,7 +9,7 @@ class AdminNavbarLinksTest < Capybara::Rails::TestCase
     login_admin_user!
 
     # Save off the array of page titles (because we are navigating away form the page with the titles)
-    active_admin_sub_page_titles = page.all('ul#tabs li').collect{|li| li.text}
+    active_admin_sub_page_titles = page.all('ul#tabs li').map(&:text)
 
     # Build black list of pages to omit
     active_admin_sub_page_black_list = []

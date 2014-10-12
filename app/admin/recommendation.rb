@@ -1,7 +1,15 @@
-ActiveAdmin.register PotentialProject do
-  permit_params :id, :name, :email, :phone, :company_name, :project_idea, :type_website, :type_ruby_on_rails,
-                :type_web_design, :type_code_review, :type_other, :start_timeframe, :additional_info, :heard_about_us,
-                :keep_me_updated
+ActiveAdmin.register Recommendation do
+  permit_params :id, :name, :title, :body, :image_url
+
+  index do
+    selectable_column
+    id_column
+    column :name
+    column :title
+    column :body
+    column :image_url
+    actions
+  end
 
 
   # See permitted parameters documentation:

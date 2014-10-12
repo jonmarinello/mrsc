@@ -2,7 +2,7 @@ require 'mandrill'
 
 class StartAProjectMailer < MandrillMailer::TemplateMailer
   default :from => 'donotreply@mrsc.com'
-  
+
   def start_a_project(potential_project)
     mandrill_mail :template => 'start_a_project',
                   :subject => 'Start A Project Request',
@@ -33,6 +33,5 @@ class StartAProjectMailer < MandrillMailer::TemplateMailer
   def boolean_to_string(value)
     return '✅' if value == true
     return '&nbsp;' if value == false
-    "unknown value --> #{value.inspect}"
   end
 end
