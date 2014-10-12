@@ -21,8 +21,8 @@ class PagesTest < Capybara::Rails::TestCase
       must_have_content 'Welcome To Mission Ridge Software Consulting'
     end
 
-    # Visit Projects page
-    validate_nav_page('projects') do
+    # Visit portfolio page
+    validate_nav_page('portfolio') do
       must_have_content 'We work well with others'
       must_have_content 'Fin & Field is all about the sportsman. Dedicated to those in search of their next outdoor adventure and to the outfitters, captains, and guides that make it all possible.'
       must_have_content 'RightScale provides a complete management platform to design, deploy, and manage the lifecycle of mission-critical cloud deployments.'

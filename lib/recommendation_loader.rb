@@ -15,7 +15,7 @@ class RecommendationsLoader
 
     Recommendation.create!(:name => 'nitin_mohan',
                            :title => 'Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013',
-                           :body => '"Its been a delight to work along-side Jon. He has solid skills in design and finishing projects within deadline.
+                           :body => '"Its been a delight to work along-side Jon. He has solid skills in design and finishing portfolio within deadline.
                                       He has been instrumental in automating our testing across different cloud providers and refactoring test code in ruby to make it easier to understand and use. He is very approachable and friendly, and never hesitates to share his wisdom."',
                            :image_url => 'https://media.licdn.com/media/p/3/000/0a2/3e2/10b5d3a.jpg')
 
