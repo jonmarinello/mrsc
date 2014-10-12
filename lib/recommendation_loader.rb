@@ -1,7 +1,7 @@
 class RecommendationsLoader
   def self.load_recommendations
     Recommendation.create!(:name => 'shawn_duex',
-                           :title => 'Shawn Duex – Engineering Manager at RightScale, October 23, 2013',
+                           :title => 'Shawn Duex - Engineering Manager at RightScale, October 23, 2013',
                            :body => '"Jon and I have been working together on and off since 2008. We worked together at Microsoft and most recently we have been working closely at Rightscale. Jon is responsible for the development and support of our automated test frameworks. These frameworks included the virtual monkey and rocket monkey testing tools used by my team to validate RightScale''s Windows RightImages and ServerTemplates.
                                       Jon has consistently provided amazing support for my team. He has championed many important features my team has needed and he builds these new features with an extremely high level of quality. Jon is very quick to deliver and does an amazing job following up with my team to ensure that these new features are successfully integrated. If we encounter an issue, Jon is always readily available to suggest a work-around and get a fix developed quickly.
                                       Many of my team members are offshore and Jon has always made him self available during their work day to help with issues or troubleshooting problems. Often times Jon will go the extra mile and proactively check in with my team members and make sure they are unblocked and working efficiently with the tools he supports."',
@@ -38,7 +38,7 @@ class RecommendationsLoader
                            :image_url => 'https://media.licdn.com/media/p/4/000/156/0a1/32effd9.jpg')
 
     Recommendation.create!(:name => 'vitaly_sedelnik',
-                           :title => 'Vitaly Sedelnik – Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014',
+                           :title => 'Vitaly Sedelnik - Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014',
                            :body => '"Jon is super skilled software engineer, equally great at design, implementation, troubleshooting and maintenance. We worked together for about 2 years at RightScale collaborating on internal test automation framework which was developed and maintained by him. Jon consistently provided high quality and feature rich automation tools which bring QA in my team to the next level. Besides his professionalism Jon is just a nice person, open minded and pleasure to work with. I am looking forward to work with Jon in the future."',
                            :image_url => 'https://media.licdn.com/media/p/8/005/07c/212/17956c3.jpg')
 
@@ -50,7 +50,7 @@ class RecommendationsLoader
                            :image_url => 'https://media.licdn.com/media/p/6/005/080/368/2b45280.jpg')
 
     Recommendation.create!(:name => 'steve_reynolds',
-                           :title => 'Steve Reynolds – Managing Partner, Elite Associates 2011',
+                           :title => 'Steve Reynolds - Managing Partner, Elite Associates 2011',
                            :body => '"We contracted with Mission Ridge Software Consulting LLC to help us in a couple of key areas; Test automation and choosing a new SDLC process. Mission Ridge Software Consulting LLC was instrumental in providing the training we needed in these key areas. Test Driven Development (TDD) was an area new to us and they walked us through the process, helped us select a test framework and mentored us on an ongoing basis.
                                       Choosing a new SDLC process was something we always wanted to do but just kept putting off. We had been using a form of the Waterfall process but we needed to be much more responsive to our customers. Mission Ridge Software Consulting LLC helped us understand the Scrum approach and how it could be effectively applied in our company. Mission Ridge Software Consulting LLC provided the training, real-world examples and implementation road-map we needed to successfully make the transition to Scrum.
                                       The result of this investment is that we have really improved our overall engineering excellence, have a happier and much more productive team and, most importantly, we have much happier customers. This has had a significant positive impact on our bottom line. Mission Ridge Software Consulting LLC gets our highest recommendation!"',
