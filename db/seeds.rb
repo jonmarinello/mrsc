@@ -6,8 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'recommendation_loader'
+
 if Rails.env.development?
   puts 'Loading admin users...'
-
   AdminUser.create!(:email => 'admin@mrsc.com', :password => 'password')
+
+  puts 'Loading recommendations...'
+  RecommendationsLoader.load_recommendations
 end

@@ -172,24 +172,6 @@ class ActiveSupport::TestCase
 
     click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
     must_have_content 'Jon is an one-man-army' if validate_content
-
-    click_link('Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013')
-    must_have_content 'Its been a delight to work along-side Jon' if validate_content
-
-    click_link('Cary Penniman - Software Architect at RightScale, April 5, 2013')
-    must_have_content 'Jon has rock solid software engineering skills' if validate_content
-
-    click_link('Dan Onorato - Quality Assurance Manager, RightScale April 24, 2012')
-    must_have_content 'RightScale contracted with Jon Marinello' if validate_content
-
-    click_link('Efrain Olivares - Software Develompent Engineer in Test, RightScale April 16, 2012')
-    must_have_content 'I\'ve had the pleasure of working with Jon' if validate_content
-
-    click_link('Vitaly Sedelnik – Cloud Solutions Engineer / Team Lead, RightScale August 16, 2014')
-    must_have_content 'Jon is super skilled software engineer' if validate_content
-
-    click_link('Steve Reynolds – Managing Partner, Elite Associates 2011')
-    must_have_content 'We contracted with Mission Ridge Software Consulting LLC' if validate_content
   end
 end
 
