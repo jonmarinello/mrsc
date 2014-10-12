@@ -58,7 +58,7 @@
       -# Generate the id using the name
       .panel-collapse.collapse{id: "#{recommendation.name}", :class => ('in' if first_time) }
         .panel-body
-          =image_tag "#{recommendation.name}.jpg", :class => 'padded-right-bottom-image img-responsive img-circle pull-left', :width => @person_image_width
+          =image_tag recommendation.image_url, :class => 'padded-right-bottom-image img-responsive img-circle pull-left', :width => @person_image_width
           %p
             = recommendation.body.gsub("\n", '<p>').html_safe
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
