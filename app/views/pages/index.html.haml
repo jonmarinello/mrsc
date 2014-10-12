@@ -1,4 +1,4 @@
-= render partial: 'main_image', :locals => {:page => 'index'}
+= render partial: 'shared/image_carousel', :locals => {:page => 'index'}
 %h3
   Welcome To Mission Ridge Software Consulting
 %p
@@ -17,6 +17,6 @@
   We've worked with several companies and they have had a lot of great things to say about the services we have
   provided.
 %p
-  %a.btn.btn-success{href: '/pages/projects'} READ MORE &raquo;
+  %a.btn.btn-success{href: '/pages/portfolio'} READ MORE &raquo;
 = javascript_include_tag('pages')
 = render 'shared/lets_talk_about_your_project'

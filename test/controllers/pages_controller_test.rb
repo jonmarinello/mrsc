@@ -3,7 +3,7 @@ require 'test_helper'
 class PagesControllerTest < ActionController::TestCase
   test 'all routes' do
     assert_routing '/', :controller => 'pages', :action => 'index'
-    assert_routing '/pages/projects', :controller => 'pages', :action => 'projects'
+    assert_routing '/pages/portfolio', :controller => 'pages', :action => 'portfolio'
     assert_routing '/pages/about', :controller => 'pages', :action => 'about'
     assert_routing '/pages/services', :controller => 'pages', :action => 'services'
     assert_routing '/pages/contact', :controller => 'pages', :action => 'contact'
@@ -17,10 +17,10 @@ class PagesControllerTest < ActionController::TestCase
     assert_select 'title', 'MRSC'
   end
 
-  test 'should get projects' do
-    get :projects
+  test 'should get portfolio' do
+    get :portfolio
     assert_response :success
-    assert_template :projects
+    assert_template :portfolio
     assert_template :layout => 'layouts/application'
     assert_select 'title', 'MRSC'
   end
