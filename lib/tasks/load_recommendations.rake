@@ -1,6 +1,4 @@
-# This task is normally run via the Heroku Task Scheduler.
-#
-# See https://github.com/finandfield/finandfield/wiki/Listing-Activity-Scheduler-Design for details.
+# This task will load the default recommendations
 #
 require 'recommendation_loader'
 

@@ -45,9 +45,8 @@
 %h3
   Recommendations
 #accordion.panel-group
-  -# Iterate over the hash of recommendations getting the key out so we can use that for generating the ids and also so we
-  -# can index into the hash to get the title and body elements.
-  -# Also, note that this is the first time through the loop so we only open the first accordion panel.
+  -# Iterate over all the recommendations and display them in an accordion.
+  -# The first time through the loop we only open the first accordion panel.
   - first_time = true
   - @recommendations.each do |recommendation|
     .panel.panel-success
