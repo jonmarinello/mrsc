@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   def about
     @active_tab = 'about'
     @person_image_width = 90
-    @recommendations = Recommendation.order(:id).all
+    @recommendations = Recommendation.order(:position).all
   end
 
 
