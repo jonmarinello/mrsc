@@ -16,18 +16,19 @@ class PagesTest < Capybara::Rails::TestCase
       sleep 1
     end
 
+
     # Visit Index page
     validate_nav_page('index') do
       must_have_content 'Welcome To Mission Ridge Software Consulting'
     end
 
-    # Visit portfolio page
-    validate_nav_page('portfolio') do
-      must_have_content 'We work well with others'
-      must_have_content 'Fin & Field is all about the sportsman. Dedicated to those in search of their next outdoor adventure and to the outfitters, captains, and guides that make it all possible.'
-      must_have_content 'RightScale provides a complete management platform to design, deploy, and manage the lifecycle of mission-critical cloud deployments.'
-      must_have_content 'Elite Associates is involved in all aspects of the design, development and delivery of StarTeam to Fortune 1000 customers and uses that experience to help them get the most out of StarTeam.'
+
+    # Visit Services page
+    validate_nav_page('services') do
+      click_all_services_more_less_links
+      click_all_services_more_less_links
     end
+
 
     # Visit About page
     validate_nav_page('about') do
@@ -43,15 +44,19 @@ class PagesTest < Capybara::Rails::TestCase
       click_all_recommendation_links(false)
     end
 
-    # Visit Services page
-    validate_nav_page('services') do
-      click_all_services_more_less_links
-      click_all_services_more_less_links
+
+    # Visit portfolio page
+    validate_nav_page('portfolio') do
+      must_have_content 'We work well with others'
+      must_have_content 'Fin & Field is all about the sportsman. Dedicated to those in search of their next outdoor adventure and to the outfitters, captains, and guides that make it all possible.'
+      must_have_content 'RightScale provides a complete management platform to design, deploy, and manage the lifecycle of mission-critical cloud deployments.'
+      must_have_content 'Elite Associates is involved in all aspects of the design, development and delivery of StarTeam to Fortune 1000 customers and uses that experience to help them get the most out of StarTeam.'
     end
+
 
     # Visit Start A Project page
     validate_nav_page('start_a_project') do
-      must_have_content ' Start A Project '
+      must_have_content 'Start A Project '
 
       within('#new_potential_project') do
         fill_in('potential_project[company_name]', :with => 'Hans Dickman Boat Yard')
@@ -69,6 +74,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content "can't be blank"
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[name]', :with => 'Roger Eaton')
@@ -77,6 +83,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content "can't be blank"
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'xxx')
@@ -85,6 +92,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content 'invalid email address'
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
@@ -94,7 +102,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content 'is an invalid number'
-
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[phone]', :with => '(805) 705-7929')
@@ -106,6 +114,21 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/start_a_project_landing_page'
     end
+
+
+    # Test all the "READ MORE »" links
+    visit '/'
+    assert_on_page_path '/'
+    click_link_or_button('READ MORE »')
+    assert_on_page_path '/pages/services'
+    click_link_or_button('READ MORE »')
+    assert_on_page_path '/pages/about'
+    click_link_or_button('READ MORE »')
+    assert_on_page_path '/pages/portfolio'
+    click_link_or_button('READ MORE »')
+    assert_on_page_path '/pages/contact'
+    click_link_or_button('READ MORE »')
+    assert_on_page_path '/pages/start_a_project'
 
 
     # Visit Contact page
