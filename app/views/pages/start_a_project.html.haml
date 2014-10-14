@@ -6,6 +6,8 @@
     you to discuss your ideas in short order. All the information provided below will be kept strictly confidential and
     does not imply any agreement between us. Its just a starting point for a discussion.
   %p
+    - if alert || notice
+      = render 'shared/flash_messages'
     = simple_form_for @potential_project, :url => url_for(:action => 'create', :controller => 'pages') do |f|
       = f.input :name, :label => 'Your name'
       = f.input :email, :label => 'Your email address'
