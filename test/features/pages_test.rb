@@ -74,6 +74,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content "can't be blank"
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[name]', :with => 'Roger Eaton')
@@ -82,6 +83,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content "can't be blank"
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'xxx')
@@ -90,6 +92,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content 'invalid email address'
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
@@ -99,7 +102,7 @@ class PagesTest < Capybara::Rails::TestCase
 
       assert_on_page_path '/pages/create'
       must_have_content 'is an invalid number'
-
+      must_have_content 'An Error occurred.'
 
       within('#new_potential_project') do
         fill_in('potential_project[phone]', :with => '(805) 705-7929')
