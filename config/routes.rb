@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Point the web site root to the index page
   root :to => 'pages#index'
 
+  # Pages routes
   get '/pages/index' => 'pages#index'
   get '/pages/services' => 'pages#services'
   get '/pages/about' => 'pages#about'
