@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
+  # Active Admin Routes
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  # Point the MRSC web site root to the index page
+
+  # Point the web site root to the index page
   root :to => 'pages#index'
 
-  # Automatically match all out routes
-  match ':controller(/:action(/:id))', :via => :get
-  match ':controller(/:action(/:id))', :via => :post
+  # Pages routes
+  get '/pages/index' => 'pages#index'
+  get '/pages/services' => 'pages#services'
+  get '/pages/about' => 'pages#about'
+  get '/pages/portfolio' => 'pages#portfolio'
+  get '/pages/contact' => 'pages#contact'
+  get '/pages/start_a_project' => 'pages#start_a_project'
 
-  get '/pages/start_a_project_landing_page', to: 'pages#start_a_project_landing_page',
-      as: :start_a_project_landing_page
+  post '/pages/start_a_project', to: 'pages#create'
+  get '/pages/start_a_project_landing_page', to: 'pages#start_a_project_landing_page'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -65,4 +71,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Automatically match all out routes
+  # match ':controller(/:action(/:id))', :via => :get
+  # match ':controller(/:action(/:id))', :via => :post
 end
