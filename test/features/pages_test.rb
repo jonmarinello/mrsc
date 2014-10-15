@@ -3,8 +3,8 @@ require 'test_helper'
 class PagesTest < Capybara::Rails::TestCase
   scenario 'hit all main pages', :js => true do
     # Visit the main index page
-    visit '/'
-    assert_on_page_path '/'
+    visit root_path
+    assert_on_page_path root_path
 
     # Flip through carousel images
     5.times do
@@ -72,7 +72,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path '/pages/create'
+      assert_on_page_path pages_start_a_project_path
       must_have_content "can't be blank"
       must_have_content 'An Error occurred.'
 
@@ -81,7 +81,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path '/pages/create'
+      assert_on_page_path pages_start_a_project_path
       must_have_content "can't be blank"
       must_have_content 'An Error occurred.'
 
@@ -90,7 +90,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path '/pages/create'
+      assert_on_page_path pages_start_a_project_path
       must_have_content 'invalid email address'
       must_have_content 'An Error occurred.'
 
@@ -100,7 +100,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path '/pages/create'
+      assert_on_page_path pages_start_a_project_path
       must_have_content 'is an invalid number'
       must_have_content 'An Error occurred.'
 
@@ -112,23 +112,23 @@ class PagesTest < Capybara::Rails::TestCase
         end
       end
 
-      assert_on_page_path '/pages/start_a_project_landing_page'
+      assert_on_page_path pages_start_a_project_landing_page_path
     end
 
 
     # Test all the "READ MORE »" links
-    visit '/'
-    assert_on_page_path '/'
+    visit root_path
+    assert_on_page_path root_path
     click_link_or_button('READ MORE »')
-    assert_on_page_path '/pages/services'
+    assert_on_page_path pages_services_path
     click_link_or_button('READ MORE »')
-    assert_on_page_path '/pages/about'
+    assert_on_page_path pages_about_path
     click_link_or_button('READ MORE »')
-    assert_on_page_path '/pages/portfolio'
+    assert_on_page_path pages_portfolio_path
     click_link_or_button('READ MORE »')
-    assert_on_page_path '/pages/contact'
+    assert_on_page_path pages_contact_path
     click_link_or_button('READ MORE »')
-    assert_on_page_path '/pages/start_a_project'
+    assert_on_page_path pages_start_a_project_path
 
 
     # Visit Contact page
