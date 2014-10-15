@@ -8,6 +8,7 @@ class PagesControllerTest < ActionController::TestCase
     assert_routing '/pages/services', :controller => 'pages', :action => 'services'
     assert_routing '/pages/contact', :controller => 'pages', :action => 'contact'
     assert_routing '/pages/start_a_project', :controller => 'pages', :action => 'start_a_project'
+    assert_routing '/pages/start_a_project_landing_page', :controller => 'pages', :action => 'start_a_project_landing_page'
   end
 
   test 'should get index' do
