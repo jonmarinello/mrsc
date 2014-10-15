@@ -45,7 +45,7 @@ class PagesController < ApplicationController
       redirect_to pages_start_a_project_landing_page_path
     else
       # An error occurred so re-render the page with existing data and error message
-      flash[:alert] = 'An Error occurred.'
+      flash.now[:alert] = 'An Error occurred.'
       render 'start_a_project'
     end
   end
