@@ -5,13 +5,13 @@
 source 'https://rubygems.org'
 
 # Necessary Ruby version
-ruby '2.0.0'
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
 # Postgres database
-gem 'pg', '0.17.1'
+gem 'pg', '0.18.1'
 
 # Authentication/Authorization
 gem 'devise', '3.2.4'
