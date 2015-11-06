@@ -18,3 +18,9 @@
 
 // Turn off bold for simple form labels
 label{font-weight:normal !important};
+
+// Make carousel images size larger than original size when browser window re-sized larger than original image
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}

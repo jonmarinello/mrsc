@@ -75,7 +75,7 @@ class ActiveSupport::TestCase
 
   # logs in as admin user for Active Admin tests
   def login_admin_user!(admin_user = admin_users(:one))
-    visit('/admin/login')
+    visit new_admin_user_session_path
     within('#session_new') do
       fill_in('admin_user[email]', :with => admin_user.email)
       fill_in('admin_user[password]', :with => 'password')
@@ -94,15 +94,9 @@ class ActiveSupport::TestCase
   end
 
 
-  # Waits for the page element to become available using Capybara's find() method
-  def wait_for_page_element(element)
-    find(element)
-  end
-
-
   # Assert we landed on the correct page and if not, provide a helpful error message
   def assert_on_page_path(expected_page, actual_page = current_path)
-    assert_equal expected_page, actual_page, 'ERROR: Landed on wrong page'
+    assert_equal expected_page.chomp('/'), actual_page.chomp('/'), 'ERROR: Landed on wrong page'
   end
 
 
@@ -117,18 +111,10 @@ class ActiveSupport::TestCase
   end
 
 
-  DEFAULT_SLEEP_TIME = 0.12
-
   # Helper for testing any main navigation bar page
   def validate_nav_page(page_name, &_block)
-    if page_name != 'index'
-      # Visit main page via navigation bar button
-      silence_stream(STDOUT) do
-        click_link(page_name.titleize, :match => :first)
-      end
-    else
-      visit '/pages/index'
-    end
+    # Visit the desired page
+    visit "/pages/#{page_name}"
 
     # Validate we landed on the correct page
     assert_on_page_path "/pages/#{page_name}"
@@ -139,17 +125,21 @@ class ActiveSupport::TestCase
     must_have_content 'Stay Connected'
 
     # click on the learn more button
-    silence_stream(STDOUT) do
-      click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
-    end
+    click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
 
     # Execute any code the client wants
     yield
   end
 
 
+  DEFAULT_SLEEP_TIME_IN_SECONDS = 0.25
+
   # Help for clicking all the services "More.../Less..." links
-  def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME)
+  def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME_IN_SECONDS)
+    # Make surte we are on the services page
+    assert_on_page_path pages_services_path
+
+    # Click each of the services more/less links and sleep a little in between in case you are watching (looks better)
     find('#toggle-rails-text').click
     sleep sleep_seconds
     find('#toggle-iphone-text').click
@@ -209,7 +199,6 @@ def reload_page
   visit page.driver.browser.current_url
 end
 
-
 # Waits for the page element to become available using Capybara's find() method.
 #
 # You can pass an optional try_count which defaults to 5 and waits one second
@@ -218,8 +207,7 @@ end
 def wait_for_page_element(element, try_count = 5)
   try_count.times do |i|
     begin
-      find(element)
-      break
+      return find(element)
     rescue Capybara::ElementNotFound
       if i + 1 < try_count
         sleep 1

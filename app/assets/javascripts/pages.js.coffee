@@ -1,14 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 # If the window is big enough, show the buttons/border-bottoms
 showCarouselButtonAndBottomBorder = (mainImageLearnMoreButtons) ->
   mainImageLearnMoreButtons.show()
   pageHeader = $(".main-image-text .page-header")
   pageHeader.css "padding-bottom", "9.5px"
   pageHeader.css "border-bottom", "1px solid #e6e6e6"
-  return
 
 # Adjusts the main image font size and shows/hides the main image button based on window size
 handleMainImageFontSizeAndButton = ->
@@ -34,7 +29,6 @@ handleMainImageFontSizeAndButton = ->
     # If the window is big enough, show the buttons/border-bottoms and enlarge the text items
     showCarouselButtonAndBottomBorder mainImageLearnMoreButtons
     mainImageTextItems.css "font-size", "46px"
-  return
 
 # Toggles the "Read More/Read Less" label and associated text visibility
 handleShowHideText = (toggleText, text) ->
@@ -45,8 +39,9 @@ handleShowHideText = (toggleText, text) ->
     text.hide()
     toggleText.text window.readMoreLabel
   false
-$(document).ready ->
 
+
+$ ->
   # One time sizing
   handleMainImageFontSizeAndButton()
 
@@ -79,9 +74,6 @@ $(document).ready ->
   togglePrefix = "#toggle-"
 
   # Register for all the services "Read More/Read Less" click events to handle associated text visibility
-  #
-  # TODO: Would love change this to using a for loop but unfortunately, by the time the Click event fires,
-  # i is 6 for all the functions. Looking for a way to do this using meta-programming but timed out for now.
   $(togglePrefix + textItems[0]).unbind("click").click ->
     handleShowHideText $(togglePrefix + textItems[0]), $("#" + textItems[0])
 

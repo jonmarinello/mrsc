@@ -49,6 +49,11 @@ gem 'bootstrap-sass', '3.1.1.1'
 # Haml
 gem 'haml-rails', '0.5.3'
 
+group :development do
+  gem 'better_errors', '2.0.0'
+  gem 'binding_of_caller', '0.7.2'
+end
+
 # Production dependencies
 group :production do
   # Heroku requires this
@@ -70,6 +75,9 @@ group :test do
   gem 'selenium-webdriver', '2.48.1'
 end
 
+# Pry lets you examine variables run through server as if you were in a rails console
+gem 'pry-rails', '0.3.2',     :group => [:development, :test]
+
 # Use unicorn as the app server
 gem 'unicorn', '4.8.3'
 
@@ -87,7 +95,7 @@ gem 'newrelic_rpm', '3.8.1.221'
 gem 'simple_form', '3.1.0.rc1'
 
 # Madrill Mailer
-gem 'mandrill_mailer', '0.4.9'
+gem 'mandrill_mailer', '1.1.0'
 
 # Email validation
 gem 'validates_email_format_of', '1.6.1'
