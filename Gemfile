@@ -67,7 +67,7 @@ group :test do
   # Capybara/Minitest
   gem "minitest-rails-capybara", '2.0.1'
   gem 'capybara_minitest_spec', '1.0.2'
-  gem 'selenium-webdriver', '2.43.0'
+  gem 'selenium-webdriver', '2.48.1'
 end
 
 # Use unicorn as the app server
@@ -77,7 +77,8 @@ gem 'unicorn', '4.8.3'
 gem 'bootswatch-rails', '3.2.0'
 
 # Active Admin
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'active_admin_theme', '1.0.2'
 
 # New Relic Monitoring
 gem 'newrelic_rpm', '3.8.1.221'
