@@ -29,6 +29,9 @@ config/initializers/secret_token.rb
 # RubyMine
 .idea
 
+# RVM
+.ruby-version
+
 # Mac Desktop Services Store files
 .DS_Store
 
