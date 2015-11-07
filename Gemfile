@@ -82,7 +82,7 @@ gem 'pry-rails', '0.3.2',     :group => [:development, :test]
 gem 'unicorn', '4.8.3'
 
 # Bootswatch skins
-gem 'bootswatch-rails', '3.2.0'
+gem 'bootswatch-rails', '3.3.5'
 
 # Active Admin
 gem 'activeadmin', '~> 1.0.0.pre2'
