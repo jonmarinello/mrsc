@@ -11,7 +11,7 @@ ruby '2.1.5'
 gem 'rails', '4.1.1'
 
 # Postgres database
-gem 'pg', '0.18.1'
+gem 'pg', '0.18.3'
 
 # Authentication/Authorization
 gem 'devise', '3.2.4'
