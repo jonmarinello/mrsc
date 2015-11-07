@@ -50,14 +50,14 @@ gem 'bootstrap-sass', '3.1.1.1'
 gem 'haml-rails', '0.5.3'
 
 group :development do
-  gem 'better_errors', '2.0.0'
+  gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
 end
 
 # Production dependencies
 group :production do
   # Heroku requires this
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor', '0.0.3'
 end
 
 # Test dependencies
