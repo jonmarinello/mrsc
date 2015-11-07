@@ -92,7 +92,7 @@ gem 'active_admin_theme', '1.0.2'
 gem 'newrelic_rpm', '3.8.1.221'
 
 # Simple forms
-gem 'simple_form', '3.1.0.rc1'
+gem 'simple_form', '3.2.0'
 
 # Madrill Mailer
 gem 'mandrill_mailer', '1.1.0'
