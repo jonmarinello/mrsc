@@ -104,5 +104,5 @@ gem 'validates_email_format_of', '1.6.1'
 gem 'phony_rails', '0.7.1'
 
 # Sortable gems
-gem 'acts_as_list', '0.4.0'
+gem 'acts_as_list', '0.7.2'
 gem 'activeadmin-sortable', '0.0.3'
