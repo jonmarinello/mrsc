@@ -112,8 +112,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      # TODO: Get this to work - upgraded to latest selenium and this broke :(
-      # assert_on_page_path pages_start_a_project_landing_page_path
+      assert_on_page_path pages_start_a_project_landing_page_path
     end
 
 
