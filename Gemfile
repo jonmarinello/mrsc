@@ -11,7 +11,7 @@ ruby '2.1.5'
 gem 'rails', '4.1.1'
 
 # Postgres database
-gem 'pg', '0.18.1'
+gem 'pg', '0.18.3'
 
 # Authentication/Authorization
 gem 'devise', '3.2.4'
@@ -20,7 +20,7 @@ gem 'devise', '3.2.4'
 gem 'sass-rails', '4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.5.0'
+gem 'uglifier', '2.7.2'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
@@ -50,14 +50,14 @@ gem 'bootstrap-sass', '3.1.1.1'
 gem 'haml-rails', '0.5.3'
 
 group :development do
-  gem 'better_errors', '2.0.0'
+  gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
 end
 
 # Production dependencies
 group :production do
   # Heroku requires this
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor', '0.0.3'
 end
 
 # Test dependencies
@@ -82,7 +82,7 @@ gem 'pry-rails', '0.3.2',     :group => [:development, :test]
 gem 'unicorn', '4.8.3'
 
 # Bootswatch skins
-gem 'bootswatch-rails', '3.2.0'
+gem 'bootswatch-rails', '3.3.5'
 
 # Active Admin
 gem 'activeadmin', '~> 1.0.0.pre2'
@@ -92,7 +92,7 @@ gem 'active_admin_theme', '1.0.2'
 gem 'newrelic_rpm', '3.8.1.221'
 
 # Simple forms
-gem 'simple_form', '3.1.0.rc1'
+gem 'simple_form', '3.2.0'
 
 # Madrill Mailer
 gem 'mandrill_mailer', '1.1.0'
@@ -104,5 +104,5 @@ gem 'validates_email_format_of', '1.6.1'
 gem 'phony_rails', '0.7.1'
 
 # Sortable gems
-gem 'acts_as_list', '0.4.0'
+gem 'acts_as_list', '0.7.2'
 gem 'activeadmin-sortable', '0.0.3'
