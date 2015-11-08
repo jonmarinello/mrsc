@@ -1,0 +1,78 @@
+%h1 Mission Ridge Software Consulting - New Potential Project
+= image_tag 'http://s28.postimg.org/swjrt30d9/mrsc.jpg'
+%hr
+%h2 General Information
+%p
+  %strong
+    Name:
+  = "#{@potential_project.name}"
+%p
+  %strong
+    Email:
+  = "#{@potential_project.email}"
+
+- if @potential_project.phone.present?
+  %p
+    %strong
+      Telephone:
+    = "#{number_to_phone(@potential_project.phone, area_code: true).sub('1(', '(')}"
+
+- if @potential_project.company_name.present?
+  %p
+    %strong
+      Company Name:
+    = "#{@potential_project.company_name}"
+%p
+  %strong
+    Project Idea:
+  = "#{@potential_project.project_idea}"
+
+- if @potential_project.start_timeframe.present?
+  %p
+    %strong
+      Start Timeframe:
+    = "#{@potential_project.start_timeframe}"
+
+- if @potential_project.additional_info.present?
+  %p
+    %strong
+      Additional Information:
+    = "#{@potential_project.additional_info}"
+
+- if @potential_project.heard_about_us.present?
+  %p
+    %strong
+      Heard About Us At:
+    = "#{@potential_project.heard_about_us}"
+
+- if @potential_project.keep_me_updated.present?
+  %p
+    %i.fa.fa-check
+    Keep me updated with Mission Ridge Software Consulting news
+
+%h2 Selected Project Attributes
+
+- if @potential_project.type_website.present?
+  %p
+    %i.fa.fa-check
+    Website
+
+- if @potential_project.type_ruby_on_rails.present?
+  %p
+    %i.fa.fa-check
+    Ruby on Rails
+
+- if @potential_project.type_web_design.present?
+  %p
+    %i.fa.fa-check
+    Web Design
+
+- if @potential_project.type_code_review.present?
+  %p
+    %i.fa.fa-check
+    Code Review
+
+- if @potential_project.type_other.present?
+  %p
+    %i.fa.fa-check
+    Other
