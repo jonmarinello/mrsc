@@ -59,11 +59,18 @@ class PagesControllerTest < ActionController::TestCase
     assert_select 'title', 'MRSC'
   end
 
+  test 'should create a potential project' do
+    assert_difference('PotentialProject.count') do
+      post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com', project_idea: 'To build the perfect androird woman!'}
+    end
+
+    assert_redirected_to pages_start_a_project_landing_page_path
+  end
+
   test 'should get start_a_project_langing_page' do
     get :start_a_project_landing_page
     assert_response :success
-    # TODO: Find out why this doesn't work
-    # assert_template :start_a_project_langing_page
+    assert_template 'pages/start_a_project_landing_page'
     assert_template :layout => 'layouts/application'
     assert_select 'title', 'MRSC'
   end
