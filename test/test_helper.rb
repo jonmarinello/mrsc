@@ -217,3 +217,19 @@ def wait_for_page_element(element, try_count = 5)
     end
   end
 end
+
+
+# Mandrill mock to avoid sending email messages (and blowing through our quota and making it harder to run
+# manual tests and find the results) in our automated tests.
+#
+
+# Set to true to see mock log messages
+$log_mandrill_mock_messages = false
+
+module MandrillMailer
+  class TemplateMailer < MandrillMailer::CoreMailer
+    def deliver
+      puts "\nMandrill API TemplateMailer#deliver called...\n" if $log_mandrill_mock_messages
+    end
+  end
+end
