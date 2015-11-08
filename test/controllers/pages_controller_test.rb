@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
-  def common_tests(page_template)
+  def common_get_test(page, page_template)
+    get page
     assert_response :success
     assert_template page_template
     assert_template :layout => 'layouts/application'
@@ -20,43 +21,40 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get index' do
-    get :index
-    common_tests 'pages/index'
+    common_get_test :index, 'pages/index'
     assert_not_nil assigns :active_tab
+    assert_not_nil assigns :company_name
   end
 
 
   test 'should get portfolio' do
-    get :portfolio
-    common_tests 'pages/portfolio'
+    common_get_test :portfolio, 'pages/portfolio'
     assert_not_nil assigns :active_tab
   end
 
 
   test 'should get about' do
-    get :about
-    common_tests 'pages/about'
+    common_get_test :about, 'pages/about'
     assert_not_nil assigns :active_tab
+    assert_not_nil assigns :person_image_width
+    assert_not_nil assigns :recommendations
   end
 
 
   test 'should get services' do
-    get :services
-    common_tests 'pages/services'
+    common_get_test :services, 'pages/services'
     assert_not_nil assigns :active_tab
   end
 
 
   test 'should get contact' do
-    get :contact
-    common_tests 'pages/contact'
+    common_get_test :contact, 'pages/contact'
     assert_not_nil assigns :active_tab
   end
 
 
   test 'should get start_a_project' do
-    get :start_a_project
-    common_tests 'pages/start_a_project'
+    common_get_test :start_a_project, 'pages/start_a_project'
     assert_not_nil assigns :active_tab
   end
 
@@ -73,8 +71,7 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get start_a_project_langing_page' do
-    get :start_a_project_landing_page
-    common_tests 'pages/start_a_project_landing_page'
+    common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page'
     assert_nil assigns :active_tab
   end
 end
