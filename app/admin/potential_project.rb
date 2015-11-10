@@ -4,18 +4,30 @@ ActiveAdmin.register PotentialProject do
                 :keep_me_updated
 
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+  index do
+    selectable_column
+    id_column
+    column :name
+    column :phone do |potential_project|
+      number_to_phone(potential_project.phone, area_code: true).sub('1(', '(') if potential_project.phone.present?
+    end
+    column :company_name
+    column :start_timeframe
+    column :type_website
+    column :type_ruby_on_rails
+    column :type_web_design
+    column :type_code_review
+    column :type_other
+    actions
+  end
 
-
+  filter :name
+  filter :phone
+  filter :company_name
+  filter :type_website
+  filter :type_ruby_on_rails
+  filter :type_web_design
+  filter :type_code_review
+  filter :type_other
+  filter :keep_me_updated
 end
