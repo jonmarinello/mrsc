@@ -94,9 +94,6 @@ gem 'newrelic_rpm', '3.8.1.221'
 # Simple forms
 gem 'simple_form', '3.2.0'
 
-# Madrill Mailer
-gem 'mandrill_mailer', '1.1.0'
-
 # Email validation
 gem 'validates_email_format_of', '1.6.1'
 
@@ -106,3 +103,8 @@ gem 'phony_rails', '0.7.1'
 # Sortable gems
 gem 'acts_as_list', '0.7.2'
 gem 'activeadmin-sortable', '0.0.3'
+
+# Emails
+gem 'roadie', '3.0.5'
+gem 'roadie-rails', '1.0.6'
+
