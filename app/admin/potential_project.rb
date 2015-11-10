@@ -3,7 +3,6 @@ ActiveAdmin.register PotentialProject do
                 :type_web_design, :type_code_review, :type_other, :start_timeframe, :additional_info, :heard_about_us,
                 :keep_me_updated
 
-
   index do
     selectable_column
     id_column
