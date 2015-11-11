@@ -5,4 +5,6 @@ class PotentialProject < ActiveRecord::Base
   validates :email, :email_format => { :message => 'invalid email address' }
   phony_normalize :phone, :default_country_code => 'US'
   validates :phone, :phony_plausible => true
+
+  scope :active, -> {where(:is_active => true)}
 end
