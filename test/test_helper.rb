@@ -1,3 +1,6 @@
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 # This needs to be at the very top - before any application code is run
 # Test coverage
 require 'simplecov'
