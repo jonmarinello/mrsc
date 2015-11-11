@@ -65,6 +65,7 @@ end
 group :test do
   # Code Coverage
   gem 'simplecov', '0.9.0'
+  gem 'codeclimate-test-reporter', '0.4.8', :require => nil
 
   # awesome matchers that make mundane tests easy
   gem 'shoulda', '3.5.0'
