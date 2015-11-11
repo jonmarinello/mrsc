@@ -119,11 +119,6 @@ class ActiveSupport::TestCase
     # Validate we landed on the correct page
     assert_on_page_path "/pages/#{page_name}"
 
-    # Validate standard expected content
-    must_have_content 'Mission Ridge Software Consulting LLC'
-    must_have_content 'Have a project we can help with?' if page_name != 'start_a_project'
-    must_have_content 'Stay Connected'
-
     # click on the learn more button
     click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
 
@@ -158,10 +153,7 @@ class ActiveSupport::TestCase
   # Helper for testing recommendation accordion panels
   def click_all_recommendation_links(validate_content)
     click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
-    must_have_content 'Jon and I have been working together on and off since 2008' if validate_content
-
     click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
-    must_have_content 'Jon is an one-man-army' if validate_content
   end
 end
 
@@ -183,7 +175,7 @@ end
 #
 module WaitForAjax
   def wait_for_ajax
-    Timeout.timeout(Capybara.default_wait_time) do
+    Timeout.timeout(Capybara.default_max_wait_time) do
       loop until finished_all_ajax_requests?
     end
   end

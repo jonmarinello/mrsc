@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.5'
 
 # Postgres database
 gem 'pg', '0.18.3'
@@ -49,6 +49,7 @@ gem 'bootstrap-sass', '3.1.1.1'
 # Haml
 gem 'haml-rails', '0.5.3'
 
+# Development dependencies
 group :development do
   gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
@@ -67,11 +68,11 @@ group :test do
 
   # awesome matchers that make mundane tests easy
   gem 'shoulda', '3.5.0'
-  gem 'minitest-spec-rails', '5.0.4'
+  gem 'minitest-spec-rails', '5.3.0'
 
   # Capybara/Minitest
-  gem "minitest-rails-capybara", '2.0.1'
-  gem 'capybara_minitest_spec', '1.0.2'
+  gem "minitest-rails-capybara", '2.1.1'
+  gem 'capybara_minitest_spec', '1.0.5'
   gem 'selenium-webdriver', '2.48.1'
 end
 

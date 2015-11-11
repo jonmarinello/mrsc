@@ -17,6 +17,6 @@ Master: [ ![Codeship Status for jonmarinello/mrsc](https://www.codeship.io/proje
 Copyright Notice
 ----------------
 
-Copyright © 2015 Mission Ridge Software Development LLC
+Copyright © 2011-2015 Mission Ridge Software Development LLC
 
 All rights reserved.
