@@ -70,6 +70,18 @@ class PagesControllerTest < ActionController::TestCase
   end
 
 
+  test 'should fail to create a potential project' do
+    assert_difference('PotentialProject.count', 0) do
+      post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com'}
+    end
+
+    assert_nil assigns :active_tab
+    assert_not_nil assigns :potential_project
+    assert_equal 'An Error occurred.', flash[:alert]
+    assert_equal pages_start_a_project_path, request.path
+  end
+
+
   test 'should get start_a_project_langing_page' do
     common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page'
     assert_nil assigns :active_tab
