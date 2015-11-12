@@ -48,11 +48,12 @@
   -# Iterate over all the recommendations and display them in an accordion.
   -# The first time through the loop we only open the first accordion panel.
   - first_time = true
+  #recommendation
   - @recommendations.each do |recommendation|
     .panel.panel-success
       .panel-heading
         %h4.panel-title
-          %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => "collapse", href: "##{recommendation.name}"}
+          %a.accordion-toggle{'data-parent' => '#accordion', 'data-toggle' => 'collapse', href: "##{recommendation.name}"}
             = recommendation.title
       -# Generate the id using the name
       .panel-collapse.collapse{id: "#{recommendation.name}", :class => ('in' if first_time) }
@@ -63,7 +64,10 @@
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
     - first_time = false
 %p
-  %a.btn.btn-success{href: pages_portfolio_path} READ MORE &raquo;
+  %a.btn.btn-success#read-more{href: pages_portfolio_path} READ MORE &raquo;
 = javascript_include_tag('pages')
+= javascript_include_tag('tours/shared/common_tour_steps')
+= javascript_include_tag('tours/about_tour')
+= render 'layouts/shared/start_tour_box'
 = render 'shared/lets_talk_about_your_project'
 

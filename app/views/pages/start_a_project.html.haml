@@ -25,3 +25,6 @@
       = f.input :heard_about_us, :label => 'How you heard about us'
       = f.input :keep_me_updated, :label => 'Keep me updated with Mission Ridge Software Consulting news', :wrapper => :vertical_boolean
       = f.button :submit, 'Submit', :class => 'btn btn-warning'
+= javascript_include_tag('tours/shared/common_tour_steps')
+= javascript_include_tag('tours/start_a_project_tour')
+= render 'layouts/shared/start_tour_box'
