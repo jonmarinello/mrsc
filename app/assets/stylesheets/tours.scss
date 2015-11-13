@@ -1,0 +1,39 @@
+$tour-tab-box-text-rotation: 270deg;
+$radius: 30%;
+
+#start_tour_tab {
+  position: fixed;
+  height: 34px;
+  right: -46px;
+  top: 35%;
+  z-index: 100;
+  background-color: darkblue;
+  display: inline-block;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-transform: rotate($tour-tab-box-text-rotation);
+  -moz-transform: rotate($tour-tab-box-text-rotation);
+  -o-transform: rotate($tour-tab-box-text-rotation);
+  transform: rotate($tour-tab-box-text-rotation); // for IE
+
+  #inner_start_tour_tab {
+    border: solid 1px white;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    margin: 1px;
+    font: 18px/1.2 arial,helvetica,sans-serif;
+    padding: 5px 7px 7px 7px;
+  }
+
+  &:hover {
+    right: -43px;
+  }
+
+  .tour-button {
+    color: white;
+    background-color: darkblue;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+  }
+}

@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require pages
-//= require bootstrap.min
+//= require plugins/bootstrap.min.js
 //= require application

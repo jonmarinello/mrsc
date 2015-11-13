@@ -17,6 +17,9 @@
   We've worked with several companies and they have had a lot of great things to say about the services we have
   provided.
 %p
-  %a.btn.btn-success{href: pages_services_path} READ MORE &raquo;
+  %a.btn.btn-success#read-more{href: pages_services_path} READ MORE &raquo;
 = javascript_include_tag('pages')
+= javascript_include_tag('tours/shared/common_tour_steps')
+= javascript_include_tag('tours/index_tour')
+= render 'layouts/shared/start_tour_box'
 = render 'shared/lets_talk_about_your_project'
