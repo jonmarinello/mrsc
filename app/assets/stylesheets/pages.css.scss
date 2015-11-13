@@ -1,7 +1,3 @@
-// Place all the styles related to the Statics controller here.
-// They will automatically be included in application.css.scss.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .padded-right-bottom-image {
   padding-right: 1em;
   padding-bottom: 0.10em;
@@ -18,9 +14,3 @@
 
 // Turn off bold for simple form labels
 label{font-weight:normal !important};
-
-// Make carousel images size larger than original size when browser window re-sized larger than original image
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-}

@@ -27,12 +27,6 @@ $ ->
       placement: "top"
     },
     {
-      element: "#learn-more-button",
-      title: "Learn More",
-      content: "Click this to learn more about what you see in the image above.",
-      placement: "bottom"
-    },
-    {
       element: "#learn-more",
       title: "Image Buttons",
       content: "Click the little round buttons to visit other images.",

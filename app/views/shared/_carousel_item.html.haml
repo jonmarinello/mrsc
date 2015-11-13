@@ -1,8 +1,3 @@
 %img{alt: "#{page} page carousel image", src: image_path("#{page}.jpg")}
 .carousel-caption
-  .main-image-text
-    -# Using page deader here to get the nice horizontal line between the text and the button
-    .page-header
-      = raw(pages[page])
-  .main-image-learn-more-button
-    %a.btn.btn-warning#learn-more-button{href: "/pages/#{page}/#learn-more"} LEARN MORE &raquo;
+  = raw(pages[page])
