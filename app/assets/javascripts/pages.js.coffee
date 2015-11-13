@@ -1,34 +1,29 @@
-# If the window is big enough, show the buttons/border-bottoms
-showCarouselButtonAndBottomBorder = (mainImageLearnMoreButtons) ->
-  mainImageLearnMoreButtons.show()
-  pageHeader = $(".main-image-text .page-header")
-  pageHeader.css "padding-bottom", "9.5px"
-  pageHeader.css "border-bottom", "1px solid #e6e6e6"
+# Adjusts the main image font size and positioning based on window size
+handleMainImageFontSizeAndPosition = ->
+  # Get the text item
+  mainImageTextItem = $(".carousel-caption")
 
-# Adjusts the main image font size and shows/hides the main image button based on window size
-handleMainImageFontSizeAndButton = ->
-  # Get the text items
-  mainImageTextItems = $(".main-image-text")
-
-  # Get the learn more buttons
-  mainImageLearnMoreButtons = $(".main-image-learn-more-button")
-  if $(window).width() < 760
-    if $(window).width() < 560
-
-      # If the window get too small, hide the buttons/border-bottoms and shrink the text items
-      mainImageLearnMoreButtons.hide()
-      pageHeader = $(".main-image-text .page-header")
-      pageHeader.css "border-bottom", "none"
-      pageHeader.css "padding-bottom", "0px"
-      mainImageTextItems.css "font-size", "16px"
+  width = $(window).width()
+  switch
+    when width <= 360
+      mainImageTextItem.css "padding-bottom", "10%"
+      mainImageTextItem.css "font-size", "1em"
+    when width > 360 && width <= 560
+      mainImageTextItem.css "padding-bottom", "10%"
+      mainImageTextItem.css "font-size", "2em"
+    when width > 560 && width <= 800
+      mainImageTextItem.css "padding-bottom", "15%"
+      mainImageTextItem.css "font-size", "2em"
+    when width > 800 && width <= 1000
+      mainImageTextItem.css "padding-bottom", "18%"
+      mainImageTextItem.css "font-size", "3em"
+    when width > 1000 && width <= 2000
+      mainImageTextItem.css "padding-bottom", "20%"
+      mainImageTextItem.css "font-size", "4em"
     else
-      showCarouselButtonAndBottomBorder mainImageLearnMoreButtons
-      mainImageTextItems.css "font-size", "24px"
-  else
+      mainImageTextItem.css "padding-bottom", "21%"
+      mainImageTextItem.css "font-size", "7em"
 
-    # If the window is big enough, show the buttons/border-bottoms and enlarge the text items
-    showCarouselButtonAndBottomBorder mainImageLearnMoreButtons
-    mainImageTextItems.css "font-size", "46px"
 
 # Toggles the "Read More/Read Less" label and associated text visibility
 handleShowHideText = (toggleText, text) ->
@@ -43,11 +38,11 @@ handleShowHideText = (toggleText, text) ->
 
 $ ->
   # One time sizing
-  handleMainImageFontSizeAndButton()
+  handleMainImageFontSizeAndPosition()
 
   # Register for the resize event so we can adjust the main image text and button
   $(window).on "resize", ->
-    handleMainImageFontSizeAndButton()
+    handleMainImageFontSizeAndPosition()
     return
 
 

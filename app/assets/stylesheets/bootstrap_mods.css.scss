@@ -1,0 +1,52 @@
+// Change the default padding so that the MRSC logo fits inside the toolbar
+.navbar-brand {
+  padding: 2px;
+}
+
+// Banner font adjustments
+.carousel-caption {
+  padding-bottom: 20%;
+  font-family: 'Shadows Into Light', cursive;
+  font-size-adjust: 0.80;
+  border: none;
+}
+
+// Bootstrap carousel fade feature customization
+.carousel .item {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+// Bootstrap carousel fade feature customization (cont.)
+.carousel .active.left {
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel .next {
+  left: 0;
+  opacity: 1;
+  z-index: 1;}
+
+// Turn off side-bar flashing
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+}
+
+// Make carousel images size larger than original size when browser window re-sized larger than original image
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+// Make bootstrap-tour text black
+.popover {
+  color: black;
+}
