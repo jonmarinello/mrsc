@@ -122,9 +122,6 @@ class ActiveSupport::TestCase
     # Validate we landed on the correct page
     assert_on_page_path "/pages/#{page_name}"
 
-    # click on the learn more button
-    click_link_or_button('LEARN MORE »') if page_name != 'start_a_project'
-
     # Execute any code the client wants
     yield
   end
