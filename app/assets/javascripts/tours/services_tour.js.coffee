@@ -1,6 +1,12 @@
 $ ->
   customSteps = [
     {
+      element: "#title",
+      title: "Our Core Services",
+      content: "To learn more about the general core sevices we offer please scroll down.",
+      placement: "top"
+    },
+    {
       element: "#toggle-rails-text",
       title: "Toggle More.../Less...",
       content: "For each service, click this to expand and collapse the additional information.",

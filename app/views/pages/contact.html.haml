@@ -1,5 +1,5 @@
 = render partial: 'shared/image_carousel', :locals => {:page => 'contact'}
-%h3
+%h3#title
   Contact Us
 .row
   .col-md-6.col-sm-6
@@ -8,27 +8,31 @@
       %blockquote
         %address#contact-us
           %strong Mailing Address
-          %br/
+          %br
           Mission Ridge Software Consulting LLC
-          %br/
+          %br
           1410 Harbor View Drive
-          %br/
+          %br
           Santa Barbara, CA 93103
-          %br/
+          %br
           %abbr{title: 'Phone'} P:
           (805) 705-7929
         %address
           %strong Email
-          %br/
+          %br
           %a{href: "mailto:jonmarinello@gmail.com"} Jon Marinello
         %address
           %strong Skype
-          %br/
-          %br/
+          %br
+          %br
           %a{href: 'skype:jon.marinello.mrsc?chat'}
             =image_tag 'skype.jpg', :class => 'padded-right-bottom-image img-responsive pull-left', :width => 80
           If you would like to Skype us click the skype button and include a short message that explains a summary of your request
           for information and that it is related to Mission Ridge Software Consulting LLC.
+        %address
+          %strong Create a New Project Request
+          %br
+          You can also start a discussion about your project ideas directly by clicking the "LET'S TALK ABOUT YOUR PROJECT" button below.
   .col-md-6.col-sm-6
     .well-lg
       %blockquote
