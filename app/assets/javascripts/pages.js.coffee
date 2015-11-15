@@ -45,13 +45,12 @@ $ ->
     handleMainImageFontSizeAndPosition()
     return
 
-
   # Setup array of services sections for use with "Read More/Read Less"
   textItems = [
     "rails-text"
     "iphone-text"
     "scrum-text"
-    "mind-map-text"
+    "cms-text"
     "prototyping-text"
     "cloud-text"
   ]

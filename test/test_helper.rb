@@ -141,7 +141,7 @@ class ActiveSupport::TestCase
     sleep sleep_seconds
     find('#toggle-scrum-text').click
     sleep sleep_seconds
-    find('#toggle-mind-map-text').click
+    find('#toggle-cms-text').click
     sleep sleep_seconds
     find('#toggle-prototyping-text').click
     sleep sleep_seconds
