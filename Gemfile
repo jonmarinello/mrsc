@@ -5,16 +5,16 @@
 source 'https://rubygems.org'
 
 # Necessary Ruby version
-ruby '2.1.5'
+ruby '2.2.3'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.5'
+# Ruby on Rails
+gem 'rails', '4.2.5'
 
 # Postgres database
-gem 'pg', '0.18.3'
+gem 'pg', '0.18.4'
 
 # Authentication/Authorization
-gem 'devise', '3.2.4'
+gem 'devise', '3.5.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
@@ -32,7 +32,7 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '2.2.2'
+gem 'turbolinks', '2.5.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.0.7'
@@ -64,7 +64,7 @@ end
 # Test dependencies
 group :test do
   # Code Coverage
-  gem 'simplecov', '0.9.0'
+  gem 'simplecov', '0.10.0'
   gem 'codeclimate-test-reporter', '0.4.8', :require => nil
 
   # awesome matchers that make mundane tests easy
@@ -91,7 +91,7 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'active_admin_theme', '1.0.2'
 
 # New Relic Monitoring
-gem 'newrelic_rpm', '3.8.1.221'
+gem 'newrelic_rpm', '3.14.0.305'
 
 # Simple forms
 gem 'simple_form', '3.2.0'
@@ -100,7 +100,7 @@ gem 'simple_form', '3.2.0'
 gem 'validates_email_format_of', '1.6.1'
 
 # Phone number validation
-gem 'phony_rails', '0.7.1'
+gem 'phony_rails', '0.12.11'
 
 # Sortable gems
 gem 'acts_as_list', '0.7.2'

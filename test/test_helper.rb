@@ -65,7 +65,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-  Capybara.default_wait_time = 5
+  Capybara.default_max_wait_time = 5
 
 
   # Temporary helper until we get a better one in the test helpers

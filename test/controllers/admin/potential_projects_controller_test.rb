@@ -6,7 +6,7 @@ class Admin::PotentialProjectsControllerTest < ActionController::TestCase
 
   test 'should get redirected when hitting index because not logged in' do
     get :index
-    assert_redirected_to new_admin_user_session_path
+    assert_redirected_to new_admin_user_session_url
   end
 
 
@@ -33,7 +33,7 @@ class Admin::PotentialProjectsControllerTest < ActionController::TestCase
   test 'should update a potential_project' do
     mini_test_login_admin_user!
 
-    patch :update, :id => 1, :post => { 'project_idea' => 'I got changed.' }
+    patch :update, :id => 1, :potential_project => { 'project_idea' => 'I got changed.' }
     assert_redirected_to admin_potential_project_path(assigns(:potential_project))
   end
 
