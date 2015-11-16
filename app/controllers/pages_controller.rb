@@ -39,7 +39,7 @@ class PagesController < ApplicationController
 
     if @potential_project.save
       # Save succeeded so send email letting us know that someone wants to start a project
-      NewPotentialProjectMailer.new_potential_project(@potential_project).deliver
+      NewPotentialProjectMailer.new_potential_project(@potential_project).deliver_later
 
       # Redirect to the thank you landing page
       redirect_to pages_start_a_project_landing_page_path
