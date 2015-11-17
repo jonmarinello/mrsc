@@ -1,10 +1,39 @@
 require 'test_helper'
 
 class PagesTest < Capybara::Rails::TestCase
-  scenario 'hit all main pages', :js => true do
+  # Helper for testing recommendation accordion panels
+  def click_all_recommendation_links(validate_content)
+    click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
+    click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
+  end
+
+
+  scenario 'hit all read more buttons', :js => true do
+    # Sleeps needed so current_path catches up - LAME
+    visit root_path
+    sleep 1
+    find('#read-more').click
+    sleep 1
+    assert_equal pages_services_path, current_path
+    find('#read-more').click
+    sleep 1
+    assert_equal pages_about_path, current_path
+    find('#read-more').click
+    sleep 1
+    assert_equal pages_portfolio_path, current_path
+    find('#read-more').click
+    sleep 1
+    assert_equal pages_contact_path, current_path
+    find('#read-more').click
+    sleep 1
+    assert_equal pages_start_a_project_path, current_path
+  end
+
+
+  scenario 'test carousel', :js => true do
     # Visit the main index page
     visit root_path
-    assert_on_page_path root_path
+    assert_equal root_path, current_path
 
     # Flip through carousel images
     5.times do
@@ -15,8 +44,9 @@ class PagesTest < Capybara::Rails::TestCase
       find('a[class="left carousel-control"]').click
       sleep 1
     end
+  end
 
-
+  scenario 'visit all main pages', :js => true do
     # Visit Index page
     validate_nav_page('index') do
     end
@@ -46,6 +76,18 @@ class PagesTest < Capybara::Rails::TestCase
     end
 
 
+    # Visit Contact page
+    validate_nav_page('contact') do
+      # Visit all the social media links
+      find('#skype-link').click
+      find('#facebook-link').click
+      find('#twitter-link').click
+      find('#googleplus-link').click
+      find('#linkedin-link').click
+      find('#githib-link').click
+    end
+
+
     # Visit Start A Project page
     validate_nav_page('start_a_project') do
       within('#new_potential_project') do
@@ -62,21 +104,21 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path pages_start_a_project_path
+      assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
         fill_in('potential_project[name]', :with => 'Roger Eaton')
         click_button('Submit')
       end
 
-      assert_on_page_path pages_start_a_project_path
+      assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'xxx')
         click_button('Submit')
       end
 
-      assert_on_page_path pages_start_a_project_path
+      assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
         fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
@@ -84,7 +126,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path pages_start_a_project_path
+      assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
         fill_in('potential_project[name]', :with => 'Roger Eaton')
@@ -94,37 +136,7 @@ class PagesTest < Capybara::Rails::TestCase
         click_button('Submit')
       end
 
-      assert_on_page_path pages_start_a_project_landing_page_path
-    end
-
-
-    # Test all the "READ MORE »" links
-    read_more_button_text = 'READ MORE »'
-
-    visit root_path
-    assert_on_page_path root_path
-
-    click_link_or_button(read_more_button_text)
-    assert_on_page_path pages_services_path
-    click_link_or_button(read_more_button_text)
-    assert_on_page_path pages_about_path
-    click_link_or_button(read_more_button_text)
-    assert_on_page_path pages_portfolio_path
-    click_link_or_button(read_more_button_text)
-    assert_on_page_path pages_contact_path
-    click_link_or_button(read_more_button_text)
-    assert_on_page_path pages_start_a_project_path
-
-
-    # Visit Contact page
-    validate_nav_page('contact') do
-      # Visit all the social media links
-      find('#skype-link').click
-      find('#facebook-link').click
-      find('#twitter-link').click
-      find('#googleplus-link').click
-      find('#linkedin-link').click
-      find('#githib-link').click
+      assert_equal pages_start_a_project_landing_page_path, current_path
     end
   end
 end
