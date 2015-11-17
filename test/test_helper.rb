@@ -97,12 +97,6 @@ class ActiveSupport::TestCase
   end
 
 
-  # Assert we landed on the correct page and if not, provide a helpful error message
-  def assert_on_page_path(expected_page, actual_page = current_path)
-    assert_equal expected_page.chomp('/'), actual_page.chomp('/'), 'ERROR: Landed on wrong page'
-  end
-
-
   # Hack to allow us to input data into a field using a jQuery input mask see:
   #    https://github.com/thoughtbot/capybara-webkit/issues/303 for details.
   def fill_in_input_mask(location, options = {})
@@ -120,7 +114,7 @@ class ActiveSupport::TestCase
     visit "/pages/#{page_name}"
 
     # Validate we landed on the correct page
-    assert_on_page_path "/pages/#{page_name}"
+    assert_equal "/pages/#{page_name}", current_path
 
     # Execute any code the client wants
     yield
@@ -132,7 +126,7 @@ class ActiveSupport::TestCase
   # Help for clicking all the services "More.../Less..." links
   def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME_IN_SECONDS)
     # Make surte we are on the services page
-    assert_on_page_path pages_services_path
+    assert_equal pages_services_path, current_path
 
     # Click each of the services more/less links and sleep a little in between in case you are watching (looks better)
     find('#toggle-rails-text').click
@@ -147,13 +141,6 @@ class ActiveSupport::TestCase
     sleep sleep_seconds
     find('#toggle-cloud-text').click
     sleep sleep_seconds
-  end
-
-
-  # Helper for testing recommendation accordion panels
-  def click_all_recommendation_links(validate_content)
-    click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
-    click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
   end
 end
 

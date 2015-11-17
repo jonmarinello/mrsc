@@ -22,7 +22,7 @@ class AdminNavbarLinksTest < Capybara::Rails::TestCase
       click_link(page_title)
 
       # Validate we landed on the correct page
-      assert_on_page_path "/admin/#{page_title.downcase.gsub(/\s/, '_')}"
+      assert_equal "/admin/#{page_title.downcase.gsub(/\s/, '_')}", current_path
 
       # Validate that the title matches
       page.must_have_content page_title

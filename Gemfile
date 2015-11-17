@@ -40,17 +40,16 @@ gem 'jbuilder', '2.0.7'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '0.4.0', :group => :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', '1.1.3', :group => :development
-
 # Bootstrap
 gem 'bootstrap-sass', '3.3.5.1'
 
 # Haml
-gem 'haml-rails', '0.5.3'
+gem 'haml-rails', '0.9.0'
 
 # Development dependencies
 group :development do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring', '1.4.3'
   gem 'better_errors', '2.1.1'
   gem 'binding_of_caller', '0.7.2'
 end
