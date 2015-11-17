@@ -20,7 +20,7 @@ $ ->
     {
       element: "#navbar-brand",
       title: "Navigation Bar",
-      content: "Click on the various tabs to visit the <b>Home</b> and other pages. You can use the <b>Next</b> end <b>Prev</b> buttons to navigate through the tour alternaitvely you can use the <b>left</b> and <b>right</b> arrow keys wich you may find more convenient. You can end the tour at any time by clicking <b>End</b>.",
+      content: "Click on the various tabs to visit the <b>Home</b> and other pages. You can use the <b>Next</b> end <b>Prev</b> buttons to navigate through the tour. Alternaitvely you can use the <b>left</b> and <b>right</b> arrow keys wich you may find more convenient. You can end the tour at any time by clicking <b>End</b>.",
       placement: "bottom"
     },
     {

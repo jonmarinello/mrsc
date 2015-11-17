@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require pages
-//= require plugins/bootstrap.js
+//= require bootstrap-sprockets
 //= require application
