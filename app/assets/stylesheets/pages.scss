@@ -3,6 +3,11 @@
   padding-bottom: 0.10em;
 }
 
+.mrsc-image {
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
 .social-media {
   align: center;
   width: 27em;
@@ -11,6 +16,3 @@
 .highlighted {
   color: darkorange;
 }
-
-// Turn off bold for simple form labels
-label{font-weight:normal !important};
