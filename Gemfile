@@ -17,7 +17,7 @@ gem 'pg', '0.18.4'
 gem 'devise', '3.5.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.3'
+gem 'sass-rails', '5.0.4'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.7.2'
@@ -44,7 +44,7 @@ gem 'sdoc', '0.4.0', :group => :doc
 gem 'spring', '1.1.3', :group => :development
 
 # Bootstrap
-gem 'bootstrap-sass', '3.1.1.1'
+gem 'bootstrap-sass', '3.3.5.1'
 
 # Haml
 gem 'haml-rails', '0.5.3'
