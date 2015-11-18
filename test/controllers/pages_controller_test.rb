@@ -9,6 +9,7 @@ class PagesControllerTest < ActionController::TestCase
     assert_select 'title', 'MRSC'
   end
 
+
   test 'all routes' do
     assert_routing root_path, :controller => 'pages', :action => 'index'
     assert_routing pages_portfolio_path, :controller => 'pages', :action => 'portfolio'
@@ -22,40 +23,46 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should get index' do
     common_get_test :index, 'pages/index'
-    assert_not_nil assigns :active_tab
-    assert_not_nil assigns :company_name
+    assert_not_nil assigns(:active_tab)
+    assert_not_nil assigns(:company_name)
+    assert_select '#start_tour_tab', 1
   end
 
 
   test 'should get portfolio' do
     common_get_test :portfolio, 'pages/portfolio'
-    assert_not_nil assigns :active_tab
+    assert_not_nil assigns(:active_tab)
+    assert_select '#start_tour_tab', 1
   end
 
 
   test 'should get about' do
     common_get_test :about, 'pages/about'
-    assert_not_nil assigns :active_tab
-    assert_not_nil assigns :person_image_width
-    assert_not_nil assigns :recommendations
+    assert_not_nil assigns(:active_tab)
+    assert_not_nil assigns(:person_image_width)
+    assert_not_nil assigns(:recommendations)
+    assert_select '#start_tour_tab', 1
   end
 
 
   test 'should get services' do
     common_get_test :services, 'pages/services'
-    assert_not_nil assigns :active_tab
+    assert_not_nil assigns(:active_tab)
+    assert_select '#start_tour_tab', 1
   end
 
 
   test 'should get contact' do
     common_get_test :contact, 'pages/contact'
-    assert_not_nil assigns :active_tab
+    assert_not_nil assigns(:active_tab)
+    assert_select '#start_tour_tab', 1
   end
 
 
   test 'should get start_a_project' do
     common_get_test :start_a_project, 'pages/start_a_project'
-    assert_not_nil assigns :active_tab
+    assert_not_nil assigns(:active_tab)
+    assert_select '#start_tour_tab', 1
   end
 
 
@@ -64,8 +71,8 @@ class PagesControllerTest < ActionController::TestCase
       post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com', project_idea: 'To build the perfect androird woman!'}
     end
 
-    assert_nil assigns :active_tab
-    assert_not_nil assigns :potential_project
+    assert_nil assigns(:active_tab)
+    assert_not_nil assigns(:potential_project)
     assert_redirected_to pages_start_a_project_landing_page_path
   end
 
@@ -75,8 +82,8 @@ class PagesControllerTest < ActionController::TestCase
       post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com'}
     end
 
-    assert_nil assigns :active_tab
-    assert_not_nil assigns :potential_project
+    assert_nil assigns(:active_tab)
+    assert_not_nil assigns(:potential_project)
     assert_equal 'An Error occurred.', flash[:alert]
     assert_equal pages_start_a_project_path, request.path
   end
@@ -84,6 +91,7 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should get start_a_project_langing_page' do
     common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page'
-    assert_nil assigns :active_tab
+    assert_nil assigns(:active_tab)
+    assert_select '#start_tour_tab', 0
   end
 end

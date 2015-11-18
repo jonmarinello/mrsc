@@ -20,4 +20,4 @@ $ ->
     }
   ]
 
-  window.createTour(customSteps)
+  window.createTour('contact', customSteps)

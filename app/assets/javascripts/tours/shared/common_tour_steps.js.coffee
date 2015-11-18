@@ -1,9 +1,9 @@
 #
 # Tour constructor
 #
-window.createTour = (customSteps) ->
+window.createTour = (name, customSteps) ->
   window.tour = new Tour({
-    name: 'tour',
+    name: name,
     debug: false,
     storage: false,
     steps: window.commonStepsPrefix.concat(customSteps).concat(window.commonStepsSuffix),

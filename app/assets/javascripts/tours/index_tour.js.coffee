@@ -14,4 +14,4 @@ $ ->
     }
   ]
 
-  window.createTour(customSteps)
+  window.createTour('index', customSteps)
