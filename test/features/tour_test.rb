@@ -6,7 +6,7 @@ class PagesTest < Capybara::Rails::TestCase
     sleep 1
 
     # Click the "take the tour" button
-    find('#start_tour_tab').click
+    find('#start-tour-tab').click
 
     # Run through the steps
     number_steps.times do

@@ -1,7 +1,7 @@
 $tour-tab-box-text-rotation: 270deg;
 $radius: 30%;
 
-#start_tour_tab {
+#start-tour-tab {
   position: fixed;
   height: 34px;
   right: -46px;
@@ -16,7 +16,7 @@ $radius: 30%;
   -o-transform: rotate($tour-tab-box-text-rotation);
   transform: rotate($tour-tab-box-text-rotation); // for IE
 
-  #inner_start_tour_tab {
+  #inner-start-tour-tab {
     border: solid 1px white;
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;

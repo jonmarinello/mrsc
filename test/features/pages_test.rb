@@ -1,10 +1,25 @@
 require 'test_helper'
 
 class PagesTest < Capybara::Rails::TestCase
-  # Helper for testing recommendation accordion panels
-  def click_all_recommendation_links(validate_content)
-    click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
-    click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
+  # Helper for clicking all the services "More.../Less..." links
+  DEFAULT_SLEEP_TIME_IN_SECONDS = 0.25
+  def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME_IN_SECONDS)
+    # Make sure we are on the services page
+    assert_equal pages_services_path, current_path
+
+    # Click each of the services more/less links and sleep a little in between in case you're watching (looks better)
+    find('a#toggle-rails-text').click
+    find('a#toggle-rails-text').click
+    find('a#toggle-cms-text').click
+    find('a#toggle-cms-text').click
+    find('a#toggle-ios-text').click
+    find('a#toggle-ios-text').click
+    find('a#toggle-cloud-text').click
+    find('a#toggle-cloud-text').click
+    find('a#toggle-scrum-text').click
+    find('a#toggle-scrum-text').click
+    find('a#toggle-prototyping-text').click
+    find('a#toggle-prototyping-text').click
   end
 
 
@@ -55,7 +70,6 @@ class PagesTest < Capybara::Rails::TestCase
     # Visit Services page
     validate_nav_page('services') do
       click_all_services_more_less_links
-      click_all_services_more_less_links
     end
 
 
@@ -66,8 +80,8 @@ class PagesTest < Capybara::Rails::TestCase
       sleep 1
 
       # Test the recommendation accordion panels
-      click_all_recommendation_links(true)
-      click_all_recommendation_links(false)
+      click_link('Shawn Duex - Engineering Manager at RightScale, October 23, 2013')
+      click_link('Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013')
     end
 
 

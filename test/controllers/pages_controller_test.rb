@@ -25,14 +25,14 @@ class PagesControllerTest < ActionController::TestCase
     common_get_test :index, 'pages/index'
     assert_not_nil assigns(:active_tab)
     assert_not_nil assigns(:company_name)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get portfolio' do
     common_get_test :portfolio, 'pages/portfolio'
     assert_not_nil assigns(:active_tab)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
@@ -41,28 +41,28 @@ class PagesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:active_tab)
     assert_not_nil assigns(:person_image_width)
     assert_not_nil assigns(:recommendations)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get services' do
     common_get_test :services, 'pages/services'
     assert_not_nil assigns(:active_tab)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get contact' do
     common_get_test :contact, 'pages/contact'
     assert_not_nil assigns(:active_tab)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get start_a_project' do
     common_get_test :start_a_project, 'pages/start_a_project'
     assert_not_nil assigns(:active_tab)
-    assert_select '#start_tour_tab', 1
+    assert_select '#start-tour-tab', 1
   end
 
 
@@ -92,6 +92,6 @@ class PagesControllerTest < ActionController::TestCase
   test 'should get start_a_project_langing_page' do
     common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page'
     assert_nil assigns(:active_tab)
-    assert_select '#start_tour_tab', 0
+    assert_select '#start-tour-tab', 0
   end
 end

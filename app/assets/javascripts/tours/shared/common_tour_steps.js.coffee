@@ -55,6 +55,6 @@ $ ->
 
   #
   # Tour startup handler
-  $("#start_tour_tab").on "click", (e) ->
+  $("#start-tour-tab").on "click", (e) ->
     window.tour.end()
     window.tour.restart()
