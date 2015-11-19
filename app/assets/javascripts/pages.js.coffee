@@ -48,7 +48,7 @@ $ ->
   # Setup array of services sections for use with "Read More/Read Less"
   textItems = [
     "rails-text"
-    "iphone-text"
+    "ios-text"
     "scrum-text"
     "cms-text"
     "prototyping-text"

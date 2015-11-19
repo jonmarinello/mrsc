@@ -1,9 +1,9 @@
 #
 # Tour constructor
 #
-window.createTour = (customSteps) ->
+window.createTour = (name, customSteps) ->
   window.tour = new Tour({
-    name: 'tour',
+    name: name,
     debug: false,
     storage: false,
     steps: window.commonStepsPrefix.concat(customSteps).concat(window.commonStepsSuffix),
@@ -55,6 +55,6 @@ $ ->
 
   #
   # Tour startup handler
-  $("#start_tour_tab").on "click", (e) ->
+  $("#start-tour-tab").on "click", (e) ->
     window.tour.end()
     window.tour.restart()

@@ -1,3 +1,4 @@
+# Code Climate setup
 require 'codeclimate-test-reporter'
 CodeClimate::TestReporter.start
 
@@ -119,32 +120,7 @@ class ActiveSupport::TestCase
     # Execute any code the client wants
     yield
   end
-
-
-  DEFAULT_SLEEP_TIME_IN_SECONDS = 0.25
-
-  # Help for clicking all the services "More.../Less..." links
-  def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME_IN_SECONDS)
-    # Make surte we are on the services page
-    assert_equal pages_services_path, current_path
-
-    # Click each of the services more/less links and sleep a little in between in case you are watching (looks better)
-    find('#toggle-rails-text').click
-    sleep sleep_seconds
-    find('#toggle-iphone-text').click
-    sleep sleep_seconds
-    find('#toggle-scrum-text').click
-    sleep sleep_seconds
-    find('#toggle-cms-text').click
-    sleep sleep_seconds
-    find('#toggle-prototyping-text').click
-    sleep sleep_seconds
-    find('#toggle-cloud-text').click
-    sleep sleep_seconds
-  end
 end
-
-
 
 
 #
