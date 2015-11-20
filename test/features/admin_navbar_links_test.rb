@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AdminNavbarLinksTest < Capybara::Rails::TestCase
-  scenario 'Navigating to all the pages listed in the Active Admin navbar', :js => true do
+  scenario 'Navigating to all the pages listed in the Active Admin navbar', js: true do
     # IMPORTANT NOTE: As new Active Admin dashboard sub-pages become available they will automatically be visited
     #                 by this test.
 

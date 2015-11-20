@@ -23,7 +23,7 @@ class PagesTest < Capybara::Rails::TestCase
   end
 
 
-  scenario 'hit all read more buttons', :js => true do
+  scenario 'hit all read more buttons', js: true do
     # Sleeps needed so current_path catches up - LAME
     visit root_path
     sleep 1
@@ -45,7 +45,7 @@ class PagesTest < Capybara::Rails::TestCase
   end
 
 
-  scenario 'test carousel', :js => true do
+  scenario 'test carousel', js: true do
     # Visit the main index page
     visit root_path
     assert_equal root_path, current_path
@@ -61,7 +61,7 @@ class PagesTest < Capybara::Rails::TestCase
     end
   end
 
-  scenario 'visit all main pages', :js => true do
+  scenario 'visit all main pages', js: true do
     # Visit Index page
     validate_nav_page('index') do
     end
@@ -105,15 +105,15 @@ class PagesTest < Capybara::Rails::TestCase
     # Visit Start A Project page
     validate_nav_page('start_a_project') do
       within('#new_potential_project') do
-        fill_in('potential_project[company_name]', :with => 'Hans Dickman Boat Yard')
+        fill_in('potential_project[company_name]', with: 'Hans Dickman Boat Yard')
         check('potential_project[type_website]')
         check('potential_project[type_ruby_on_rails]')
         check('potential_project[type_web_design]')
         uncheck('potential_project[type_code_review]')
         check('potential_project[type_other]')
-        fill_in('potential_project[start_timeframe]', :with => 'Fall 2015')
-        fill_in('potential_project[additional_info]', :with => 'Call me back ASAP to discuss this opportunity.')
-        fill_in('potential_project[heard_about_us]', :with => 'Google search.')
+        fill_in('potential_project[start_timeframe]', with: 'Fall 2015')
+        fill_in('potential_project[additional_info]', with: 'Call me back ASAP to discuss this opportunity.')
+        fill_in('potential_project[heard_about_us]', with: 'Google search.')
         check('potential_project[keep_me_updated]')
         click_button('Submit')
       end
@@ -121,32 +121,32 @@ class PagesTest < Capybara::Rails::TestCase
       assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
-        fill_in('potential_project[name]', :with => 'Roger Eaton')
+        fill_in('potential_project[name]', with: 'Roger Eaton')
         click_button('Submit')
       end
 
       assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
-        fill_in('potential_project[email]', :with => 'xxx')
+        fill_in('potential_project[email]', with: 'xxx')
         click_button('Submit')
       end
 
       assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
-        fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
-        fill_in('potential_project[phone]', :with => '30912xxx')
+        fill_in('potential_project[email]', with: 'roger.eaton@gmail.com')
+        fill_in('potential_project[phone]', with: '30912xxx')
         click_button('Submit')
       end
 
       assert_equal pages_start_a_project_path, current_path
 
       within('#new_potential_project') do
-        fill_in('potential_project[name]', :with => 'Roger Eaton')
-        fill_in('potential_project[email]', :with => 'roger.eaton@gmail.com')
-        fill_in('potential_project[phone]', :with => '(805) 705-7929')
-        fill_in('potential_project[project_idea]', :with => 'Build a cool new website for the Hans Dickman Boat Yard!')
+        fill_in('potential_project[name]', with: 'Roger Eaton')
+        fill_in('potential_project[email]', with: 'roger.eaton@gmail.com')
+        fill_in('potential_project[phone]', with: '(805) 705-7929')
+        fill_in('potential_project[project_idea]', with: 'Build a cool new website for the Hans Dickman Boat Yard!')
         click_button('Submit')
       end
 
