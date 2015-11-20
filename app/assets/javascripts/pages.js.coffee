@@ -40,6 +40,10 @@ $ ->
   # One time sizing
   handleMainImageFontSizeAndPosition()
 
+  # Reset any previously running tour (get's rid of "ghost" steps)
+  if (typeof window.tour != "undefined")
+    window.tour.end()
+
   # Register for the resize event so we can adjust the main image text and button
   $(window).on "resize", ->
     handleMainImageFontSizeAndPosition()
