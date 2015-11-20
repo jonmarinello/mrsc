@@ -9,8 +9,8 @@ class NewPotentialProjectMailer < ActionMailer::Base
     @potential_project = potential_project
 
     mail(
-        :to => 'jonmarinello@gmail.com',
-        :subject => 'New potential project'
+        to: 'jonmarinello@gmail.com',
+        subject: 'New potential project'
     )
   end
 end

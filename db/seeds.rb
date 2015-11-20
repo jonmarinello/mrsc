@@ -10,7 +10,7 @@ require 'recommendation_loader'
 
 if Rails.env.development?
   puts 'Loading admin users...'
-  AdminUser.create!(:email => 'admin@mrsc.com', :password => 'password')
+  AdminUser.create!(email: 'admin@mrsc.com', password: 'password')
 
   puts 'Loading recommendations...'
   RecommendationsLoader.load_recommendations

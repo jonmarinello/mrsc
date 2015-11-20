@@ -5,19 +5,19 @@ class PagesControllerTest < ActionController::TestCase
     get page
     assert_response :success
     assert_template page_template
-    assert_template :layout => 'layouts/application'
+    assert_template layout: 'layouts/application'
     assert_select 'title', 'MRSC'
   end
 
 
   test 'all routes' do
-    assert_routing root_path, :controller => 'pages', :action => 'index'
-    assert_routing pages_portfolio_path, :controller => 'pages', :action => 'portfolio'
-    assert_routing pages_about_path, :controller => 'pages', :action => 'about'
-    assert_routing pages_services_path, :controller => 'pages', :action => 'services'
-    assert_routing pages_contact_path, :controller => 'pages', :action => 'contact'
-    assert_routing pages_start_a_project_path, :controller => 'pages', :action => 'start_a_project'
-    assert_routing pages_start_a_project_landing_page_path, :controller => 'pages', :action => 'start_a_project_landing_page'
+    assert_routing root_path, controller: 'pages', action: 'index'
+    assert_routing pages_portfolio_path, controller: 'pages', action: 'portfolio'
+    assert_routing pages_about_path, controller: 'pages', action: 'about'
+    assert_routing pages_services_path, controller: 'pages', action: 'services'
+    assert_routing pages_contact_path, controller: 'pages', action: 'contact'
+    assert_routing pages_start_a_project_path, controller: 'pages', action: 'start_a_project'
+    assert_routing pages_start_a_project_landing_page_path, controller: 'pages', action: 'start_a_project_landing_page'
   end
 
 

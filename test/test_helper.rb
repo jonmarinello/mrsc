@@ -81,8 +81,8 @@ class ActiveSupport::TestCase
   def login_admin_user!(admin_user = admin_users(:one))
     visit new_admin_user_session_path
     within('#session_new') do
-      fill_in('admin_user[email]', :with => admin_user.email)
-      fill_in('admin_user[password]', :with => 'password')
+      fill_in('admin_user[email]', with: admin_user.email)
+      fill_in('admin_user[password]', with: 'password')
       click_button('Login')
     end
   end
@@ -103,7 +103,7 @@ class ActiveSupport::TestCase
   def fill_in_input_mask(location, options = {})
     len = options[:with].to_s.length - 1
     len.times do
-      fill_in location, :with => '1'
+      fill_in location, with: '1'
     end
     fill_in location, options
   end

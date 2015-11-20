@@ -9,7 +9,7 @@
   #collapse.collapse.navbar-collapse
     %ul.nav.navbar-nav
       - %w(services about portfolio contact start_a_project).each do |page|
-        %li{:class => @active_tab == page ? 'active' : ''}
+        %li{class: @active_tab == page ? 'active' : ''}
           =link_to(page.humanize.titleize, { controller: 'pages', action: page })
 %h3
   Mission Ridge Software Consulting LLC

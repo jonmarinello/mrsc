@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20151111192002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "active_admin_comments", force: true do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
     t.text     "body"
     t.string   "resource_id",   null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20151111192002) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "admin_users", force: true do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20151111192002) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "potential_projects", force: true do |t|
+  create_table "potential_projects", force: :cascade do |t|
     t.string   "name",                              null: false
     t.string   "email",                             null: false
     t.string   "phone"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20151111192002) do
     t.boolean  "is_active",          default: true, null: false
   end
 
-  create_table "recommendations", force: true do |t|
+  create_table "recommendations", force: :cascade do |t|
     t.string   "name",                    null: false
     t.string   "title",                   null: false
     t.text     "body",                    null: false

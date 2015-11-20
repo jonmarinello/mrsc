@@ -1,4 +1,4 @@
-= render partial: 'shared/image_carousel', :locals => {:page => 'services'}
+= render partial: 'shared/image_carousel', locals: {page: 'services'}
 - default_image_width = 200
 - read_more_label = 'More...'
 %h3#title
@@ -8,7 +8,7 @@
     .thumbnail
       .caption
         %p
-          =image_tag 'rails.png', :class => 'img-responsive pull-left img-rounded padded-right-bottom-image', :width => default_image_width
+          =image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             Ruby On Rails Web Development
@@ -17,7 +17,7 @@
         %p
           Rails development is our passion and we love building applications with this framework because of the speed
           of development and the many products around it including
-          %a{:target => '_blank', :href => 'https://www.heroku.com/'} Heroku
+          %a{target: '_blank', href: 'https://www.heroku.com/'} Heroku
           for hosting, New Relic for monitoring and many more.
         %a#toggle-rails-text{href: '#'}
           = read_more_label
@@ -28,7 +28,7 @@
             community of developers committed to contributing to the Ruby on Rails open source framework.
           %p
             Coupled with
-            %a{:target => '_blank', :href => 'http://en.wikipedia.org/wiki/Responsive_web_design'}Responsive web design (RWD)
+            %a{target: '_blank', href: 'http://en.wikipedia.org/wiki/Responsive_web_design'}Responsive web design (RWD)
             the Rails applications we build provide an optimal user experience with easy navigation, minimum
             resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).
           %p
@@ -36,14 +36,14 @@
           %p
             %strong
               Check out this
-              %a{:target => '_blank', :href => 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails'}
+              %a{target: '_blank', href: 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails'}
                 great article
               on why Rails is so popular with the development community.
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'cms.png', :class => 'img-responsive pull-left padded-right-bottom-image', :width => default_image_width
+          =image_tag 'cms.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             Content Management Systems
@@ -70,20 +70,20 @@
             website is what you need.
           %p
             Here is one example of a CMS-based website we built for
-            %a{:target => '_blank', :href => 'http://www.landscapesbyantonio.com'}
+            %a{target: '_blank', href: 'http://www.landscapesbyantonio.com'}
               %strong
                 Landscapes by Antonio.
           %p
             %strong
               Check out how CMS systems work in this short video called
-            %a{:target => '_blank', :href => 'https://youtu.be/9IDeKXQuiik'}
+            %a{target: '_blank', href: 'https://youtu.be/9IDeKXQuiik'}
               %strong
                 Squarespace 7: Start here. Go anywhere
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'iphone_ipad.png', :class => 'img-responsive pull-left padded-right-bottom-image', :width => default_image_width
+          =image_tag 'iphone_ipad.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             iOS/iPhone/iPad Mobile App Development
@@ -107,7 +107,7 @@
             We're ready to get started developing your iPhone app when you are.
           %strong
             Check out this cool Apple video called
-            %a{:target => '_blank', :href => 'https://youtu.be/6kjFuzPk0xo'} Apps We Can't Live Without
+            %a{target: '_blank', href: 'https://youtu.be/6kjFuzPk0xo'} Apps We Can't Live Without
             %strong
               which should get your juices flowing about a mobile app you could be adding to the Apple marketplace.
 .row
@@ -115,7 +115,7 @@
     .thumbnail
       .caption
         %p
-          =image_tag 'cloud.png', :class => 'img-responsive pull-left padded-right-bottom-image', :width => default_image_width
+          =image_tag 'cloud.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             Everything Cloud
@@ -142,14 +142,14 @@
             benefit your organization.
           %p
             %strong Check out this great short video called
-            %a{:target => '_blank', :href => 'http://youtu.be/ae_DKNwK_ms'}
+            %a{target: '_blank', href: 'http://youtu.be/ae_DKNwK_ms'}
               %strong
                 What is Cloud Computing?
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'scrum.png', :class => 'img-responsive pull-left padded-right-bottom-image', :width => default_image_width
+          =image_tag 'scrum.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             Agile/Scrum Software Development
@@ -172,14 +172,14 @@
             another direction.
           %strong
             To get a short introduction to Scrum take a look at this short video called
-            %a{:target => '_blank', :href => 'http://youtu.be/XU0llRltyFM'}
+            %a{target: '_blank', href: 'http://youtu.be/XU0llRltyFM'}
               %strong
                 Intro to Agile Scrum in Under 10 Minutes - What is Scrum?
   .col-md-4
     .thumbnail
       .caption
         %p
-          =image_tag 'prototyping.png', :class => 'img-responsive pull-left padded-right-bottom-image', :width => default_image_width
+          =image_tag 'prototyping.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
           %strong
             UX Prototyping
@@ -207,7 +207,7 @@
             %em All at lower cost to you!
           %p
             %strong Take a quick look at how quickly we can mockup a user interface for you in this video called
-            %a{:target => '_blank', :href => 'http://youtu.be/aJTuFRaIi_g'}
+            %a{target: '_blank', href: 'http://youtu.be/aJTuFRaIi_g'}
               %strong
                 Balsamiq Mockups Intro
 %p
