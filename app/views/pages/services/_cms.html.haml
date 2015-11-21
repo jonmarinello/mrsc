@@ -1,0 +1,37 @@
+.thumbnail
+  .caption
+    %p= image_tag 'cms.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %h4
+      %strong Content Management Systems
+    %p
+      If you have a great idea for a website but want to save on development costs, Content Management Systems (CMS)
+      may be the best solution and at a much lower cost then for traditional website or Ruby On Rails development.
+    %p
+      CMS provides a less flexible framework for building websites but at a much lower cost. Basically you choose
+      from a predetermined set of layout templates. You can implement a blog, online shopping or basic pages with
+      pictures and videos.
+    = link_to '#', id: 'toggle-cms-text' do
+      = locals[:read_more_label]
+    %div#cms-text
+      %p
+        When would CMS be the best solution for your website?
+      %ul
+        %li
+          Low cost is critical
+        %li
+          Time-to-market is a factor
+        %li
+          Minimal control over behavior and layout is acceptable
+      %p
+        Together we'll thoroughly brainstorm your website ideas and see if the CMS approach will work best for you or whether a traditional
+        website is what you need.
+      %p
+        Here is one example of a CMS-based website we built for
+        %strong
+          = succeed '.' do
+            = link_to 'Landscapes by Antonio', 'http://www.landscapesbyantonio.com', target: :_blank
+      %p
+        %strong
+          Check out how CMS systems work in this short video called
+          = succeed '.' do
+            = link_to 'Squarespace 7: Start here. Go anywhere', 'https://youtu.be/9IDeKXQuiik', target: :_blank
