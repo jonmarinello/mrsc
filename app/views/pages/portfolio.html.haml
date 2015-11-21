@@ -9,7 +9,7 @@
   .col-md-4
     = render 'pages/portfolio/rightscale'
 %p
-  %a.btn.btn-success#read-more{href: pages_contact_path} READ MORE &raquo;
+  = render 'shared/read_more', :locals => {target_path: pages_contact_path}
 = javascript_include_tag('pages')
 = javascript_include_tag('tours/shared/common_tour_steps')
 = javascript_include_tag('tours/portfolio_tour')

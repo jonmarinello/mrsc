@@ -4,5 +4,5 @@
   %p
     Mission Ridge Software Consulting has been notified of your request and someone will get back to you shortly regarding your request.
 %p
-  %a.btn.btn-success{href: root_path} READ MORE &raquo;
+  = render 'shared/read_more', :locals => {target_path: root_path}
 = javascript_include_tag('pages')

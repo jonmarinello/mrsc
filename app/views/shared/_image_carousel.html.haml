@@ -10,9 +10,9 @@
     - count = 0
     - pages.each_key do |page_key|
       - if page_key == page
-        %li.active{"data-slide-to" => "#{count}", "data-target" => "#main-carousel"}
+        %li.active{"data-slide-to" => "#{count}", "data-target" => '#main-carousel'}
       - else
-        %li{"data-slide-to" => "#{count}", "data-target" => "#main-carousel"}
+        %li{"data-slide-to" => "#{count}", "data-target" => '#main-carousel'}
       - count += 1
   / Wrapper for slides
   .carousel-inner
@@ -24,8 +24,8 @@
         .item
           = render partial: 'shared/carousel_item', locals: {pages: pages, page: "#{page_key}"}
   / Controls
-  %a.left.carousel-control{"data-slide" => "prev", href: "#main-carousel", role: "button"}
+  %a.left.carousel-control{'data-slide' => 'prev', href: '#main-carousel', role: 'button'}
     %span.glyphicon.glyphicon-chevron-left
-  %a.right.carousel-control{"data-slide" => "next", href: "#main-carousel", role: "button"}
+  %a.right.carousel-control{'data-slide' => 'next', href: '#main-carousel', role: 'button'}
     %span.glyphicon.glyphicon-chevron-right
 #learn-more{:class => 'anchor'}

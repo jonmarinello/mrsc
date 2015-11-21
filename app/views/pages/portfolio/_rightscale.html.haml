@@ -1,7 +1,7 @@
 .thumbnail
   .caption
     %h4
-      %a{target: '_blank', href: 'http://www.rightscale.com'}
+      = link_to 'http://www.rightscale.com', target: :_blank do
         =image_tag 'rightscale.jpg', class: 'img-responsive', width: 300
     %p
       %strong
@@ -28,8 +28,8 @@
     %p
       %strong
         For more information on the server template test automation framework check out this
-        %a{target: '_blank', href: 'http://www.rightscale.com/blog/cloud-management-best-practices/continuous-testing-cloud'}great article
+        = link_to 'great article', 'http://www.rightscale.com/blog/cloud-management-best-practices/continuous-testing-cloud', target: :_blank
         on Continuous Testing in the Cloud.
     %p
       %center
-        %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
+        = render 'shared/read_their_recommendations'

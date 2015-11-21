@@ -2,7 +2,7 @@
   .caption
     %h4
       %center
-      %a{target: '_blank', href: 'http://elite-associates.com'}
+      = link_to 'http://elite-associates.com', target: :_blank do
         =image_tag 'elite_associates.jpg', class: 'img-responsive', width: 340
     %p
       %strong
@@ -31,4 +31,4 @@
       positive impact on how Elite Associates is viewed by their customers and the market in general.
     %p
       %center
-        %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
+        = render 'shared/read_their_recommendations'

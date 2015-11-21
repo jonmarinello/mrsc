@@ -2,7 +2,7 @@
   .caption
     %h4
       %center
-        %a{target: '_blank', href: 'https://www.therealreal.com'}
+        = link_to 'https://www.therealreal.com', target: :_blank do
           =image_tag 'therealreal.png', class: 'img-responsive img-rounded'
     %p
       %strong
@@ -24,4 +24,4 @@
         This is a current engagement.
     %p
       %center
-        %a.btn.btn-primary{href: 'about#jonmarinello'} READ THEIR RECOMMENDATIONS &raquo;
+        = render 'shared/read_their_recommendations'
