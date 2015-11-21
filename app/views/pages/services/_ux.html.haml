@@ -1,0 +1,32 @@
+.thumbnail
+  .caption
+    %p= image_tag 'prototyping.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %h4
+      %strong UX Prototyping
+    %p
+      Don't waste time coding until you understand your UX requirements.
+    %p
+      We'll guide you to quickly iterate through your web and mobile application user interface ideas.
+    %p
+      Before writing any code
+      we'll build a set of wireframes to mockup your web or mobile application. Mockups are easy to build quickly and
+      super easy to refine. This avoids wasting time writing code for user interfaces that haven't been thoroughly
+      thought through and will then need to be changed multiple times.
+    = link_to '#', id: 'toggle-prototyping-text' do
+      = locals[:read_more_label]
+    %div#prototyping-text
+      %p
+        %strong
+          %em Doing this iteration in wireframe mockups significantly reduces costs.
+      %p
+        Together we'll iterate your ideas by getting immediate and meaningful feedback. Sketch-style wireframes help focus
+        the conversation on content and interaction, not minute details (those can come later).
+      %p
+        Since mockups require little investment in time and effort, we'll help you revise your UX designs more often
+        and refine them sooner, leaving more time for discussion and writing code.
+        %em All at lower cost to you!
+      %p
+        %strong
+          Take a quick look at how quickly we can mockup a user interface for you in this video called
+          = succeed '.' do
+            = link_to 'Balsamiq Mockups Intro', 'http://youtu.be/aJTuFRaIi_g', target: :_blank

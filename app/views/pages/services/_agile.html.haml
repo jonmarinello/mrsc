@@ -1,0 +1,25 @@
+.thumbnail
+  .caption
+    %p= image_tag 'scrum.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %h4
+      %strong Agile/Scrum Software Development
+    %p
+      We are a dedicated Scrum development shop with Scrum certification.
+    %p
+      We want to develop your project in close concert with you. Along the way, delivering and iterating usable
+      features that you can use now. Using Scrum we can get you the most "bang for the buck" as early as possible.
+    = link_to '#', id: 'toggle-scrum-text' do
+      = locals[:read_more_label]
+    %div#scrum-text
+      %p
+        Agile development provides opportunities to assess the direction throughout the development lifecycle.
+        This is achieved through regular cadences of work, known as Sprints or iterations, at the end of which teams
+        must present a potentially shippable product increment. By focusing on the repetition of abbreviated work
+        cycles as well as the functional product they yield, agile methodology is described as “iterative” and
+        “incremental.” In waterfall, development teams only have one chance to get each aspect of a project right.
+        In an agile paradigm, every aspect of development — requirements, design, etc. — is continually revisited.
+        When a team stops and re-evaluates the direction of a project every two weeks, there’s time to steer it in
+        another direction.
+      %strong
+        To get a short introduction to Scrum take a look at this short video called
+        = link_to 'Intro to Agile Scrum in Under 10 Minutes - What is Scrum?', 'http://youtu.be/XU0llRltyFM', target: :_blank

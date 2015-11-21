@@ -1,0 +1,31 @@
+.thumbnail
+  .caption
+    %p= image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: locals[:default_image_width]
+    %h4
+      %strong Ruby On Rails Web Development
+    %p
+      If you're looking for Ruby on Rails development, you've come to the right place.
+    %p
+      Rails development is our passion and we love building applications with this framework because of the speed
+      of development and the many products around it including
+      = link_to 'Heroku', 'https://www.heroku.com/', target: :_blank
+      for hosting, New Relic for monitoring and many more.
+    = link_to '#', id: 'toggle-rails-text' do
+      = locals[:read_more_label]
+    %div#rails-text
+      %p
+        Rails provides the the most flexible, scalable, secure and well thought out framework for developing
+        today's demanding web applications that need to work on both desktop and mobile platforms. It has a large
+        community of developers committed to contributing to the Ruby on Rails open source framework.
+      %p
+        Coupled with
+        = link_to 'Responsive web design (RWD)', 'http://en.wikipedia.org/wiki/Responsive_web_design', target: :_blank
+        the Rails applications we build provide an optimal user experience with easy navigation, minimum
+        resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).
+      %p
+        When you're ready to get started with the development of your Ruby on Rails app, we're ready for you.
+      %p
+        %strong
+          Check out this
+          = link_to 'great article', 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails', target: :_blank
+          on why Rails is so popular with the development community.
