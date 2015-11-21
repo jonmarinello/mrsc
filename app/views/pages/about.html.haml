@@ -19,7 +19,7 @@
 .panel.panel-primary
   .panel-heading
     %h3.panel-title
-      %a{target: '_blank', href: 'http://www.linkedin.com/in/jonmarinello'} Jon Marinello
+      = link_to 'Jon Marinello', 'http://www.linkedin.com/in/jonmarinello', target: :_blank
   .panel-body
     =image_tag 'jonmarinello.jpg', class: 'padded-right-bottom-image img-responsive img-circle pull-left', width: 140
     %p
@@ -37,7 +37,7 @@
       passion and I love building "responsive" web applications.
     %p
       Click
-      %a{target: '_blank', href: 'http://www.linkedin.com/in/jonmarinello'} here
+      = link_to 'here', 'http://www.linkedin.com/in/jonmarinello', target: :_blank
       to see the details of all my qualifications on LinkedIn.
     %p
       Since forming Mission Ridge Software Consulting LLC, I've worked with several companies and they have had a lot of
@@ -64,7 +64,7 @@
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.
     - first_time = false
 %p
-  %a.btn.btn-success#read-more{href: pages_portfolio_path} READ MORE &raquo;
+  = render 'shared/read_more', :locals => {target_path: pages_portfolio_path}
 = javascript_include_tag('pages')
 = javascript_include_tag('tours/shared/common_tour_steps')
 = javascript_include_tag('tours/about_tour')

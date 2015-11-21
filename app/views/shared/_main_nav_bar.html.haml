@@ -4,7 +4,7 @@
       %span.sr-only Toggle Navigation
       - 3.times do
         %span.icon-bar
-    %a.navbar-brand#navbar-brand{href: root_path}
+    = link_to root_path, class: 'navbar-brand', id: 'navbar-brand' do
       %img.img-responsive#index-image{alt: 'mrsc', src: asset_path('mrsc.jpg'), width: '80'}
   #collapse.collapse.navbar-collapse
     %ul.nav.navbar-nav

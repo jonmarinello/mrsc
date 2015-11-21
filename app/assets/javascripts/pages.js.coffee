@@ -1,5 +1,5 @@
 # Adjusts the main image font size and positioning based on window size
-handleMainImageFontSizeAndPosition = ->
+handleMainImageFontSizeAndPosition = () ->
   # Get the text item
   mainImageTextItem = $(".carousel-caption")
 
@@ -25,8 +25,8 @@ handleMainImageFontSizeAndPosition = ->
       mainImageTextItem.css "font-size", "7em"
 
 
-# Toggles the "Read More/Read Less" label and associated text visibility
-handleShowHideText = (toggleText, text) ->
+# Toggles the services "More.../Less..." label and associated text visibility
+handleServiceExtendedShowHideText = (toggleText, text) ->
   if toggleText.text().trim() is window.readMoreLabel
     text.show()
     toggleText.text window.readLessLabel
@@ -34,6 +34,23 @@ handleShowHideText = (toggleText, text) ->
     text.hide()
     toggleText.text window.readMoreLabel
   false
+
+
+# Setup array of services sections for use with "More.../Less...""
+serviceExtendedTextItems = [
+  "rails-text"
+  "ios-text"
+  "scrum-text"
+  "cms-text"
+  "prototyping-text"
+  "cloud-text"
+]
+
+
+# Hide all service exteneded descriptions
+hideAllServiceExtendedTextItems = () ->
+  for textItem in serviceExtendedTextItems
+    $("#" + textItem).hide()
 
 
 $ ->
@@ -47,24 +64,9 @@ $ ->
   # Register for the resize event so we can adjust the main image text and button
   $(window).on "resize", ->
     handleMainImageFontSizeAndPosition()
-    return
 
-  # Setup array of services sections for use with "Read More/Read Less"
-  textItems = [
-    "rails-text"
-    "ios-text"
-    "scrum-text"
-    "cms-text"
-    "prototyping-text"
-    "cloud-text"
-  ]
-
-  # One time set all services "Read More/Read Less" text to be "Read More"
-  index = undefined
-  index = 0
-  while index < textItems.length
-    $("#" + textItems[index]).hide()
-    ++index
+  # One time set all services "More.../Less..." text to be "More..."
+  hideAllServiceExtendedTextItems()
 
   # Setup our label comparison strings
   window.readMoreLabel = "More..."
@@ -72,22 +74,20 @@ $ ->
   togglePrefix = "#toggle-"
 
   # Register for all the services "Read More/Read Less" click events to handle associated text visibility
-  $(togglePrefix + textItems[0]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[0]), $("#" + textItems[0])
+  $(togglePrefix + serviceExtendedTextItems[0]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[0]), $("#" + serviceExtendedTextItems[0])
 
-  $(togglePrefix + textItems[1]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[1]), $("#" + textItems[1])
+  $(togglePrefix + serviceExtendedTextItems[1]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[1]), $("#" + serviceExtendedTextItems[1])
 
-  $(togglePrefix + textItems[2]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[2]), $("#" + textItems[2])
+  $(togglePrefix + serviceExtendedTextItems[2]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[2]), $("#" + serviceExtendedTextItems[2])
 
-  $(togglePrefix + textItems[3]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[3]), $("#" + textItems[3])
+  $(togglePrefix + serviceExtendedTextItems[3]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[3]), $("#" + serviceExtendedTextItems[3])
 
-  $(togglePrefix + textItems[4]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[4]), $("#" + textItems[4])
+  $(togglePrefix + serviceExtendedTextItems[4]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[4]), $("#" + serviceExtendedTextItems[4])
 
-  $(togglePrefix + textItems[5]).unbind("click").click ->
-    handleShowHideText $(togglePrefix + textItems[5]), $("#" + textItems[5])
-
-  return
+  $(togglePrefix + serviceExtendedTextItems[5]).unbind("click").click ->
+    handleServiceExtendedShowHideText $(togglePrefix + serviceExtendedTextItems[5]), $("#" + serviceExtendedTextItems[5])

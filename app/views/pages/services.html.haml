@@ -7,19 +7,17 @@
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            Ruby On Rails Web Development
+          %strong Ruby On Rails Web Development
         %p
           If you're looking for Ruby on Rails development, you've come to the right place.
         %p
           Rails development is our passion and we love building applications with this framework because of the speed
           of development and the many products around it including
-          %a{target: '_blank', href: 'https://www.heroku.com/'} Heroku
+          = link_to 'Heroku', 'https://www.heroku.com/', target: :_blank
           for hosting, New Relic for monitoring and many more.
-        %a#toggle-rails-text{href: '#'}
+        = link_to '#', id: 'toggle-rails-text' do
           = read_more_label
         %div#rails-text
           %p
@@ -28,7 +26,7 @@
             community of developers committed to contributing to the Ruby on Rails open source framework.
           %p
             Coupled with
-            %a{target: '_blank', href: 'http://en.wikipedia.org/wiki/Responsive_web_design'}Responsive web design (RWD)
+            = link_to 'Responsive web design (RWD)', 'http://en.wikipedia.org/wiki/Responsive_web_design', target: :_blank
             the Rails applications we build provide an optimal user experience with easy navigation, minimum
             resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors).
           %p
@@ -36,24 +34,22 @@
           %p
             %strong
               Check out this
-              %a{target: '_blank', href: 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails'}
-                great article
+              = link_to 'great article', 'http://www.toptal.com/ruby-on-rails/after-two-decades-of-programming-i-use-rails', target: :_blank
               on why Rails is so popular with the development community.
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'cms.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'cms.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            Content Management Systems
+          %strong Content Management Systems
         %p
           If you have a great idea for a website but want to save on development costs, Content Management Systems (CMS)
           may be the best solution and at a much lower cost then for traditional website or Ruby On Rails development.
         %p
           CMS provides a less flexible framework for building websites but at a much lower cost. Basically you choose
-          from a predetermined set of layout templates. You can implement a blog, online shopping or basic pages with pictures and videos.
-        %a#toggle-cms-text{href: '#'}
+          from a predetermined set of layout templates. You can implement a blog, online shopping or basic pages with
+          pictures and videos.
+        = link_to '#', id: 'toggle-cms-text' do
           = read_more_label
         %div#cms-text
           %p
@@ -70,29 +66,26 @@
             website is what you need.
           %p
             Here is one example of a CMS-based website we built for
-            %a{target: '_blank', href: 'http://www.landscapesbyantonio.com'}
-              %strong
-                Landscapes by Antonio.
+            %strong
+              = succeed '.' do
+                = link_to 'Landscapes by Antonio', 'http://www.landscapesbyantonio.com', target: :_blank
           %p
             %strong
               Check out how CMS systems work in this short video called
-            %a{target: '_blank', href: 'https://youtu.be/9IDeKXQuiik'}
-              %strong
-                Squarespace 7: Start here. Go anywhere
+              = succeed '.' do
+                = link_to 'Squarespace 7: Start here. Go anywhere', 'https://youtu.be/9IDeKXQuiik', target: :_blank
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'iphone_ipad.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'iphone_ipad.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            iOS/iPhone/iPad Mobile App Development
+          %strong iOS/iPhone/iPad Mobile App Development
         %p
           Let's build the next great iOS/iPhone/iPad app.
         %p
           We love building iPhone and iPad apps. We do native iPhone app development and responsive mobile web
           development. Have an app idea or design you want to get into this rapidly growing marketplace?
-        %a#toggle-ios-text{href: '#'}
+        = link_to '#', id: 'toggle-ios-text' do
           = read_more_label
         %div#ios-text
           %p
@@ -107,18 +100,15 @@
             We're ready to get started developing your iPhone app when you are.
           %strong
             Check out this cool Apple video called
-            %a{target: '_blank', href: 'https://youtu.be/6kjFuzPk0xo'} Apps We Can't Live Without
-            %strong
-              which should get your juices flowing about a mobile app you could be adding to the Apple marketplace.
+            = link_to "Apps We Can't Live Without", 'https://youtu.be/6kjFuzPk0xo', target: :_blank
+            which should get your juices flowing about a mobile app you could be adding to the Apple marketplace.
 .row
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'cloud.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'cloud.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            Everything Cloud
+          %strong Everything Cloud
         %p
           Time-to-market, more flexible support for business strategies by IT, and faster response time to
           competitive conditions are combining to accelerate cloud computing adoption today.
@@ -126,7 +116,7 @@
           If you are looking for expertise in cloud computing then we can help. Cloud computing has become an integral
           part of businesses of all sizes because it allows a company to focus on what they do best without the hassle
           of hardware and software.
-        %a#toggle-cloud-text{href: '#'}
+        = link_to '#', id: 'toggle-cloud-text' do
           = read_more_label
         %div#cloud-text
           %p
@@ -142,23 +132,19 @@
             benefit your organization.
           %p
             %strong Check out this great short video called
-            %a{target: '_blank', href: 'http://youtu.be/ae_DKNwK_ms'}
-              %strong
-                What is Cloud Computing?
+            = link_to 'What is Cloud Computing?', 'http://youtu.be/ae_DKNwK_ms', target: :_blank
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'scrum.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'scrum.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            Agile/Scrum Software Development
+          %strong Agile/Scrum Software Development
         %p
           We are a dedicated Scrum development shop with Scrum certification.
         %p
           We want to develop your project in close concert with you. Along the way, delivering and iterating usable
           features that you can use now. Using Scrum we can get you the most "bang for the buck" as early as possible.
-        %a#toggle-scrum-text{href: '#'}
+        = link_to '#', id: 'toggle-scrum-text' do
           = read_more_label
         %div#scrum-text
           %p
@@ -172,17 +158,13 @@
             another direction.
           %strong
             To get a short introduction to Scrum take a look at this short video called
-            %a{target: '_blank', href: 'http://youtu.be/XU0llRltyFM'}
-              %strong
-                Intro to Agile Scrum in Under 10 Minutes - What is Scrum?
+            = link_to 'Intro to Agile Scrum in Under 10 Minutes - What is Scrum?', 'http://youtu.be/XU0llRltyFM', target: :_blank
   .col-md-4
     .thumbnail
       .caption
-        %p
-          =image_tag 'prototyping.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
+        %p= image_tag 'prototyping.png', class: 'img-responsive pull-left padded-right-bottom-image', width: default_image_width
         %h4
-          %strong
-            UX Prototyping
+          %strong UX Prototyping
         %p
           Don't waste time coding until you understand your UX requirements.
         %p
@@ -192,7 +174,7 @@
           we'll build a set of wireframes to mockup your web or mobile application. Mockups are easy to build quickly and
           super easy to refine. This avoids wasting time writing code for user interfaces that haven't been thoroughly
           thought through and will then need to be changed multiple times.
-        %a#toggle-prototyping-text{href: '#'}
+        = link_to '#', id: 'toggle-prototyping-text' do
           = read_more_label
         %div#prototyping-text
           %p
@@ -206,12 +188,12 @@
             and refine them sooner, leaving more time for discussion and writing code.
             %em All at lower cost to you!
           %p
-            %strong Take a quick look at how quickly we can mockup a user interface for you in this video called
-            %a{target: '_blank', href: 'http://youtu.be/aJTuFRaIi_g'}
-              %strong
-                Balsamiq Mockups Intro
+            %strong
+              Take a quick look at how quickly we can mockup a user interface for you in this video called
+              = succeed '.' do
+                = link_to 'Balsamiq Mockups Intro', 'http://youtu.be/aJTuFRaIi_g', target: :_blank
 %p
-  %a.btn.btn-success#read-more{href: pages_about_path} READ MORE &raquo;
+  = render 'shared/read_more', :locals => {target_path: pages_about_path}
 = javascript_include_tag('pages')
 = javascript_include_tag('tours/shared/common_tour_steps')
 = javascript_include_tag('tours/services_tour')

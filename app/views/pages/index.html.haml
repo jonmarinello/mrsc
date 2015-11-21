@@ -4,14 +4,16 @@
 %p
   Mission Ridge Software Consulting is located in Santa Barbara, California and provides quality
   software consulting services at competitive rates. We specialize in
-  %a{target: '_blank', href: 'http://rubyonrails.org'} Ruby on Rails
+  = link_to 'Ruby on Rails', 'http://rubyonrails.org', target: :_blank
   responsive web design and development, basic
-  %a{target: '_blank', href: 'https://www.ruby-lang.org/en/'} Ruby
+  = link_to 'Ruby', 'https://www.ruby-lang.org/en/', target: :_blank
   application and gem development as well as providing other technical consulting services.
 %p
-  As a lower cost alternative we also develop custom websites using Content Management Systems (CMS).
+  As a lower cost alternative we also develop custom websites using
+  = succeed '.' do
+    = link_to 'Content Management Systems (CMS)', 'https://en.wikipedia.org/wiki/Content_management_system', target: :_blank
 %p
-  %a{target: '_blank', href: 'http://en.wikipedia.org/wiki/Responsive_web_design'} Responsive web design (RWD)
+  = link_to 'Responsive web design (RWD)', 'http://en.wikipedia.org/wiki/Responsive_web_design', target: :_blank
   is a web design approach aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation
   with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop
   computer monitors).
@@ -19,7 +21,7 @@
   We've worked with several companies and they have had a lot of great things to say about the services we have
   provided.
 %p
-  %a.btn.btn-success#read-more{href: pages_services_path} READ MORE &raquo;
+  = render 'shared/read_more', :locals => {target_path: pages_services_path}
 = javascript_include_tag('pages')
 = javascript_include_tag('tours/shared/common_tour_steps')
 = javascript_include_tag('tours/index_tour')

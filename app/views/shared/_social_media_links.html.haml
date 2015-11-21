@@ -5,22 +5,22 @@
         Stay Connected
       %ul.fa-ul{class: 'nav nav-pills'}
         %li
-          %a{target: '_blank', id: 'skype-link', href: 'skype:jon.marinello.mrsc?chat'}
+          = link_to 'skype:jon.marinello.mrsc?chat', id: 'skype-link' do
             %i.fa.fa-2x.fa-skype
         %li
-          %a{target: '_blank', id: 'facebook-link', href: 'https://www.facebook.com/missionridgeconsulting'}
+          = link_to 'https://www.facebook.com/missionridgeconsulting', id: 'facebook-link', target: :_blank do
             %i.fa.fa-2x.fa-facebook
         %li
-          %a{target: '_blank', id: 'twitter-link', href: 'http://twitter.com/jonmarinello'}
+          = link_to 'http://twitter.com/jonmarinello', id: 'twitter-link', target: :_blank do
             %i.fa.fa-2x.fa-twitter
         %li
-          %a{target: '_blank', id: 'googleplus-link', href: 'http://google.com/+JonMarinello'}
+          = link_to 'http://google.com/+JonMarinello', id: 'googleplus-link', target: :_blank do
             %i.fa.fa-2x.fa-google
         %li
-          %a{target: '_blank', id: 'linkedin-link', href: 'http://www.linkedin.com/in/jonmarinello'}
+          = link_to 'http://www.linkedin.com/in/jonmarinello', id: 'linkedin-link', target: :_blank do
             %i.fa.fa-2x.fa-linkedin
         %li
-          %a{target: '_blank', id: 'githib-link', href: 'https://github.com/jonmarinello'}
+          = link_to 'https://github.com/jonmarinello', id: 'githib-link', target: :_blank do
             %i.fa.fa-2x.fa-github-alt
     %small
       Founded 2011, Mission Ridge Software Consulting LLC © 2011-2015
