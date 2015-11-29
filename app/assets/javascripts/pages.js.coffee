@@ -39,8 +39,8 @@ handleServiceExtendedShowHideText = (toggleText, text) ->
 # Setup array of services sections for use with "More.../Less...""
 serviceExtendedTextItems = [
   "rails-text"
-  "ios-text"
-  "scrum-text"
+  "mobile-text"
+  "agile-text"
   "cms-text"
   "prototyping-text"
   "cloud-text"

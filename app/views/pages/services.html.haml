@@ -7,16 +7,16 @@
   .col-md-4
     = render 'pages/services/ror', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
   .col-md-4
-    = render 'pages/services/cms', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
+    = render 'pages/services/mobile', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
   .col-md-4
-    = render 'pages/services/ios', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
+    = render 'pages/services/cms', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
 .row
   .col-md-4
     = render 'pages/services/cloud', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
   .col-md-4
-    = render 'pages/services/agile', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
-  .col-md-4
     = render 'pages/services/ux', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
+  .col-md-4
+    = render 'pages/services/agile', :locals => {read_more_label: read_more_label, default_image_width: default_image_width}
 %p
   = render 'shared/read_more', :locals => {target_path: pages_about_path}
 = javascript_include_tag('pages')

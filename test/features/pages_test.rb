@@ -12,12 +12,12 @@ class PagesTest < Capybara::Rails::TestCase
     find('a#toggle-rails-text').click
     find('a#toggle-cms-text').click
     find('a#toggle-cms-text').click
-    find('a#toggle-ios-text').click
-    find('a#toggle-ios-text').click
+    find('a#toggle-mobile-text').click
+    find('a#toggle-mobile-text').click
     find('a#toggle-cloud-text').click
     find('a#toggle-cloud-text').click
-    find('a#toggle-scrum-text').click
-    find('a#toggle-scrum-text').click
+    find('a#toggle-agile-text').click
+    find('a#toggle-agile-text').click
     find('a#toggle-prototyping-text').click
     find('a#toggle-prototyping-text').click
   end
