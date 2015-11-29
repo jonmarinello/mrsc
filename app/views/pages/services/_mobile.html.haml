@@ -1,0 +1,27 @@
+.thumbnail
+  .caption
+    %p= image_tag 'iphone_ipad.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %h4
+      %strong Mobile App Development
+    %p
+      Let's build the next great mobile app for the iOS or Android platform.
+    %p
+      We love building mobile apps. We specialize in native iPhone, iPad & Android app development as well as responsive mobile web
+      development. Have an app idea or design you want to get into this rapidly growing marketplace?
+    = link_to '#', id: 'toggle-mobile-text' do
+      = locals[:read_more_label]
+    %div#mobile-text
+      %p
+        We started developing Mobile apps two years ago in response to the growing demand in the mobile app
+        development space. Mobile application development is now a critical part of any product strategy and its worth
+        thinking through if you need a native mobile app or you prefer a responsive web approach where the mobile
+        experience on your site is optimized.
+      %p
+        Mobile app development is moving fast, and we're committed to staying on top of the best frameworks,
+        techniques and design standards for mobile.
+      %p
+        We're ready to get started developing your mobile app when you are.
+      %strong
+        Check out this cool Apple video called
+        = link_to "Apps We Can't Live Without", 'https://youtu.be/6kjFuzPk0xo', target: :_blank
+        which should get your juices flowing about a mobile app you could be adding to the Apple or Android marketplace.
