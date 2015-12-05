@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/pages/index' => 'pages#index'
   get '/pages/services' => 'pages#services'
   get '/pages/about' => 'pages#about'
+  get '/pages/get_recommendations' => 'pages#get_recommendations'
   get '/pages/portfolio' => 'pages#portfolio'
   get '/pages/contact' => 'pages#contact'
   get '/pages/start_a_project' => 'pages#start_a_project'

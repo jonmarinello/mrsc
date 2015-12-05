@@ -13,7 +13,14 @@ class PagesController < ApplicationController
   def about
     @active_tab = 'about'
     @person_image_width = 90
-    @recommendations = Recommendation.order(:position).all
+    @recommendations = Recommendation.ordered_recommendations
+  end
+
+
+  def get_recommendations
+    respond_to do |format|
+      format.json { render json: Recommendation.ordered_recommendations.to_json( :only => [:title, :body, :image_url] ) }
+    end
   end
 
 
@@ -61,8 +68,9 @@ class PagesController < ApplicationController
   def potential_project_request_params
     params.require(:potential_project).permit(
         :id, :name, :email, :project_idea, :phone, :company_name,
-        :project_idea, :type_website, :type_ruby_on_rails, :type_web_design,
-        :type_code_review, :type_other, :start_timeframe,
+        :project_idea, :type_ruby_on_rails_web_development,
+        :type_mobile_app_development, :type_cms_web_development, :type_everything_cloud,
+        :type_ux_prototyping, :type_agile_development, :type_other, :start_timeframe,
         :additional_info, :heard_about_us, :keep_me_updated)
   end
 end

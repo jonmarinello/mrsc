@@ -1,7 +1,8 @@
 ActiveAdmin.register PotentialProject do
-  permit_params :id, :name, :email, :phone, :company_name, :project_idea, :type_website, :type_ruby_on_rails,
-                :type_web_design, :type_code_review, :type_other, :start_timeframe, :additional_info, :heard_about_us,
-                :keep_me_updated, :is_active
+  permit_params :id, :name, :email, :phone, :company_name, :project_idea, :type_ruby_on_rails_web_development,
+                :type_mobile_app_development, :type_cms_web_development, :type_everything_cloud,
+                :type_ux_prototyping, :type_agile_development, :type_other, :start_timeframe, :additional_info,
+                :heard_about_us, :keep_me_updated, :is_active
 
   index do
     selectable_column
@@ -13,10 +14,12 @@ ActiveAdmin.register PotentialProject do
     end
     column :company_name
     column :start_timeframe
-    column :type_website
-    column :type_ruby_on_rails
-    column :type_web_design
-    column :type_code_review
+    column :type_ruby_on_rails_web_development
+    column :type_mobile_app_development
+    column :type_cms_web_development
+    column :type_everything_cloud
+    column :type_ux_prototyping
+    column :type_agile_development
     column :type_other
     column :keep_me_updated
     actions
@@ -25,10 +28,12 @@ ActiveAdmin.register PotentialProject do
   filter :name
   filter :phone
   filter :company_name
-  filter :type_website
-  filter :type_ruby_on_rails
-  filter :type_web_design
-  filter :type_code_review
+  filter :type_ruby_on_rails_web_development
+  filter :type_mobile_app_development
+  filter :type_cms_web_development
+  filter :type_everything_cloud
+  filter :type_ux_prototyping
+  filter :type_agile_development
   filter :type_other
   filter :keep_me_updated
 
