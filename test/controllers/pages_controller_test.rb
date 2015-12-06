@@ -14,6 +14,7 @@ class PagesControllerTest < ActionController::TestCase
     assert_routing root_path, controller: 'pages', action: 'index'
     assert_routing pages_portfolio_path, controller: 'pages', action: 'portfolio'
     assert_routing pages_about_path, controller: 'pages', action: 'about'
+    assert_routing pages_get_recommendations_path, controller: 'pages', action: 'get_recommendations'
     assert_routing pages_services_path, controller: 'pages', action: 'services'
     assert_routing pages_contact_path, controller: 'pages', action: 'contact'
     assert_routing pages_start_a_project_path, controller: 'pages', action: 'start_a_project'
@@ -42,6 +43,16 @@ class PagesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:person_image_width)
     assert_not_nil assigns(:recommendations)
     assert_select '#start-tour-tab', 1
+  end
+
+
+  test 'should get get_recommendations JSON' do
+    get :get_recommendations, { format: :json }
+    assert_response :success
+    assert_template layout: false
+    assert_nil assigns(:active_tab)
+    assert_nil assigns(:person_image_width)
+    assert_nil assigns(:recommendations)
   end
 
 

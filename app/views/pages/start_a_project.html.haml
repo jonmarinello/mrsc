@@ -15,10 +15,12 @@
       = f.input :company_name, label: 'Company or organization name'
       = f.input :project_idea, label: 'Describe your project or idea'
       Project Type (Select all that apply):
-      = f.input :type_website, label: 'Website', wrapper: :vertical_boolean
-      = f.input :type_ruby_on_rails, label: 'Ruby On Rails', wrapper: :vertical_boolean
-      = f.input :type_web_design, label: 'Web Design', wrapper: :vertical_boolean
-      = f.input :type_code_review, label: 'Code Review', wrapper: :vertical_boolean
+      = f.input :type_ruby_on_rails_web_development, label: 'Ruby on Rails Web Development', wrapper: :vertical_boolean
+      = f.input :type_mobile_app_development, label: 'Mobile App Development', wrapper: :vertical_boolean
+      = f.input :type_cms_web_development, label: 'CMS Web Development', wrapper: :vertical_boolean
+      = f.input :type_everything_cloud, label: 'Everything Cloud', wrapper: :vertical_boolean
+      = f.input :type_ux_prototyping, label: 'User Experience Prototyping', wrapper: :vertical_boolean
+      = f.input :type_agile_development, label: 'Agile Development', wrapper: :vertical_boolean
       = f.input :type_other, label: 'Other', wrapper: :vertical_boolean
       = f.input :additional_info, label: 'Any additional information'
       = f.input :start_timeframe, label: 'Starting timeframe'

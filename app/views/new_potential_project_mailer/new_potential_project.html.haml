@@ -52,25 +52,35 @@
 
 %h2 Selected Project Attributes
 
-- if @potential_project.type_website.present?
+- if @potential_project.type_ruby_on_rails_web_development.present?
   %p
     %strong ✓
-    Website
+    Ruby on Rails Web Development
 
-- if @potential_project.type_ruby_on_rails.present?
+- if @potential_project.type_mobile_app_development.present?
   %p
     %strong ✓
-    Ruby on Rails
+    Mobile App Development
 
-- if @potential_project.type_web_design.present?
+- if @potential_project.type_cms_web_development.present?
   %p
     %strong ✓
-    Web Design
+    CMS Web Development
 
-- if @potential_project.type_code_review.present?
+- if @potential_project.type_everything_cloud.present?
   %p
     %strong ✓
-    Code Review
+    Everything Cloud
+
+- if @potential_project.type_ux_prototyping.present?
+  %p
+    %strong ✓
+    User Experience Prototyping
+
+- if @potential_project.type_agile_development.present?
+  %p
+    %strong ✓
+    Agile Development
 
 - if @potential_project.type_other.present?
   %p

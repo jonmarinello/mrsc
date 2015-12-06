@@ -7,10 +7,12 @@ one:
   phone: (805) 705-7035
   company_name: Josh's Video Prodctions
   project_idea: A Corporate Web site for my company.
-  type_website: true
-  type_ruby_on_rails: true
-  type_web_design: true
-  type_code_review: false
+  type_ruby_on_rails_web_development: true
+  type_mobile_app_development: true
+  type_cms_web_development: true
+  type_everything_cloud: false
+  type_ux_prototyping: false
+  type_agile_development: false
   type_other: false
   start_timeframe: Sometime soon
   additional_info: Please give me a call and let's discuss this project idea ASAP.
@@ -24,10 +26,12 @@ two:
   phone: (714) 588-9405
   company_name: Elite Associates
   project_idea: A responsive Corporate Web site for my company and a Mobile Web application.
-  type_website: true
-  type_ruby_on_rails: true
-  type_web_design: true
-  type_code_review: false
+  type_ruby_on_rails_web_development: true
+  type_mobile_app_development: true
+  type_cms_web_development: true
+  type_everything_cloud: false
+  type_ux_prototyping: false
+  type_agile_development: false
   type_other: true
   start_timeframe: One month from now
   additional_info: Please email me and let's discuss this project idea and mobile application. I have some other ideas as well.
