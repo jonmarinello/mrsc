@@ -106,10 +106,12 @@ class PagesTest < Capybara::Rails::TestCase
     validate_nav_page('start_a_project') do
       within('#new_potential_project') do
         fill_in('potential_project[company_name]', with: 'Hans Dickman Boat Yard')
-        check('potential_project[type_website]')
-        check('potential_project[type_ruby_on_rails]')
-        check('potential_project[type_web_design]')
-        uncheck('potential_project[type_code_review]')
+        check('potential_project[type_ruby_on_rails_web_development]')
+        check('potential_project[type_mobile_app_development]')
+        check('potential_project[type_cms_web_development]')
+        uncheck('potential_project[type_everything_cloud]')
+        check('potential_project[type_ux_prototyping]')
+        check('potential_project[type_agile_development]')
         check('potential_project[type_other]')
         fill_in('potential_project[start_timeframe]', with: 'Fall 2015')
         fill_in('potential_project[additional_info]', with: 'Call me back ASAP to discuss this opportunity.')
