@@ -1,29 +1,61 @@
+- default_image_width = '200px'
 = render partial: 'shared/image_carousel', locals: {page: 'index'}
 %h3#title
   Welcome To Mission Ridge Software Consulting
 %p
   Mission Ridge Software Consulting is located in Santa Barbara, California and provides quality
-  software consulting services at competitive rates. We specialize in
-  = link_to 'Ruby on Rails', 'http://rubyonrails.org', target: :_blank
-  responsive web design and development, basic
-  = link_to 'Ruby', 'https://www.ruby-lang.org/en/', target: :_blank
-  application and gem development as well as providing other technical consulting services.
+  software consulting services at competitive rates. We mainly specialize in:
+
+.row
+  .col-md-4
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title
+          Ruby on Rails Website Development
+      .panel-body
+        = image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
+        = render 'pages/services/rails_summary', :locals => {default_image_width: default_image_width}
+        %p
+          Want to find out more? Just
+          = succeed '.' do
+            = link_to 'click here', pages_services_path, anchor: '#rails_text'
+        = link_to "LET'S TALK ABOUT YOUR PROJECT &raquo;".html_safe, url_for(controller: 'pages', action: 'start_a_project'), class: 'btn btn-warning', id: 'lets-talk-about-your-project'
+
+  .col-md-4
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title
+          Mobile Application Development
+      .panel-body
+        = image_tag 'mobile.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
+        = render 'pages/services/mobile_summary', :locals => {default_image_width: default_image_width}
+        %p
+          Want to find out more? Just
+          = succeed '.' do
+            = link_to 'click here', pages_services_path, anchor: '#mobile_text'
+        = link_to "LET'S TALK ABOUT YOUR PROJECT &raquo;".html_safe, url_for(controller: 'pages', action: 'start_a_project'), class: 'btn btn-warning', id: 'lets-talk-about-your-project'
+
+  .col-md-4
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title
+          CMS Website Development
+      .panel-body
+        = image_tag 'cms.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: default_image_width
+        = render 'pages/services/cms_summary', :locals => {default_image_width: default_image_width}
+        %p
+          Want to find out more? Just
+          = succeed '.' do
+            = link_to 'click here', pages_services_path, anchor: '#cms_text'
+        = link_to "LET'S TALK ABOUT YOUR PROJECT &raquo;".html_safe, url_for(controller: 'pages', action: 'start_a_project'), class: 'btn btn-warning', id: 'lets-talk-about-your-project'
+
 %p
-  As a lower cost alternative we also develop custom websites using
-  = succeed '.' do
-    = link_to 'Content Management Systems (CMS)', 'https://en.wikipedia.org/wiki/Content_management_system', target: :_blank
-%p
-  = link_to 'Responsive web design (RWD)', 'http://en.wikipedia.org/wiki/Responsive_web_design', target: :_blank
-  is a web design approach aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation
-  with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop
-  computer monitors).
-%p
-  We've worked with several companies and they have had a lot of great things to say about the services we have
+  We've worked with a number of companies and they have had a lot of great things to say about the services we have
   provided.
 %p
   = render 'shared/read_more', :locals => {target_path: pages_services_path}
+%hr
 = javascript_include_tag('pages')
 = javascript_include_tag('tours/shared/common_tour_steps')
 = javascript_include_tag('tours/index_tour')
 = render 'layouts/shared/start_tour_box'
-= render 'shared/lets_talk_about_your_project'
