@@ -3,13 +3,7 @@
     %p= image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: locals[:default_image_width]
     %h4
       %strong Ruby On Rails Web Development
-    %p
-      If you're looking for Ruby on Rails development, you've come to the right place.
-    %p
-      Rails development is our passion and we love building applications with this framework because of the speed
-      of development and the many products around it including
-      = link_to 'Heroku', 'https://www.heroku.com/', target: :_blank
-      for hosting, New Relic for monitoring and many more.
+    = render 'pages/services/rails_summary'
     = link_to '#', id: 'toggle-rails-text' do
       = locals[:read_more_label]
     %div#rails-text
