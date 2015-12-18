@@ -53,6 +53,23 @@ hideAllServiceExtendedTextItems = () ->
     $("#" + textItem).hide()
 
 
+# Carousel scroll fade out
+#$(window).scroll ->
+#  $('.carousel').css 'opacity', 1 - ($(window).scrollTop() / ($(window).height() / 1.6))
+#  return
+
+$(window).scroll ->
+  scrollTop = $(window).scrollTop()
+  height = $(window).height()
+  opacity = (height - scrollTop) / height
+  console.log('-------')
+  console.log(scrollTop)
+  console.log(height)
+  console.log(height - scrollTop)
+  console.log(opacity)
+  $('.carousel').css 'opacity': opacity
+
+
 $ ->
   # One time sizing
   handleMainImageFontSizeAndPosition()
