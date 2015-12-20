@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => [:mobile_start_a_project]
+
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'
     @active_tab = 'index'
@@ -60,6 +62,28 @@ class PagesController < ApplicationController
 
   def start_a_project_landing_page
     @active_tab = nil
+  end
+
+
+  def mobile_start_a_project
+    @active_tab = nil
+
+    respond_to do |format|
+      format.html do
+        @potential_project = PotentialProject.new(potential_project_request_params)
+
+        if @potential_project.save
+          # Save succeeded so send email letting us know that someone wants to start a project
+          NewPotentialProjectMailer.new_potential_project(@potential_project).deliver_later
+
+          # Respond with all ok
+          render nothing: true, status: :ok, content_type: 'text/html'
+        else
+          # Respond with an error
+          render nothing: true, status: 304, content_type: 'text/html'
+        end
+      end
+    end
   end
 
 

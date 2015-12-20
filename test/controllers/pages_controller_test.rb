@@ -105,4 +105,26 @@ class PagesControllerTest < ActionController::TestCase
     assert_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 0
   end
+
+
+  test 'should create a potential project via mobile endpoint' do
+    assert_difference('PotentialProject.count') do
+      post :mobile_start_a_project, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com', project_idea: 'To build the perfect androird woman!'}
+    end
+
+    assert_nil assigns(:active_tab)
+    assert_not_nil assigns(:potential_project)
+    assert_response :ok
+  end
+
+
+  test 'should fail to create a potential project via mobile endpoint' do
+    assert_difference('PotentialProject.count', 0) do
+      post :mobile_start_a_project, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com'}
+    end
+
+    assert_nil assigns(:active_tab)
+    assert_not_nil assigns(:potential_project)
+    assert_response 304
+  end
 end
