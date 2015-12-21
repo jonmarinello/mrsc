@@ -12,7 +12,6 @@ ActiveAdmin.register Recommendation do
     id_column
     column :name
     column :title
-    column :body
     column :image_url
     actions
   end
