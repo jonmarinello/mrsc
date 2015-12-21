@@ -77,6 +77,7 @@ gem 'roadie-rails', '1.0.6'
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '~> 1.4'
+  gem 'annotate', '~> 2.6'
 end
 
 # Test dependencies
