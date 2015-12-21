@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get '/pages/start_a_project' => 'pages#start_a_project'
   post '/pages/start_a_project', to: 'pages#create'
   get '/pages/start_a_project_landing_page', to: 'pages#start_a_project_landing_page'
+  post '/pages/mobile_start_a_project' => 'pages#mobile_start_a_project'
 end
