@@ -9,11 +9,11 @@
     - if alert || notice
       = render 'shared/flash_messages'
     = simple_form_for @potential_project, url: url_for(action: 'create', controller: 'pages') do |f|
-      = f.input :name, label: 'Your name'
-      = f.input :email, label: 'Your email address'
-      = f.input :phone, label: 'Your phone number'
-      = f.input :company_name, label: 'Company or organization name'
-      = f.input :project_idea, label: 'Describe your project or idea'
+      = f.input :name, label: 'Your name', placeholder: 'Roger Eaton', required: true
+      = f.input :email, label: 'Your email address', placeholder: 'roger@eaton.com', required: true
+      = f.input :phone, label: 'Your phone number', placeholder: '(805) 555-1212'
+      = f.input :company_name, label: 'Company or organization name', placeholder: 'ACME Inc.'
+      = f.input :project_idea, label: 'Describe your project or idea', placeholder: 'I would like to have you build us a website and mobile application.', required: true
       Project Type (Select all that apply):
       = f.input :type_ruby_on_rails_web_development, label: 'Ruby on Rails Web Development', wrapper: :vertical_boolean
       = f.input :type_mobile_app_development, label: 'Mobile App Development', wrapper: :vertical_boolean
@@ -22,9 +22,9 @@
       = f.input :type_ux_prototyping, label: 'User Experience Prototyping', wrapper: :vertical_boolean
       = f.input :type_agile_development, label: 'Agile Development', wrapper: :vertical_boolean
       = f.input :type_other, label: 'Other', wrapper: :vertical_boolean
-      = f.input :additional_info, label: 'Any additional information'
-      = f.input :start_timeframe, label: 'Starting timeframe'
-      = f.input :heard_about_us, label: 'How you heard about us'
+      = f.input :additional_info, label: 'Any additional information', placeholder: 'We are a small startup company so cost is a factor for us.'
+      = f.input :start_timeframe, label: 'Starting timeframe', placeholder: 'Within the next 30-45 days.'
+      = f.input :heard_about_us, label: 'How you heard about us', placeholder: 'Business referral.'
       = f.input :keep_me_updated, label: 'Keep me updated with Mission Ridge Software Consulting news', wrapper: :vertical_boolean
       = f.button :submit, 'Submit', class: 'btn btn-warning'
 = javascript_include_tag('tours/shared/common_tour_steps')
