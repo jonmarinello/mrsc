@@ -9,7 +9,14 @@
     - if alert || notice
       = render 'shared/flash_messages'
     = simple_form_for @potential_project, url: url_for(action: 'create', controller: 'pages') do |f|
-      = f.input :name, label: 'Your name', placeholder: 'Roger Eaton', required: true
+      = f.input :name, label: 'Your name', placeholder: 'Roger Eaton', required: true, 'ng-model' => 'potentialProject.name', 'ng-minlength' => '3', 'ng-class' => "{ 'has-errors' : potentialProject.name.$invalid, 'no-errors' : potentialProject.name.$valid}"
+      .error-container{'ng-messages' => 'potentialProject.name.$error', 'ng-show' => 'potentialProject.name.$error'}
+        .error{'ng-message' => 'required'}
+          %i.fa.fa-2x.fa-info-circle
+          Your name is required.
+        .error{'ng-message' => 'minlength'}
+          %i.fa.fa-2x.fa-info-circle
+          Please enter at least 3 characters.
       = f.input :email, label: 'Your email address', placeholder: 'roger@eaton.com', required: true
       = f.input :phone, label: 'Your phone number', placeholder: '(805) 555-1212'
       = f.input :company_name, label: 'Company or organization name', placeholder: 'ACME Inc.'
