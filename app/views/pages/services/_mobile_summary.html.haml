@@ -11,15 +11,16 @@
 %table
   %tr
     %td
+      = link_to 'https://itunes.apple.com/us/app/id1069734743', target: :_blank do
+        = image_tag 'Download_on_the_App_Store_Badge_US-UK_135x40.svg', width: 110
+    %td
       = link_to 'https://play.google.com/store/apps/details?id=com.missionridgeconsulting.mrsc_mobile&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1', target: :_blank do
         = image_tag 'google_play_store.png', width: 110
-    %td
-      = link_to 'http://showcase.ionicframework.com', target: :_blank do
-        = image_tag 'ionic_showcase.png', width: 110
+%p
 %p
   %strong
-    And our mobile app is being featured in the
-    = succeed '!' do
-      = link_to 'Ionic Showcase', 'http://showcase.ionicframework.com', target: :_blank
+    And our mobile app is featured in the
+    = link_to 'http://showcase.ionicframework.com', target: :_blank do
+      = image_tag 'ionic_showcase.png', width: 110
 %p
   We love building mobile apps. We specialize in iPhone, iPad & Android app development.
