@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require plugins/bootstrap-tour
+//= require plugins/angular
 //= require pages
 //= require bootstrap-sprockets
 //= require application

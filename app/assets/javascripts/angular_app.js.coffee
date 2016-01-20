@@ -1,0 +1,1 @@
+@mrsc = angular.module('mrsc', [])
