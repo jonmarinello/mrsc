@@ -1,3 +1,7 @@
+/*
+  Base Styles
+*/
+
 // Push down the body so that the fixed toolbar won't cover the content
 body {
   padding-top: 30px;
@@ -17,18 +21,4 @@ body {
 // Move the index image where it needs to go
 #index-image {
   margin-top: 8px;
-}
-
-.google-map {
-  position: relative;
-  padding-bottom: 75%; // This is the aspect ratio
-  height: 0;
-  overflow: hidden;
-}
-.google-map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
 }
