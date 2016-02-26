@@ -1,3 +1,7 @@
+/*
+  Bootstrap Modification Styles
+*/
+
 // Change the default padding so that the MRSC logo fits inside the toolbar
 .navbar-brand {
   padding: 2px;
@@ -11,14 +15,11 @@
   border: none;
 }
 
-
-
 // Make carousel images size larger than original size when browser window re-sized larger than original image
 .carousel-inner img {
   width: 100%;
   height: auto;
 }
-
 
 
 /*
@@ -77,7 +78,6 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
 
 
 // Make bootstrap-tour text black

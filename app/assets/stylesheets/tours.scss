@@ -1,5 +1,15 @@
+/*
+  Bootstrap Tour Styles
+*/
+
+// Color variables
+$tour-background-color: darkblue;
+$tour-inner-start-tour-tab-border-color: white;
+$tour-button-text-color: white;
+
+// Other variables
 $tour-tab-box-text-rotation: 270deg;
-$radius: 30%;
+$tour-button-radius: 30%;
 
 #start-tour-tab {
   position: fixed;
@@ -7,19 +17,19 @@ $radius: 30%;
   right: -46px;
   top: 35%;
   z-index: 100;
-  background-color: darkblue;
+  background-color: $tour-background-color;
   display: inline-block;
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+  border-top-left-radius: $tour-button-radius;
+  border-top-right-radius: $tour-button-radius;
   -webkit-transform: rotate($tour-tab-box-text-rotation);
   -moz-transform: rotate($tour-tab-box-text-rotation);
   -o-transform: rotate($tour-tab-box-text-rotation);
   transform: rotate($tour-tab-box-text-rotation); // for IE
 
   #inner-start-tour-tab {
-    border: solid 1px white;
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
+    border: solid 1px $tour-inner-start-tour-tab-border-color;
+    border-top-left-radius: $tour-button-radius;
+    border-top-right-radius: $tour-button-radius;
     margin: 1px;
     font: 18px/1.2 arial,helvetica,sans-serif;
     padding: 5px 7px 7px 7px;
@@ -30,8 +40,8 @@ $radius: 30%;
   }
 
   .tour-button {
-    color: white;
-    background-color: darkblue;
+    color: $tour-button-text-color;
+    background-color: $tour-background-color;
     font-weight: bold;
     display: inline-block;
     cursor: pointer;
