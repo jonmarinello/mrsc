@@ -37,6 +37,9 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
 
+reporter_options = { color: true, slow_count: 5 }
+Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+
 
 #
 # Code under test sometimes logs information to STDOUT and it can be suppressed. To suppress STDOUT in your tests,

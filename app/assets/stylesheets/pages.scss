@@ -1,3 +1,7 @@
+/*
+  Pages Styles
+*/
+
 .padded-right-bottom-image {
   padding-right: 1em;
   padding-bottom: 0.10em;
@@ -9,7 +13,6 @@
 }
 
 .social-media {
-  align: center;
   width: 27em;
 }
 
@@ -18,6 +21,7 @@
 }
 
 
+<<<<<<< HEAD
 /* Form Error Handling */
 .error-container {
   margin: 5px 0;
@@ -61,4 +65,20 @@
 
 .popup-title {
   color: white;
+}
+
+// Google Map
+.google-map {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+
+.google-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }

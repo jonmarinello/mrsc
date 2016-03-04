@@ -94,6 +94,9 @@ group :test do
   gem "minitest-rails-capybara", '~> 2.1'
   gem 'capybara_minitest_spec', '~> 1.0'
   gem 'selenium-webdriver', '~> 2.48'
+
+  # Colorized test output
+  gem 'minitest-reporters', '~> 1.1', '>= 1.1.7'
 end
 
 # Pry lets you examine variables run through server as if you were in a rails console
