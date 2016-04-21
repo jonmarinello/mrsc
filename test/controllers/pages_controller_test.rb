@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
-  def common_get_test(page, page_template)
+  def common_get_test(page, page_template, title)
     get page
     assert_response :success
     assert_template page_template
     assert_template layout: 'layouts/application'
-    assert_select 'title', 'MRSC'
+    assert_select 'title', title
   end
 
 
@@ -23,7 +23,7 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get index' do
-    common_get_test :index, 'pages/index'
+    common_get_test :index, 'pages/index', 'Mission Ridge Software Consulting - Home'
     assert_not_nil assigns(:active_tab)
     assert_not_nil assigns(:company_name)
     assert_select '#start-tour-tab', 1
@@ -31,14 +31,14 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get portfolio' do
-    common_get_test :portfolio, 'pages/portfolio'
+    common_get_test :portfolio, 'pages/portfolio', 'Mission Ridge Software Consulting - Portfolio'
     assert_not_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get about' do
-    common_get_test :about, 'pages/about'
+    common_get_test :about, 'pages/about', 'Mission Ridge Software Consulting - About'
     assert_not_nil assigns(:active_tab)
     assert_not_nil assigns(:person_image_width)
     assert_not_nil assigns(:recommendations)
@@ -57,21 +57,21 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get services' do
-    common_get_test :services, 'pages/services'
+    common_get_test :services, 'pages/services', 'Mission Ridge Software Consulting - Services'
     assert_not_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get contact' do
-    common_get_test :contact, 'pages/contact'
+    common_get_test :contact, 'pages/contact', 'Mission Ridge Software Consulting - Contact'
     assert_not_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 1
   end
 
 
   test 'should get start_a_project' do
-    common_get_test :start_a_project, 'pages/start_a_project'
+    common_get_test :start_a_project, 'pages/start_a_project', 'Mission Ridge Software Consulting - Start A Project'
     assert_not_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 1
   end
@@ -101,7 +101,7 @@ class PagesControllerTest < ActionController::TestCase
 
 
   test 'should get start_a_project_langing_page' do
-    common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page'
+    common_get_test :start_a_project_landing_page, 'pages/start_a_project_landing_page', 'Mission Ridge Software Consulting - Thank You'
     assert_nil assigns(:active_tab)
     assert_select '#start-tour-tab', 0
   end
