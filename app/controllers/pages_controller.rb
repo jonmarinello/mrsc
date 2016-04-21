@@ -1,19 +1,24 @@
 class PagesController < ApplicationController
+  include ApplicationHelper
+
   skip_before_filter :verify_authenticity_token, :only => [:mobile_start_a_project]
 
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'
     @active_tab = 'index'
+    @title = default_application_title + ' - Home'
   end
 
 
   def portfolio
     @active_tab = 'portfolio'
+    set_title
   end
 
 
   def about
     @active_tab = 'about'
+    set_title
     @person_image_width = 90
     @recommendations = Recommendation.ordered_recommendations
   end
@@ -28,16 +33,19 @@ class PagesController < ApplicationController
 
   def services
     @active_tab = 'services'
+    set_title
   end
 
 
   def contact
     @active_tab = 'contact'
+    set_title
   end
 
 
   def start_a_project
     @active_tab = 'start_a_project'
+    set_title
     @potential_project = PotentialProject.new
   end
 
@@ -62,6 +70,7 @@ class PagesController < ApplicationController
 
   def start_a_project_landing_page
     @active_tab = nil
+    @title = default_application_title + ' - Thank You'
   end
 
 
@@ -88,6 +97,10 @@ class PagesController < ApplicationController
 
 
   private
+
+  def set_title
+    @title = default_application_title + " - #{@active_tab.titleize}"
+  end
 
   def potential_project_request_params
     params.require(:potential_project).permit(
