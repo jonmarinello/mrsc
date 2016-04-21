@@ -19,5 +19,10 @@ module Mrsc
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # configure the Email Verifier
+    EmailVerifier.config do |config|
+      config.verifier_email = 'jonmarinello@gmail.com'
+    end
   end
 end

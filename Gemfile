@@ -62,6 +62,7 @@ gem 'simple_form', '3.2.0'
 
 # Email validation
 gem 'validates_email_format_of', '1.6.1'
+gem 'email_verifier', '0.1.0'
 
 # Phone number validation
 gem 'phony_rails', '0.12.11'
