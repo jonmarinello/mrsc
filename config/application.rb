@@ -21,7 +21,7 @@ module Mrsc
     # config.i18n.default_locale = :de
 
     # Compression
-    config.middleware.use Rack::Deflater
+    config.middleware.insert_before(Rack::Sendfile, Rack::Deflater)
 
     # configure the Email Verifier
     EmailVerifier.config do |config|
