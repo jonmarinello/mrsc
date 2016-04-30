@@ -25,7 +25,7 @@ handleMainImageFontSizeAndPosition = () ->
       mainImageTextItem.css "font-size", "7em"
 
 
-# Toggles the services "More.../Less..." label and associated text visibility
+# Toggles the services "See More/See Less" label and associated text visibility
 handleServiceExtendedShowHideText = (toggleText, text) ->
   if toggleText.text().trim() is window.readMoreLabel
     text.show()
@@ -36,7 +36,7 @@ handleServiceExtendedShowHideText = (toggleText, text) ->
   false
 
 
-# Setup array of services sections for use with "More.../Less...""
+# Setup array of services sections for use with "See More/See Less""
 serviceExtendedTextItems = [
   "rails-text"
   "mobile-text"
@@ -65,12 +65,12 @@ $ ->
   $(window).on "resize", ->
     handleMainImageFontSizeAndPosition()
 
-  # One time set all services "More.../Less..." text to be "More..."
+  # One time set all services "See More/See Less" text to be "See More"
   hideAllServiceExtendedTextItems()
 
   # Setup our label comparison strings
-  window.readMoreLabel = "More..."
-  window.readLessLabel = "Less..."
+  window.readMoreLabel = "See More"
+  window.readLessLabel = "See Less"
   togglePrefix = "#toggle-"
 
   # Register for all the services "Read More/Read Less" click events to handle associated text visibility

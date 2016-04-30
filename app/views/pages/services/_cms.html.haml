@@ -4,8 +4,9 @@
     %h4
       %strong CMS Web Development
     = render 'pages/services/cms_summary'
-    = link_to '#', id: 'toggle-cms-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-cms-text' do
+        = locals[:read_more_label]
     %div#cms-text
       %p
         When would CMS be the best solution for your website?

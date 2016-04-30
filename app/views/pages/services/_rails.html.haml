@@ -4,8 +4,9 @@
     %h4
       %strong Ruby On Rails Web Development
     = render 'pages/services/rails_summary'
-    = link_to '#', id: 'toggle-rails-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-rails-text' do
+        = locals[:read_more_label]
     %div#rails-text
       %p
         Rails provides the the most flexible, scalable, secure and well thought out framework for developing
