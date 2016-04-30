@@ -20,6 +20,9 @@ module Mrsc
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Compression
+    config.middleware.insert_before(Rack::Sendfile, Rack::Deflater)
+
     # configure the Email Verifier
     EmailVerifier.config do |config|
       config.verifier_email = 'jonmarinello@gmail.com'
