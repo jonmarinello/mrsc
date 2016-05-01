@@ -16,3 +16,4 @@
 //= require pages
 //= require bootstrap-sprockets
 //= require application
+//= require_tree ./plugins
