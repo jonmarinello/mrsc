@@ -1,6 +1,6 @@
 .thumbnail
   .caption
-    %p= image_tag 'prototyping.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %p= image_tag 'prototyping.jpg', alt: 'UX Prototyping', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
     %h4
       %strong UX Prototyping
     %p
@@ -12,8 +12,9 @@
       we'll build a set of wireframes to mockup your web or mobile application. Mockups are easy to build quickly and
       super easy to refine. This avoids wasting time writing code for user interfaces that haven't been thoroughly
       thought through and will then need to be changed multiple times.
-    = link_to '#', id: 'toggle-prototyping-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-prototyping-text' do
+        = locals[:read_more_label]
     %div#prototyping-text
       %p
         %strong

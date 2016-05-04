@@ -1,11 +1,12 @@
 .thumbnail
   .caption
-    %p= image_tag 'rails.png', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: locals[:default_image_width]
+    %p= image_tag 'rails.jpg', alt: 'Ruby On Rails Website Development', class: 'img-responsive pull-left img-rounded padded-right-bottom-image', width: locals[:default_image_width]
     %h4
-      %strong Ruby On Rails Web Development
+      %strong Ruby On Rails Website Development
     = render 'pages/services/rails_summary'
-    = link_to '#', id: 'toggle-rails-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-rails-text' do
+        = locals[:read_more_label]
     %div#rails-text
       %p
         Rails provides the the most flexible, scalable, secure and well thought out framework for developing

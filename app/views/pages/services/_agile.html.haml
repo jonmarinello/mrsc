@@ -1,6 +1,6 @@
 .thumbnail
   .caption
-    %p= image_tag 'scrum.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %p= image_tag 'scrum.jpg', alt: 'Agile/Scrum Software Development', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
     %h4
       %strong Agile/Scrum Software Development
     %p
@@ -8,8 +8,9 @@
     %p
       We want to develop your project in close concert with you. Along the way, delivering and iterating usable
       features that you can use now. Using Scrum we can get you the most "bang for the buck" as early as possible.
-    = link_to '#', id: 'toggle-agile-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-agile-text' do
+        = locals[:read_more_label]
     %div#agile-text
       %p
         Agile development provides opportunities to assess the direction throughout the development lifecycle.

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PagesTest < Capybara::Rails::TestCase
-  # Helper for clicking all the services "More.../Less..." links
+  # Helper for clicking all the services "See More/See Less" links
   DEFAULT_SLEEP_TIME_IN_SECONDS = 0.25
   def click_all_services_more_less_links(sleep_seconds = DEFAULT_SLEEP_TIME_IN_SECONDS)
     # Make sure we are on the services page

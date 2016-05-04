@@ -1,11 +1,12 @@
 .thumbnail
   .caption
-    %p= image_tag 'mobile.png', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
+    %p= image_tag 'mobile.jpg', alt: 'Mobile App Development', class: 'img-responsive pull-left padded-right-bottom-image', width: locals[:default_image_width]
     %h4
       %strong Mobile App Development
     = render 'pages/services/mobile_summary'
-    = link_to '#', id: 'toggle-mobile-text' do
-      = locals[:read_more_label]
+    %strong
+      = link_to '#', id: 'toggle-mobile-text' do
+        = locals[:read_more_label]
     %div#mobile-text
       %p
         We started developing Mobile apps two years ago in response to the growing demand in the mobile app

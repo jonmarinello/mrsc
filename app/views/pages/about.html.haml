@@ -5,7 +5,7 @@
 %h3#title
   About Us
 .well
-  =image_tag 'mrsc.png', class: 'padded-right-bottom-image img-responsive pull-left mrsc-image'
+  =image_tag 'mrsc.png', alt: 'MRSC', class: 'padded-right-bottom-image img-responsive pull-left mrsc-image'
   %p
     We're based in beautiful Santa Barbara, California and our mission is to provide you with very highest quality
     consulting services delivered per specification, on time, every time.
@@ -24,7 +24,7 @@
     %h3.panel-title
       = link_to 'Jon Marinello', 'http://www.linkedin.com/in/jonmarinello', target: :_blank
   .panel-body
-    =image_tag 'jonmarinello.jpg', class: 'padded-right-bottom-image img-responsive img-circle pull-left', width: 140
+    =image_tag 'jonmarinello.jpg', alt: 'Jon Marinello', class: 'padded-right-bottom-image img-responsive img-circle pull-left', width: 140
     %p
       Hi, I'm Jon Marinello, the founder and CTO of Mission Ridge Software Consulting LLC which began operations in 2011.
       I have over 30 years of experience developing highly scalable, reliable and available software systems
@@ -61,7 +61,7 @@
       -# Generate the id using the name
       .panel-collapse.collapse{id: "#{recommendation.name}", class: ('in' if first_time) }
         .panel-body
-          =image_tag recommendation.image_url, class: 'padded-right-bottom-image img-responsive img-circle pull-left', width: @person_image_width
+          =image_tag recommendation.image_url, alt: 'LinkedIn Member Image', class: 'padded-right-bottom-image img-responsive img-circle pull-left', width: @person_image_width
           %p
             = recommendation.body.gsub("\n", '<p>').html_safe
     -# Save off the fact that we are no longer in the first iteration so we only open the first accordion panel.

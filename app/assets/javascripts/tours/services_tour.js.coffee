@@ -8,7 +8,7 @@ $ ->
     },
     {
       element: "#toggle-rails-text",
-      title: "Toggle More.../Less...",
+      title: "Toggle See More/See Less",
       content: "For each service, click this to expand and collapse the additional information.",
       placement: "right"
     },
