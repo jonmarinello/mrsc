@@ -3,13 +3,16 @@
 %meta{:content => 'Take a look at our satisfied customers and the work we did for them.', :name => 'description'}
 = render partial: 'shared/image_carousel', locals: {page: 'portfolio'}
 %h3#title
-  We Work Well With Others
+  Our Portfolio
 .row
-  .col-md-4#we-work-well-with-others
+  .col-md-6
+    = render 'pages/portfolio/procore'
+  .col-md-6#we-work-well-with-others
     = render 'pages/portfolio/fin_and_field'
-  .col-md-4#we-work-well-with-others
+.row
+  .col-md-6
     = render 'pages/portfolio/the_real_real'
-  .col-md-4
+  .col-md-6
     = render 'pages/portfolio/rightscale'
 %p
   = render 'shared/read_more', :locals => {target_path: pages_contact_path}
