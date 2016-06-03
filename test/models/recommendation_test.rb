@@ -10,6 +10,7 @@
 #  updated_at :datetime
 #  image_url  :string           default(""), not null
 #  position   :integer
+#  is_active  :boolean          default(TRUE), not null
 #
 
 require 'test_helper'
