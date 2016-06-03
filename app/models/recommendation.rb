@@ -20,5 +20,5 @@ class Recommendation < ActiveRecord::Base
 
   acts_as_list
 
-  scope :ordered_recommendations, -> { Recommendation.order(:position).all }
+  scope :active_and_ordered, -> { Recommendation.where(:is_active => true).order(:position).all }
 end

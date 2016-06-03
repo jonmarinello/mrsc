@@ -20,7 +20,16 @@ class RecommendationTest < ActiveSupport::TestCase
   should validate_presence_of(:body)
   should validate_presence_of(:image_url)
 
-  test 'test ordered_recommendations scope' do
-    assert_equal 2, Recommendation.ordered_recommendations.count
+  describe 'test active_and_ordered scope' do
+    test 'test active_and_ordered scope with all active records' do
+      assert_equal 2, Recommendation.active_and_ordered.count
+    end
+
+    test 'test active_and_ordered scope with one inactive record' do
+      first_recommendation = Recommendation.first
+      first_recommendation.is_active = false
+      first_recommendation.save!
+      assert_equal 1, Recommendation.active_and_ordered.count
+    end
   end
 end
