@@ -20,13 +20,13 @@ class PagesController < ApplicationController
     @active_tab = 'about'
     set_title
     @person_image_width = 90
-    @recommendations = Recommendation.ordered_recommendations
+    @recommendations = Recommendation.active_and_ordered
   end
 
 
   def get_recommendations
     respond_to do |format|
-      format.json { render json: Recommendation.ordered_recommendations.to_json( :only => [:title, :body, :image_url] ) }
+      format.json { render json: Recommendation.active_and_ordered.to_json(:only => [:title, :body, :image_url] ) }
     end
   end
 

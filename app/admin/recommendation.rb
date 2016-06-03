@@ -1,5 +1,5 @@
 ActiveAdmin.register Recommendation do
-  permit_params :id, :name, :title, :body, :image_url
+  permit_params :id, :is_active, :name, :title, :body, :image_url
 
   config.sort_order = 'position_asc' # assumes you are using 'position' for your acts_as_list column
   config.paginate   = false # optional; drag-and-drop across pages is not supported
@@ -10,6 +10,7 @@ ActiveAdmin.register Recommendation do
     sortable_handle_column # inserts a drag handle
     selectable_column
     id_column
+    column :is_active
     column :name
     column :title
     column :image_url
