@@ -55,7 +55,7 @@ gem 'active_admin_theme', '1.0.3'
 gem 'activeadmin-sortable', '0.0.3'
 
 # New Relic Monitoring
-gem 'newrelic_rpm', '3.14.0.305'
+gem 'newrelic_rpm', '3.15.2.317'
 
 # Simple forms
 gem 'simple_form', '3.2.0'
