@@ -5,7 +5,7 @@
 source 'https://rubygems.org'
 
 # Ruby version
-ruby '2.2.3'
+ruby '2.3.1'
 
 # Ruby on Rails
 gem 'rails', '4.2.5'
@@ -17,7 +17,7 @@ gem 'pg', '0.18.4'
 gem 'devise', '3.5.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '5.0.4'
+gem 'sass-rails', '5.0.5'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.7.2'
@@ -71,8 +71,8 @@ gem 'phony_rails', '0.12.11'
 gem 'acts_as_list', '0.7.2'
 
 # Emails
-gem 'roadie', '3.0.5'
-gem 'roadie-rails', '1.0.6'
+gem 'roadie', '3.1.1'
+gem 'roadie-rails', '1.1.1'
 
 # Development dependencies
 group :development do

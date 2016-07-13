@@ -1,3 +1,4 @@
+Rails.application.config.assets.precompile += %w( index.jpg )
 Rails.application.config.assets.precompile += %w( pages.js )
 Rails.application.config.assets.precompile += %w( email.css )
 Rails.application.config.assets.precompile += %w( tours/shared/common_tour_steps.js )
