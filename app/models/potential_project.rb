@@ -24,7 +24,7 @@
 #  type_agile_development             :boolean
 #
 
-class PotentialProject < ActiveRecord::Base
+class PotentialProject < ApplicationRecord
   validates_presence_of(:name)
   validates_presence_of(:email)
   validates_presence_of(:project_idea)

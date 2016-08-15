@@ -13,7 +13,7 @@
 #  is_active  :boolean          default(TRUE), not null
 #
 
-class Recommendation < ActiveRecord::Base
+class Recommendation < ApplicationRecord
   validates_presence_of(:name)
   validates_presence_of(:title)
   validates_presence_of(:body)

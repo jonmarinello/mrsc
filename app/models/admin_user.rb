@@ -17,7 +17,7 @@
 #  updated_at             :datetime
 #
 
-class AdminUser < ActiveRecord::Base
+class AdminUser < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
