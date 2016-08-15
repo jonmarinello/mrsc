@@ -2,7 +2,7 @@ require 'test_helper'
 
 # Test all PotentialProject CRUD operations
 class Admin::PotentialProjectsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   test 'should get redirected when hitting index because not logged in' do
     get :index

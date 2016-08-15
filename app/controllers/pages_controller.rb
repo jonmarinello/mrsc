@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   include ApplicationHelper
 
-  skip_before_filter :verify_authenticity_token, :only => [:mobile_start_a_project]
+  skip_before_action :verify_authenticity_token, :only => [:mobile_start_a_project]
 
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'

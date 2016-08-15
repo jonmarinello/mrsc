@@ -82,6 +82,9 @@ group :test do
   gem 'simplecov'
   gem 'codeclimate-test-reporter', require: nil
 
+  # assert_template or assigns tests
+  gem 'rails-controller-testing'
+
   # awesome matchers that make mundane tests easy
   gem 'shoulda'
   gem 'minitest-spec-rails'
