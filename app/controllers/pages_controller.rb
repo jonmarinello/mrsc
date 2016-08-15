@@ -86,10 +86,10 @@ class PagesController < ApplicationController
           NewPotentialProjectMailer.new_potential_project(@potential_project).deliver_later
 
           # Respond with all ok
-          render nothing: true, status: :ok, content_type: 'text/html'
+          head :ok, content_type: 'text/html'
         else
           # Respond with an error
-          render nothing: true, status: 304, content_type: 'text/html'
+          head 304, content_type: 'text/html'
         end
       end
     end
