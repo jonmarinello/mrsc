@@ -79,7 +79,13 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should create a potential project' do
     assert_difference('PotentialProject.count') do
-      post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com', project_idea: 'To build the perfect androird woman!'}
+      post :create, params: {
+          potential_project: {
+              name: 'Bryan Flynn',
+              email: 'bryan@gmail.com',
+              project_idea: 'To build the perfect android woman!'
+          }
+      }
     end
 
     assert_nil assigns(:active_tab)
@@ -90,7 +96,12 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should fail to create a potential project' do
     assert_difference('PotentialProject.count', 0) do
-      post :create, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com'}
+      post :create, params: {
+          potential_project: {
+              name: 'Bryan Flynn',
+              email: 'bryan@gmail.com'
+          }
+      }
     end
 
     assert_nil assigns(:active_tab)
@@ -109,7 +120,14 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should create a potential project via mobile endpoint' do
     assert_difference('PotentialProject.count') do
-      post :mobile_start_a_project, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com', project_idea: 'To build the perfect androird woman!'}
+      post :mobile_start_a_project, params:
+          {
+              potential_project: {
+                  name: 'Bryan Flynn',
+                  email: 'bryan@gmail.com',
+                  project_idea: 'To build the perfect androird woman!'
+              }
+          }
     end
 
     assert_nil assigns(:active_tab)
@@ -120,7 +138,13 @@ class PagesControllerTest < ActionController::TestCase
 
   test 'should fail to create a potential project via mobile endpoint' do
     assert_difference('PotentialProject.count', 0) do
-      post :mobile_start_a_project, potential_project: {name: 'Bryan Flynn', email: 'bryan@gmail.com'}
+      post :mobile_start_a_project, params:
+          {
+              potential_project: {
+                  name: 'Bryan Flynn',
+                  email: 'bryan@gmail.com'
+              }
+          }
     end
 
     assert_nil assigns(:active_tab)
