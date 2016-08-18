@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   include ApplicationHelper
 
-  skip_before_filter :verify_authenticity_token, :only => [:mobile_start_a_project]
+  skip_before_action :verify_authenticity_token, :only => [:mobile_start_a_project]
 
   def index
     @company_name = 'Mission Ridge Software Consulting, LLC'
@@ -86,10 +86,10 @@ class PagesController < ApplicationController
           NewPotentialProjectMailer.new_potential_project(@potential_project).deliver_later
 
           # Respond with all ok
-          render nothing: true, status: :ok, content_type: 'text/html'
+          head :ok, content_type: 'text/html'
         else
           # Respond with an error
-          render nothing: true, status: 304, content_type: 'text/html'
+          head 304, content_type: 'text/html'
         end
       end
     end
