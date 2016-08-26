@@ -11,7 +11,7 @@ class RecommendationsLoader
                            title: 'Kannan Manickam - Senior Software Engineer at RightScale, April 8, 2013',
                            body: '"Jon is an one-man-army in developing and maintaining code for the testing framework used here at RightScale to test the server configuration across different cloud vendors and operating systems using the API. He always has the passion for learning new tools, technologies, and integrating it with the product he builds.
                                    Whether it is day or night, He is available to support teams related to issues they have with the product he built and fixes them ASAP. Jon''s tireless work ethic and positive attitude make him a valuable professional. I would recommend Jon without hesitation."',
-                           image_url: 'https://media.licdn.com/media/p/1/005/020/215/2f128be.jpg')
+                           image_url: 'https://media.licdn.com/media/AAEAAQAAAAAAAAh5AAAAJGI4YjI3YzZlLWNhOTQtNGZhNS05OGE1LTIwZWQxYjhiZTQ4Zg.jpg')
 
     Recommendation.create!(name: 'nitin_mohan',
                            title: 'Nitin Mohan - Senior Software Engineer at RightScale, April 6, 2013',
