@@ -94,9 +94,6 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     builder (3.2.2)
-    bullet (5.3.0)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
     capybara (2.8.1)
       addressable
@@ -335,7 +332,6 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    uniform_notifier (1.10.0)
     validates_email_format_of (1.6.3)
       i18n
     warden (1.2.6)
@@ -361,7 +357,6 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   bootswatch-rails
-  bullet
   capybara_minitest_spec
   codeclimate-test-reporter
   coffee-rails
