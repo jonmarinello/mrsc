@@ -107,7 +107,7 @@ class PagesControllerTest < ActionController::TestCase
     assert_nil assigns(:active_tab)
     assert_not_nil assigns(:potential_project)
     assert_equal 'An Error occurred.', flash[:alert]
-    assert_equal pages_start_a_project_path, request.path
+    assert_equal pages_start_a_project_path, request.fullpath
   end
 
 

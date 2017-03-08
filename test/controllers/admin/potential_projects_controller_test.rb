@@ -15,7 +15,7 @@ class Admin::PotentialProjectsControllerTest < ActionController::TestCase
 
     get :index
     assert_response :success
-    assert_equal admin_potential_projects_path, request.path
+    assert_equal admin_potential_projects_path, request.fullpath
   end
 
 
@@ -53,7 +53,7 @@ class Admin::PotentialProjectsControllerTest < ActionController::TestCase
 
     get :show, params: { id: '2' }
     assert_response :success
-    assert_equal admin_potential_project_path(assigns(:potential_project)), request.path
+    assert_equal admin_potential_project_path(assigns(:potential_project)), request.fullpath
   end
 
 
