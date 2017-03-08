@@ -74,6 +74,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'annotate'
+  # gem 'quiet_assets'
 end
 
 # Test dependencies
@@ -107,7 +108,6 @@ group :test, :development do
   gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
-  # gem 'quiet_assets'
 end
 
 # Production dependencies
